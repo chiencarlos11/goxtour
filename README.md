@@ -1,2 +1,2 @@
-# goxtour
-Go X Tour
+# ReactBase
+Base React Project with Reddux and Router

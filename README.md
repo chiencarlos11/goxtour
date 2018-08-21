@@ -1,2 +1,2 @@
-# goxtour2018
-Go X Tour 2018
+# goxtour
+Go X Tour

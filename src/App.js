@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
-import { PageHeader, Navbar } from 'react-bootstrap';
+import MainArea from './components/MainArea'
+import logo from './static/goX.png'
+import menuLine from './static/menu-line.png'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
+import './stylesheets/menu.css'
 
 // const Home = () => (
 //   <div>
@@ -30,17 +33,17 @@ const City = () => (
   </div>
 );
 
-const Executive = () => (
-  <div>
-    <ul>
-      <li>DAVID INGRAM</li>
-      <li>JASON MULLIMS</li>
-      <li>STEVEN POOLE</li>
-      <li>JASON APPEL</li>
-      <li>SHANE PENNELL</li>
-    </ul>
-  </div>
-);
+// const Executive = () => (
+//   <div>
+//     <ul>
+//       <li>DAVID INGRAM</li>
+//       <li>JASON MULLIMS</li>
+//       <li>STEVEN POOLE</li>
+//       <li>JASON APPEL</li>
+//       <li>SHANE PENNELL</li>
+//     </ul>
+//   </div>
+// );
 
 const Info = () => (
   <div>
@@ -58,6 +61,7 @@ const Contact = () => (
   </div>
 );
 
+
 // const Courses = ({ match }) => (
 //   <div>
 //      <ul>
@@ -70,35 +74,40 @@ const Contact = () => (
 //   </div>
 // );
 
+
 class App extends Component {
+
+
   render() {
     return (
       <div>
-        <PageHeader>
-          <Navbar>
-            <Navbar.Header>
-              <Navbar.Brand>
-                <Link to="/cities">CITIES</Link>
-              </Navbar.Brand>
-              <Navbar.Brand>
-                <Link to="/stores">STORES</Link>
-              </Navbar.Brand>
-              <Navbar.Brand>
-                <Link to="/executives">EXECUTIVES</Link>
-              </Navbar.Brand>
-              <Navbar.Brand>
-                <Link to="/info">INFO</Link>
-              </Navbar.Brand>
-              <Navbar.Brand>
-                <Link to="/contact">CONTACT</Link>
-              </Navbar.Brand>
-            </Navbar.Header>
-          </Navbar>
-        </PageHeader>
+
+        <nav className="navbar">
+          <div className="container-fluid">
+            <div className="navbar-header">
+              <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+              </button>
+              <img className="logo" src={logo} width="150" alt=""/>
+            </div>
+            <div className="collapse navbar-collapse" id="myNavbar">
+              <ul className="nav navbar-nav menu_fonts">
+                <li><Link to="/cities">CITIES</Link></li>
+                <li><Link to="/stores">STORES</Link></li>
+                <li className="active"><Link to="/executives">EXECUTIVES</Link></li>
+                <li><Link to="/info">INFO</Link></li>
+                <li><Link to="/contact">CONTACT</Link></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <img src={menuLine} alt=""/>
 
         <Route path="/cities" component={City}/>
         <Route path="/stores" component={Store}/>
-        <Route path="/executives" component={Executive}/>
+        <Route path="/executives" component={MainArea}/>
         <Route path="/info" component={Info}/>
         <Route path="/contact" component={Contact}/>
       </div>

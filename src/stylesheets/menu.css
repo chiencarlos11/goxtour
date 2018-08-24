@@ -1,0 +1,30 @@
+.menu_fonts {
+	font-family: Georgia, serif;
+	font-size: 20px;
+	letter-spacing: 0px;
+	word-spacing: 2px;
+	color: #000000;
+	font-weight: 700;
+	text-decoration: none;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: uppercase;
+	padding-top: 3.5%;
+}
+
+.logo {
+	padding-top: 15%;
+}
+
+.Main {
+	/* The image used */
+    background-image: url(../static/background.jpg);
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

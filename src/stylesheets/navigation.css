@@ -21,6 +21,7 @@
   padding-top: 1.5%;
 }
 
-.background_menu {
+.navigation_menu {
   background-color: white;
+  flex:10;
 }

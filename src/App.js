@@ -5,7 +5,7 @@ import Navigation from './components/Navigation'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
-
+import './stylesheets/flex.css'
 
 // const Home = () => (
 //   <div>
@@ -79,8 +79,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="background">
-        <Navigation />
+      <div >
+        <Navigation className="container"/>
         <Route path="/cities" component={City}/>
         <Route path="/stores" component={Store}/>
         <Route path="/executives" component={MainArea}/>

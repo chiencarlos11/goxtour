@@ -1,22 +1,18 @@
 import React, { Component } from "react";
-import { Grid, Row, Col } from "react-bootstrap";
 import MainLeft from "./MainLeft";
 import MainRight from "./MainRight";
 import "../stylesheets/background.css";
+import "../stylesheets/flex.css";
 
 export default class MainArea extends Component {
 	render() {
 		return (
-			<Grid className="mainpanel">
-				<Row >
-					<Col xs={6} md={4} className="leftpanel" >
-						<MainLeft />
-					</Col>
-					<Col xs={12} md={8} className="rightpanel" >
-						<MainRight />
-					</Col>
-				</Row>
-			</Grid>
+
+			<div className="container-2">
+				<MainLeft className="container-left" />
+				<MainRight className="container-right" />
+			</div>
+
 		);
 	}
 }

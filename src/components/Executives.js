@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import Executive from "./Executive.js";
 import { ListGroup, ListGroupItem } from "react-bootstrap";
+import "../stylesheets/executive.css";
+import logo from "../static/goXtour_logo.png";
 
 export default class Executives extends Component {
   render() {
     return (
-      <ListGroup>
+      <ListGroup bsClass="list">
+        <img className="logo2" src={logo} width="150" alt="" />
         <ListGroupItem href="#link1">
           <Executive name="DAVID INGRAM" title="CHIEF EXECUTIVE OFFICER" />
         </ListGroupItem>

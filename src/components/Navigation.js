@@ -7,7 +7,7 @@ import "../stylesheets/navigation.css";
 export default class Navigation extends Component {
 	render() {
 		return (
-			<div className="background_menu">
+			<div className="navigation_menu">
 				<Nav bsStyle="tabs" activeKey={4}>
 					<NavItem eventKey={1} href="/executives">
 						<img className="logo" src={logo} width="150" alt="" />

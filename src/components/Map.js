@@ -8,7 +8,7 @@ export default class Map extends Component{
   render(){
 
     return(
-        <Image className='map_background background-white' src={CadMap} alt="" responsive />
+        <Image className='map_background' src={CadMap} alt="" responsive />
     	)
   }
 }

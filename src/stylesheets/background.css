@@ -1,16 +1,55 @@
 .background {
 	/* The image used */
     background-image: url(../static/background.jpg);
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
 
-    /* Full height */
-    height: 100%; 
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
 
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .background-white {
-	background-color: white;
+	padding-right: 0px;
+    height: 680;
+}
+
+.map_background {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f3f3f4;
+    padding-right: 0px;
+    margin-top: 15px;
+
+}
+
+.mainpanel {
+    border: 1px solid #c3c3c3;
+    width: 96%;
+}
+
+.leftpanel {
+    display: flex;
+    align-content: left;
+    top: 15px;
+    min-width: 30%;
+    width: 400px;
+    border: 1px solid #c3c3c3;
+}
+
+.rightpanel {
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    display: flex;
+    align-content: left;
+    min-width: 30%;
+    width: 400px;
+    border: 1px solid #c3c3c3;
 }

@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import MainArea from './components/MainArea'
-import logo from './static/goX.png'
-import menuLine from './static/menu-line.png'
+import Navigation from './components/Navigation'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
-import './stylesheets/menu.css'
+
 
 // const Home = () => (
 //   <div>
@@ -80,31 +79,8 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-
-        <nav className="navbar">
-          <div className="container-fluid">
-            <div className="navbar-header">
-              <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
-              </button>
-              <img className="logo" src={logo} width="150" alt=""/>
-            </div>
-            <div className="collapse navbar-collapse" id="myNavbar">
-              <ul className="nav navbar-nav menu_fonts">
-                <li><Link to="/cities">CITIES</Link></li>
-                <li><Link to="/stores">STORES</Link></li>
-                <li className="active"><Link to="/executives">EXECUTIVES</Link></li>
-                <li><Link to="/info">INFO</Link></li>
-                <li><Link to="/contact">CONTACT</Link></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-        <img src={menuLine} alt=""/>
-
+      <div className="background">
+        <Navigation />
         <Route path="/cities" component={City}/>
         <Route path="/stores" component={Store}/>
         <Route path="/executives" component={MainArea}/>

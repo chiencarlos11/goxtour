@@ -14,7 +14,7 @@ export default class ImageModal extends Component {
     } else {
 
       photo = (
-        <img
+        <img className="img-responsive center-block"
           src={this.props.photo.images.standard_resolution.url}
           alt={this.props.photo.id}
         />

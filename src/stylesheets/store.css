@@ -36,13 +36,3 @@
     margin-right: auto;
     width: 30%;
 }
-
-.store-list {
-	background-color: white;
-	max-width: 350px;
-	min-width: 300px;
-	max-height: 520px;
-    margin-top: 5px;
-    overflow:scroll;
-    -webkit-overflow-scrolling: touch;
-}

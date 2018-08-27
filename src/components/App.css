@@ -1,0 +1,28 @@
+html,
+body,
+.container-fluid {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.height_full {
+  height: 100%;
+}
+
+.map_row {
+  height: 50%;
+  background-color: red;
+}
+
+.avatar_row {
+  height: 15%;
+  background-color: blue;
+}
+
+.photo_row {
+  height: 35%;
+  background-color: yellow;
+}

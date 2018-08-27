@@ -18,7 +18,7 @@ export default class Navigation extends Component {
 					<NavItem className="text" eventKey={3} href="/stores">
 						STORES
 					</NavItem>
-					<NavItem className="text" eventKey={4} href="/executives">
+					<NavItem className="text" eventKey={4} href="/">
 						EXECUTIVES
 					</NavItem>
 					<NavItem className="text" eventKey={5} href="/info">

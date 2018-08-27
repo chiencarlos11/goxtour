@@ -1,0 +1,40 @@
+{
+  "stores": [
+    {
+      "name": "Headquarters",
+      "state": "disabled",
+      "latitude": 43.595105,
+      "longitude": -79.639026
+    },
+    {
+      "name": "3510",
+      "state": "active",
+      "latitude": 43.764316,
+      "longitude": -79.519635
+    },
+    {
+      "name": "2609",
+      "state": "active",
+      "latitude": 44.05875,
+      "longitude": -79.48103
+    },
+    {
+      "name": "2563",
+      "state": "active",
+      "latitude": 44.06708,
+      "longitude": -79.42956
+    },
+    {
+      "name": "2567",
+      "state": "active",
+      "latitude": 44.21425,
+      "longitude": -79.46318
+    },
+    {
+      "name": "2581",
+      "state": "active",
+      "latitude": 44.38259,
+      "longitude": -79.70418
+    }
+  ]
+}

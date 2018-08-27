@@ -1,31 +1,43 @@
 .container {
-	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	background-image: url(../static/background.jpg);
 }
 
 .container-2 {
 	display: flex;
 	align-items: center;
 	/* The image used */
-	background-image: url(../static/background.jpg);
+	
 	/* Set rules to fill background */
 	background-size: 100%;
-	border: 1px solid #fff;
+/*	border: 1px solid #fff;*/
+	align-items: center;
+    justify-content: center;
+}
+
+.container-3 {
+	display: flex;
+	align-items: center;
+	/* The image used */
+	/* Set rules to fill background */
+	background-size: 100%;
+/*	border: 1px solid #fff;*/
 	align-items: center;
     justify-content: center;
 }
 
 .container-left {
 	flex:1;
-	max-width: 400px;
+	max-width: 300px;
 	border: 1px solid #fff;
-
+	flex-basis: 20%;
 }
 
 .container-right {
-	flex:4;
+	flex:1;
 	border: 1px solid #fff;
 	margin-right: 15px;
+	flex-basis: 20%;
 }
 

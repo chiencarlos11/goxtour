@@ -5,26 +5,8 @@ import MainArea from "./MainArea";
 import Navigation from "./Navigation";
 import "../stylesheets/flex.css";
 import Instagram from './photos/Instagram'
+import MapContainer from './maps/MapContainer'
 
-const Store = () => (
-  <div>
-     <ul>
-      <li>Store 2330</li>
-      <li>Store 2330</li>
-      <li>Store 2330</li>
-    </ul>
-  </div>
-);
-
-const City = () => (
-  <div>
-    <ul>
-      <li>San Francisco</li>
-      <li>Istanbul</li>
-      <li>Tokyo</li>
-    </ul>
-  </div>
-);
 
 const Info = () => (
   <div>
@@ -64,12 +46,12 @@ class App extends Component {
       <div className="height_full">
         <Navigation />
 
-        <Route name="cities" path="/cities" component={City}/>
-        <Route name="stores" path="/stores" component={Store}/>
+
         <Route name="executives" path="/" component={MainArea} exact/>
         <Route path="/info" component={Info}/>
         <Route path="/contact" component={Contact}/>
         <Route path="/instagram" component={Instagram}/>
+        <Route path="/map" component={MapContainer}/>
       </div>
     );
   }

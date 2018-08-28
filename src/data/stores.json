@@ -1,37 +1,49 @@
 {
   "stores": [
     {
+      "id":0,
       "name": "Headquarters",
+      "tag": "pomeranian",
       "state": "disabled",
       "latitude": 43.595105,
       "longitude": -79.639026
     },
     {
+      "id":1,
       "name": "3510",
+      "tag": "travelgram",
       "state": "active",
       "latitude": 43.764316,
       "longitude": -79.519635
     },
     {
+      "id":2,
       "name": "2609",
+      "tag": "switzerland",
       "state": "active",
       "latitude": 44.05875,
       "longitude": -79.48103
     },
     {
+      "id":3,
       "name": "2563",
+      "tag": "wanderlusting",
       "state": "active",
       "latitude": 44.06708,
       "longitude": -79.42956
     },
     {
+      "id":4,
       "name": "2567",
+      "tag": "photographylovers",
       "state": "active",
       "latitude": 44.21425,
       "longitude": -79.46318
     },
     {
+      "id":5,
       "name": "2581",
+      "tag": "bricks",
       "state": "active",
       "latitude": 44.38259,
       "longitude": -79.70418

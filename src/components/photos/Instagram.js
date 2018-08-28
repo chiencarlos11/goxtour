@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import ImageModal from '../ImageModal'
+import ImageModal from "../ImageModal";
 import "../../stylesheets/instagramSlider.css";
 import previousButtonImage from "../../images/white-plane-left.png";
 import nextButtonImage from "../../images/white-plane-right.png";
@@ -14,7 +14,7 @@ export default class Instagram extends Component {
     this.state = {
       currentExecId: this.props.execId,
       currentStoreId: this.props.storeId,
-      currentTag: this.props.tag,
+      currentTags: this.props.tags,
       loaded: "false",
       showModal: false,
       photo: null
@@ -24,15 +24,14 @@ export default class Instagram extends Component {
     this.previousSlide = this.previousSlide.bind(this);
 
     this.handleCloseModal = this.handleCloseModal.bind(this);
-
   }
 
   handleCloseModal() {
-    console.log("Close Modal Clicked")
+    console.log("Close Modal Clicked");
     this.setState({ showModal: false });
   }
 
-  handleImageClick(photo){
+  handleImageClick(photo) {
     this.setState({ showModal: true });
     this.setState({ photo: photo });
   }
@@ -63,7 +62,7 @@ export default class Instagram extends Component {
       })
       .then(data => {
         this.setState({ instagramData: data });
-        this.filterResultsByTag(this.state.currentTag);
+        this.filterResultsByTag(this.state.currentTags);
         this.setState({ loaded: "true" });
       })
       .catch(err => {
@@ -71,15 +70,17 @@ export default class Instagram extends Component {
       });
   }
 
-  filterResultsByTag(tag) {
-    if (tag === null || tag.length === 0) {
+  filterResultsByTag(tags) {
+    if (tags === undefined || tags.length === 0) {
       this.filteredInstagramData = this.state.instagramData.data;
     } else {
       var photoList = [];
-      for (var i = 0; i < this.state.instagramData.data.length; i++) {
-        var element = this.state.instagramData.data[i];
-        if (element.tags.indexOf(tag) >= 0) {
-          photoList.push(element);
+      for (var tag of tags) {
+        for (var i = 0; i < this.state.instagramData.data.length; i++) {
+          var element = this.state.instagramData.data[i];
+          if (element.tags.indexOf(tag) >= 0) {
+            photoList.push(element);
+          }
         }
       }
       this.filteredInstagramData = photoList;
@@ -87,12 +88,12 @@ export default class Instagram extends Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    if (nextProps.tag === null || nextProps.tag.length <= 0) {
+    if (nextProps.tags === undefined || nextProps.tags.length <= 0) {
       return true;
     }
 
-    if (this.state.instagramData && nextProps.tag !== this.state.currentTag) {
-      this.filterResultsByTag(nextProps.tag);
+    if (this.state.instagramData && nextProps.tags !== this.state.currentTags) {
+      this.filterResultsByTag(nextProps.tags);
       return true;
     }
 
@@ -115,36 +116,51 @@ export default class Instagram extends Component {
     if (this.state.loaded === "true") {
       return (
         <div>
-          <ImageModal showModal={this.state.showModal} hideModal={this.handleCloseModal} photo={this.state.photo}/>
-        <div className="container">
-          <div className="row">
-            <div className="col-1">
-              <button onClick={this.previousSlide}>Previous</button>
-            </div>
-            <div className="col-10">
-              <Slider ref="slider" {...settings}>
-                {this.filteredInstagramData.map(photo => 
-                  (
-                  <div className="imageContainer" key={photo.id} onClick={this.handleImageClick.bind(this,photo)}>
-                    <img
-                      className="image"
-                      src={photo.images.standard_resolution.url}
-                      alt={photo.id}
-                    />
-                  </div>
-                ))}
-              </Slider>
-            </div>
-            <div className="col-1">
-              <button onClick={this.nextSlide}>Next</button>
+          <ImageModal
+            showModal={this.state.showModal}
+            hideModal={this.handleCloseModal}
+            photo={this.state.photo}
+          />
+          <div className="container">
+            <div className="row">
+              <div className="col-1">
+                <button onClick={this.previousSlide}>Previous</button>
+              </div>
+              <div className="col-10">
+                <Slider ref="slider" {...settings}>
+                  {this.filteredInstagramData.map(photo => (
+                    <div
+                      className="imageContainer"
+                      key={photo.id}
+                      onClick={()=> window.open(photo.link, "_blank")}
+                    >
+                      <img
+                        className="image"
+                        src={photo.images.standard_resolution.url}
+                        alt={photo.id}
+                      />
+                    </div>
+                  ))}
+                </Slider>
+              </div>
+              <div className="col-1">
+                <button onClick={this.nextSlide}>Next</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       );
     } else {
-      return <div> <ImageModal hideModal={this.handleCloseModal} showModal={this.state.showModal}/> <div className="height_full">Loading</div> </div>;
+      return (
+        <div>
+          {" "}
+          <ImageModal
+            hideModal={this.handleCloseModal}
+            showModal={this.state.showModal}
+          />{" "}
+          <div className="height_full">Loading</div>{" "}
+        </div>
+      );
     }
-
   }
 }

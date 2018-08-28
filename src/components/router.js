@@ -7,7 +7,6 @@ import MapContainer from "./maps/MapContainer";
 
 import Instagram from "./photos/Instagram";
 
-
 class Router extends Component {
   render() {
     return (
@@ -26,7 +25,7 @@ class Router extends Component {
             exact={true}
             path="/map"
             render={() => (
-              <div className="MapContainer">
+              <div className="MapContainer height_full">
                 <MapContainer />
               </div>
             )}
@@ -41,7 +40,6 @@ class Router extends Component {
               </div>
             )}
           />
-
         </div>
       </BrowserRouter>
     );

@@ -2,7 +2,7 @@ import React from "react";
 import { withScriptjs, withGoogleMap, GoogleMap } from "react-google-maps";
 import GoXMarker from "./GoXMarker";
 import GoXOverlay from "./GoXOverlay";
-const mapStyle = require("./style.json");
+const mapStyle = require("./style2.json");
 const storesData = require("../../data/stores.json");
 const avatarsData = require("../../data/avatars.json");
 
@@ -18,7 +18,8 @@ const markers = storesData.stores.map(store => {
   return marker;
 });
 
-// Avatar Image Overlays
+// Avatar Image Overlays (None for now, use Markers instead)
+/*
 const overlays = avatarsData.avatars.map(avatar => {
   let overlay = (
     <GoXOverlay
@@ -29,11 +30,13 @@ const overlays = avatarsData.avatars.map(avatar => {
   );
   return overlay;
 });
+*/
 
 // GoogleMaps Options
 const options = {
   minZoom: 8,
-  maxZoom: 20
+  maxZoom: 20,
+  styles: mapStyle
 };
 
 // Google Maps Component
@@ -43,10 +46,8 @@ const GoXMap = withScriptjs(
       <GoogleMap
         defaultZoom={14}
         center={{ lat: 43.595105, lng: -79.639026 }}
-        defaultOptions={{ styles: mapStyle }}
         options={options}
       >
-        {overlays}
         {markers}
       </GoogleMap>
     );

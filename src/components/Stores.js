@@ -17,6 +17,7 @@ export default class Stores extends Component {
     //Returning all stores that matches execID
     let Exec_stores = avatarsData.avatars[this.props.execID].stores;
 
+    //filtering stores that only belongs to the Exec
     let filtered_stores = storesData.stores.filter(function(store) {
       return Exec_stores.includes(store.id);
     });

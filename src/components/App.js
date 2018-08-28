@@ -4,6 +4,7 @@ import "./App.css";
 import MainArea from "./MainArea";
 import Navigation from "./Navigation";
 import "../stylesheets/flex.css";
+import Instagram from './photos/Instagram'
 
 const Store = () => (
   <div>
@@ -68,6 +69,7 @@ class App extends Component {
         <Route name="executives" path="/" component={MainArea} exact/>
         <Route path="/info" component={Info}/>
         <Route path="/contact" component={Contact}/>
+        <Route path="/instagram" component={Instagram}/>
       </div>
     );
   }

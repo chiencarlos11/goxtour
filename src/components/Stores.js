@@ -13,7 +13,15 @@ export default class Stores extends Component {
   }
 
   render() {
-    let Stores = storesData.stores.map(store => (
+
+    //Returning all stores that matches execID
+    let Exec_stores = avatarsData.avatars[this.props.execID].stores;
+
+    let filtered_stores = storesData.stores.filter(function(store) {
+      return Exec_stores.includes(store.id);
+    });
+
+    let Stores = filtered_stores.map(store => (
       <ListGroupItem
         key={store.name}
         onClick={this.handleClick.bind(this, store.id)}

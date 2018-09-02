@@ -3,6 +3,7 @@
     {
       "id": 0,
       "stores": [0],
+      "tag": "goxtour2018",
       "name": "DAVID INGRAM",
       "title": "CHIEF EXECUTIVE OFFICER",
       "latitude": 43.764253,
@@ -11,6 +12,7 @@
     {
       "id": 1,
       "stores": [1, 2, 3],
+      "tag": "scmississauga",
       "name": "JASON MULLIMS",
       "title": "PRESIDENT & COO",
       "latitude": 44.199331,
@@ -19,6 +21,7 @@
     {
       "id": 2,
       "stores": [2, 4],
+      "tag": "brandrefresh",
       "name": "STEVEN POOLE",
       "title": "SVP, EFS OPERATIONS",
       "latitude": 44.199331,
@@ -27,6 +30,7 @@
     {
       "id": 3,
       "stores": [3, 5],
+      "tag": "goxtour2018",
       "name": "JASON APPEL",
       "title": "SVP & CRO",
       "latitude": 44.199331,
@@ -35,6 +39,7 @@
     {
       "id": 4,
       "stores": [4, 0],
+      "tag": "goxtour2018",
       "name": "SHANE PENNELL",
       "title": "SVP, OPERATIONS & MERCHANDISING",
       "latitude": 44.199331,

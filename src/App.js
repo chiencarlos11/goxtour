@@ -28,13 +28,11 @@ class App extends Component {
     }
 
     //Returning all stores that matches execID
-    let stores = avatarsData.avatars[execID].stores;
+    let exec_tag = avatarsData.avatars[execID].tag;
 
     //Getting a list of all tags
     let tags = [];
-    for (var store of stores) {
-      tags.push(storesData.stores[store].tag);
-    }
+    tags.push(exec_tag);
 
     //Update currentTag with array of tags
     this.setState({ currentTags: tags });

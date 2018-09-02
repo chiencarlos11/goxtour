@@ -96,7 +96,6 @@ export default class Instagram extends Component {
   }
 
   filterResultsByTag(tags) {
-    console.log("tags = " + tags)
     if (tags === undefined || tags.length === 0) {
       
       this.filteredInstagramData = this.state.instagramData.data;

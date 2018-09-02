@@ -8,6 +8,10 @@ import Menu from "./components//Menu";
 const storesData = require("./data/stores.json");
 const avatarsData = require("./data/avatars.json");
 
+const responseInstagram = response => {
+  console.log(response);
+};
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -25,8 +29,8 @@ class App extends Component {
     if (execID === null) {
       this.setState({ currentTags: [] });
       return;
-    } else if (execID === '__show_all__'){
-      this.setState({ currentTags: ['__show_all__'] });
+    } else if (execID === "__show_all__") {
+      this.setState({ currentTags: ["__show_all__"] });
       return;
     }
 
@@ -46,7 +50,7 @@ class App extends Component {
 
   changeTagStore(storeId) {
     if (storeId === null) {
-      console.log("setting currentTags to empty");
+      console.log("setting currentTags to `empty");
       this.setState({ currentTags: [] });
     } else {
       this.setState({ currentTags: [storesData.stores[storeId].tag] });

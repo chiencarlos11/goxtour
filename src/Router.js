@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import App from "./App";
+import Login from "./Login.js"
 import ExecMenu from "./components/menu/ExecMenu";
 
 import { BrowserRouter, Route } from "react-router-dom";
@@ -15,7 +16,7 @@ class Router extends Component {
             path="/"
             render={() => (
               <div className="App height_full">
-                <App />
+                <Login />
               </div>
             )}
           />

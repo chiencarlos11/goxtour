@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-// import "../stylesheets/store.css";
-import image from "../static/plane.png";
+import image from "../../static/plane.png";
 
 class Store extends Component {
   render() {
@@ -9,11 +8,11 @@ class Store extends Component {
         <table>
           <tr>
           <td>
-            <img src={image} width="100" alt={this.props.name} />
+            <img src={image} className="menuLogo" alt={this.props.name} />
           </td>
           <td>
-            <div className="name">{this.props.name}</div>
-            <div className="title">{this.props.state}</div>
+            <div className="menu_name">{this.props.name}</div>
+            <div className="menu_title">{this.props.state}</div>
           </td>
           </tr>
         </table>

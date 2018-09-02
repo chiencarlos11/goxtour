@@ -1,9 +1,28 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import ImageModal from "../ImageModal";
-import "../../stylesheets/instagramSlider.css";
-import previousButtonImage from "../../images/white-plane-left.png";
-import nextButtonImage from "../../images/white-plane-right.png";
+import Modal from "react-modal";
+import InstagramEmbed from "react-instagram-embed";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./instagramSlider.css";
+import leftIcon from "../../static/white-plane-left.png";
+import rightIcon from "../../static/white-plane-right.png";
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    width: "600px",
+    marginLeft: "auto",
+    marginRight: "auto",
+    transform: "translate(-50%, -50%)",
+    zIndex: "900"
+  }
+};
+
+Modal.setAppElement("#root");
 
 export default class Instagram extends Component {
   constructor(props) {
@@ -14,26 +33,41 @@ export default class Instagram extends Component {
     this.state = {
       currentExecId: this.props.execId,
       currentStoreId: this.props.storeId,
-      currentTags: this.props.tags,
+      currentTag: this.props.tag,
       loaded: "false",
-      showModal: false,
-      photo: null
+      modalIsOpen: false,
+      current_photo_link: null
     };
 
     this.nextSlide = this.nextSlide.bind(this);
     this.previousSlide = this.previousSlide.bind(this);
 
-    this.handleCloseModal = this.handleCloseModal.bind(this);
+    //Modal
+    this.afterOpenModal = this.afterOpenModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
-  handleCloseModal() {
-    console.log("Close Modal Clicked");
-    this.setState({ showModal: false });
+  componentDidMount() {
+    const script = document.createElement("script");
+
+    script.src = "https://www.instagram.com/embed.js";
+    script.async = true;
+
+    document.body.appendChild(script);
   }
 
-  handleImageClick(photo) {
-    this.setState({ showModal: true });
-    this.setState({ photo: photo });
+  openModal(instagram_link) {
+    this.setState({ modalIsOpen: true });
+    this.setState({ current_photo_link: instagram_link });
+  }
+
+  afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    this.subtitle.style.color = "#f00";
+  }
+
+  closeModal() {
+    this.setState({ modalIsOpen: false });
   }
 
   nextSlide() {
@@ -62,7 +96,7 @@ export default class Instagram extends Component {
       })
       .then(data => {
         this.setState({ instagramData: data });
-        this.filterResultsByTag(this.state.currentTags);
+        this.filterResultsByTag(this.state.currentTag);
         this.setState({ loaded: "true" });
       })
       .catch(err => {
@@ -103,64 +137,99 @@ export default class Instagram extends Component {
   render() {
     const settings = {
       dots: false,
-      infinite: false,
+      infinite: true,
       speed: 500,
       slidesToShow: 7,
       slidesToScroll: 1,
       autoplay: false,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 1500,
       lazyLoad: true,
-      arrows: false
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 1400,
+          settings: {
+            slidesToShow: 6
+          }
+        },
+        {
+          breakpoint: 1150,
+          settings: {
+            slidesToShow: 5
+          }
+        },
+        {
+          breakpoint: 1000,
+          settings: {
+            slidesToShow: 4
+          }
+        },
+        {
+          breakpoint: 780,
+          settings: {
+            slidesToShow: 3
+          }
+        }
+      ]
     };
 
-    if (this.state.loaded === "true") {
+    if (this.state.loaded == "true") {
       return (
-        <div>
-          <ImageModal
-            showModal={this.state.showModal}
-            hideModal={this.handleCloseModal}
-            photo={this.state.photo}
-          />
-          <div className="container">
-            <div className="row">
-              <div className="col-1">
-                <button onClick={this.previousSlide}>Previous</button>
-              </div>
-              <div className="col-10">
-                <Slider ref="slider" {...settings}>
-                  {this.filteredInstagramData.map(photo => (
-                    <div
-                      className="imageContainer"
-                      key={photo.id}
-                      onClick={()=> window.open(photo.link, "_blank")}
-                    >
-                      <img
-                        className="image"
-                        src={photo.images.standard_resolution.url}
-                        alt={photo.id}
-                      />
-                    </div>
-                  ))}
-                </Slider>
-              </div>
-              <div className="col-1">
-                <button onClick={this.nextSlide}>Next</button>
-              </div>
-            </div>
+        <div className="container-instagram-gallery">
+          <div className="sliderButton">
+            <img
+              className="arrow_image"
+              src={leftIcon}
+              onClick={this.previousSlide}
+            />
+          </div>
+          <div className="slider">
+            <Slider ref="slider" {...settings}>
+              {this.filteredInstagramData.map(photo => (
+                <img
+                  className="image"
+                  key={photo.id}
+                  src={photo.images.standard_resolution.url}
+                  alt={photo.id}
+                  onClick={this.openModal.bind(this, photo.link)}
+                />
+              ))}
+            </Slider>
+          </div>
+          <div className="sliderButton">
+            <img
+              className="arrow_image"
+              src={rightIcon}
+              onClick={this.nextSlide}
+            />
+          </div>
+          <div>
+            <Modal
+              isOpen={this.state.modalIsOpen}
+              onAfterOpen={this.afterOpenModal}
+              onRequestClose={this.closeModal}
+              style={customStyles}
+              contentLabel="Example Modal"
+            >
+              <h2 ref={subtitle => (this.subtitle = subtitle)} />
+              <InstagramEmbed
+                url={this.state.current_photo_link}
+                maxWidth={600}
+                hideCaption={false}
+                containerTagName="div"
+                protocol=""
+                injectScript
+                onLoading={() => {}}
+                onSuccess={() => {}}
+                onAfterRender={() => {}}
+                onFailure={() => {}}
+              />
+            </Modal>
           </div>
         </div>
       );
     } else {
-      return (
-        <div>
-          {" "}
-          <ImageModal
-            hideModal={this.handleCloseModal}
-            showModal={this.state.showModal}
-          />{" "}
-          <div className="height_full">Loading</div>{" "}
-        </div>
-      );
+      return <div className="height_full">Loading</div>;
     }
   }
 }

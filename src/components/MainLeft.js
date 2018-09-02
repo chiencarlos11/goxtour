@@ -8,17 +8,29 @@ export default class MainLeft extends Component {
 
 		this.state = {
 			content: "Executives",
-			execID: "1"
+			execID: null
 		};
 
 		this.displayStore = this.displayStore.bind(this);
 	}
 
 	displayStore(execID) {
-		this.setState({
-			content: "Stores",
-			execID: execID
-		});
+
+		if (execID === null){
+			this.setState({
+				content: "Executives",
+				execID: null
+			});
+
+		} else {
+			this.setState({
+				content: "Stores",
+				execID: execID
+			});
+
+		}
+
+		
 	}
 
 	render() {
@@ -37,6 +49,7 @@ export default class MainLeft extends Component {
 					<Stores
 						changeTagStore={this.props.changeTagStore}
 						execID={this.state.execID}
+						displayStore={this.displayStore}
 					/>
 				);
 				break;

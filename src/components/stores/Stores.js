@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import Store from "./Store";
-import Executive from "./Executive";
-import logo from "../static/goXtour_logo.png";
-const storesData = require("../data/stores.json");
-const avatarsData = require("../data/avatars.json");
+import Executive from "../executives/Executive";
+import logo from "../../static/goXtour_logo.png";
+
+
+const storesData = require("../../data/stores.json");
+const avatarsData = require("../../data/avatars.json");
 
 export default class Stores extends Component {
   handleClick(id) {
@@ -42,7 +44,7 @@ export default class Stores extends Component {
     );
 
     return (
-      <ul className="executive_box">
+      <ul className="menu_box">
         <img className="logo2" src={logo} width="150" alt="" onClick={this.displayExec.bind(this)} />
         {currExec}
         {Stores}

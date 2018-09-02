@@ -1,0 +1,10 @@
+.container > div {
+	display: grid;
+	border: solid 1px red;
+	background: rgba(0,255,255, 0.85);
+}
+
+.container {
+  grid-template-columns: 1fr 1fr 1fr;
+
+}

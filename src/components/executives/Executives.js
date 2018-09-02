@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import Executive from "./Executive.js";
-import logo from "../static/goXtour_logo.png";
-const avatarsData = require("../data/avatars.json");
+import logo from "../../static/goXtour_logo.png";
+import "../../stylesheets/menu.css";
+
+const avatarsData = require("../../data/avatars.json");
+
 
 export default class Executives extends Component {
   handleClick(id) {
@@ -20,8 +23,10 @@ export default class Executives extends Component {
     ));
 
     return (
-      <ul className="executive_box">
-        <img className="logo2" src={logo} width="150" alt="" onClick={this.handleClick.bind(this, null)} />
+      <ul className="menu_box">
+        <div className="topMenuLogo">
+          <img className="logo2" src={logo} alt="" onClick={this.handleClick.bind(this, null)} />
+        </div>
         {Avatars}
       </ul>
     );

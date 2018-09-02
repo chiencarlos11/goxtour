@@ -1,48 +1,40 @@
-.name {
-	font-family: Georgia, serif;
-	font-size: 20px;
-	letter-spacing: 0px;
-	word-spacing: 2px;
-	color: #000000;
-	font-weight: 700;
-	text-decoration: none;
-	font-style: normal;
-	font-variant: normal;
-	text-transform: uppercase;
-}
-
-.title {
-	font-family: Georgia, serif;
-	font-size: 10px;
-	letter-spacing: 0px;
-	word-spacing: 2px;
-	color: #28bde0;
-	font-weight: 700;
-	text-decoration: none;
-	font-style: normal;
-	font-variant: normal;
-	text-transform: uppercase;
-}
-
-.list {
-	max-width: 350px;
-	min-width: 300px;
-	background-color: white;
-}
-
 .logo2{
 	display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
+    width: 70%;
 }
 
 .store-list {
-	background-color: white;
+/*	background-color: white;
 	max-width: 350px;
 	min-width: 300px;
 	max-height: 520px;
     margin-top: 5px;
     overflow:scroll;
+    -webkit-overflow-scrolling: touch;*/
+}
+
+.executive_box {
+	border: solid 1px black;
+	max-width: 350px;
+	min-width: 300px;
+	max-height: 520px;
+    margin-top: 5px;
+    margin-left: 15px;
+    overflow:scroll;
     -webkit-overflow-scrolling: touch;
+	background: rgba(0,0,255, 0.85);
+}
+
+.name{
+	background-color: white;
+}
+
+.title{
+	background-color: white;
+}
+
+.executive_container{
+	background-color: white;
 }

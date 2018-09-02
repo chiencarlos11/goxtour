@@ -1,16 +1,16 @@
 {
-  "name": "gox",
+  "name": "demo-grid",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "^3.3.7",
     "react": "^16.4.2",
-    "react-bootstrap": "^0.32.3",
     "react-dom": "^16.4.2",
     "react-google-maps": "^9.4.5",
+    "react-instagram-embed": "^1.4.0",
+    "react-modal": "^3.5.1",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4",
+    "react-scripts": "1.1.5",
     "react-slick": "^0.23.1",
     "slick-carousel": "^1.8.1"
   },

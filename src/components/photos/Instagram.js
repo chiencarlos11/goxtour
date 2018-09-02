@@ -47,15 +47,6 @@ export default class Instagram extends Component {
     this.closeModal = this.closeModal.bind(this);
   }
 
-  componentDidMount() {
-    const script = document.createElement("script");
-
-    script.src = "https://www.instagram.com/embed.js";
-    script.async = true;
-
-    document.body.appendChild(script);
-  }
-
   openModal(instagram_link) {
     this.setState({ modalIsOpen: true });
     this.setState({ current_photo_link: instagram_link });
@@ -105,7 +96,11 @@ export default class Instagram extends Component {
   }
 
   filterResultsByTag(tags) {
+    console.log("tags = " + tags)
     if (tags === undefined || tags.length === 0) {
+      
+      this.filteredInstagramData = this.state.instagramData.data;
+    } else if (tags == '__show_all__'){
       this.filteredInstagramData = this.state.instagramData.data;
     } else {
       var photoList = [];
@@ -123,6 +118,10 @@ export default class Instagram extends Component {
 
   shouldComponentUpdate(nextProps, nextState) {
     if (nextProps.tags === undefined || nextProps.tags.length <= 0) {
+
+      return true;
+    } else if (nextProps.tags === ['__show_all__']) {
+      this.filterResultsByTag(nextProps.tags);
       return true;
     }
 

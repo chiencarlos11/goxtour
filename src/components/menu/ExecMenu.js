@@ -29,6 +29,8 @@ class ExecMenu extends Component {
         return execIcon_3;
       case 4:
         return execIcon_4;
+      default:
+        return execIcon_0;
     }
   }
 
@@ -52,7 +54,7 @@ class ExecMenu extends Component {
     return (
       <div className="container-menu">
         <div className="menu-top">
-          <img className="image-top" src={logo} alt="" />
+          <img className="image-top" src={logo} alt="" onClick={this.handleClick.bind(this, '__show_all__')} />
         </div>
         <div className="menu-main">{Execs}</div>
       </div>

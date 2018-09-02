@@ -25,6 +25,9 @@ class App extends Component {
     if (execID === null) {
       this.setState({ currentTags: [] });
       return;
+    } else if (execID === '__show_all__'){
+      this.setState({ currentTags: ['__show_all__'] });
+      return;
     }
 
     //Returning all stores that matches execID

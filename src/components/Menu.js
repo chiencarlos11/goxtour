@@ -22,7 +22,7 @@ export default class Menu extends Component {
       });
     } else {
       this.setState({
-        content: "Stores",
+        content: "Executives",
         execID: execID
       });
     }

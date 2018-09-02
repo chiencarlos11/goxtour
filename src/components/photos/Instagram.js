@@ -84,7 +84,7 @@ export default class Instagram extends Component {
 
   refreshData() {
     var url =
-      "https://api.instagram.com/v1/users/self/media/recent/?access_token=927635119.e6873b5.fcd374c1687e423e8dd81bb2a78c4744";
+      "https://api.instagram.com/v1/users/self/media/recent/?access_token=8473644139.0b82872.2185f3d55dbb4622a3fe542f43a3d098";
 
     fetch(url)
       .then(response => {

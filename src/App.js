@@ -8,10 +8,6 @@ import Menu from "./components//Menu";
 const storesData = require("./data/stores.json");
 const avatarsData = require("./data/avatars.json");
 
-const responseInstagram = response => {
-  console.log(response);
-};
-
 class App extends Component {
   constructor(props) {
     super(props);

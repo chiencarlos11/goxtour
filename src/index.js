@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import Router from "./Router";
-import AuthExample from "./AuthExample";
+import Login from "./Login";
 import registerServiceWorker from "./registerServiceWorker";
 
-ReactDOM.render(<AuthExample />, document.getElementById("root"));
+ReactDOM.render(<Login />, document.getElementById("root"));
 registerServiceWorker();

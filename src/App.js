@@ -4,6 +4,7 @@ import MapContainer from "./components/maps/MapContainer";
 import Instagram from "./components/photos/Instagram";
 import Navigation from "./components/Navigation";
 import Menu from "./components//Menu";
+import BrowserDetection from "react-browser-detection";
 
 const storesData = require("./data/stores.json");
 const avatarsData = require("./data/avatars.json");
@@ -14,12 +15,25 @@ class App extends Component {
 
     this.state = {
       currentTags: [],
-      selectedExec: null
+      selectedExec: null,
+      ie_detected: false
     };
 
     this.changeTag = this.changeTag.bind(this);
     this.changeTagStore = this.changeTagStore.bind(this);
   }
+
+  browserHandler = {
+    ie: () => {
+      console.log("This is IE");
+      this.setState({ie_detected: true})
+      return null;
+    },
+    default: browser => {
+      console.log("Browser ok.");
+      return null;
+    }
+  };
 
   changeTag(execID) {
     if (execID === null) {
@@ -54,11 +68,16 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div className="container">
+
+
+    let display = <div><h1>We are Sorry!</h1> <h3>This website is optimized for Chrome, Firefox or Safari.</h3></div>
+
+    if (!this.state.ie_detected){
+      console.log("Displaying non IE")
+      display=  <div className="container">
         <div className="header">
-          <Navigation />
-        </div>
+                      <Navigation />
+                    </div>
         <div className="main_left">
           <div className="menuBox">
             <Menu
@@ -75,8 +94,20 @@ class App extends Component {
         </div>
 
         <div className="footer">
-          <Instagram access_token={this.props.access_token} tags={this.state.currentTags} />
+          <Instagram
+            access_token={this.props.access_token}
+            tags={this.state.currentTags}
+          />
         </div>
+        </div>
+    }
+
+
+    return (
+
+      <div className="height_full">
+        <BrowserDetection>{this.browserHandler}</BrowserDetection>
+        {display}
       </div>
     );
   }

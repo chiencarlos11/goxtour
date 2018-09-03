@@ -9,6 +9,7 @@
     "i": "^0.3.6",
     "npm": "^6.4.1",
     "react": "^16.4.2",
+    "react-browser-detection": "^1.2.0",
     "react-dom": "^16.4.2",
     "react-google-maps": "^9.4.5",
     "react-instagram-embed": "^1.4.0",

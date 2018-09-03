@@ -9,6 +9,7 @@ import {
   withRouter
 } from "react-router-dom";
 import logo from "./static/goXtour_logo.png";
+import './stylesheets/login.css'
 
 const fakeAuth = {
   isAuthenticated: false,
@@ -60,16 +61,22 @@ class Login extends React.Component {
     }
 
     return (
-      <div>
-        <InstagramLogin
-          clientId="0b8287220c3e4760b11ade7ab9f25f9b"
-          onSuccess={this.responseInstagramSuccess}
-          onFailure={this.responseInstagramError}
-          implicitAuth={true}
-        >
-          <img className="image-top" src={logo} alt="" />
+      <div className="login_container">
+        <div className="login_box1">
+          <img className="elementToAnimate" src={logo} alt="" />
+        </div>
+
+        <div className="login_box2">
+          <InstagramLogin
+            clientId="0b8287220c3e4760b11ade7ab9f25f9b"
+            onSuccess={this.responseInstagramSuccess}
+            onFailure={this.responseInstagramError}
+            implicitAuth={true}
+          >
+            
           <span> Login with Instagram</span>
         </InstagramLogin>
+        </div>
       </div>
     );
   }
@@ -105,7 +112,6 @@ export default function Login() {
   return (
     <Router>
       <div className="height_full">
-        <Route exact={true} path="/public" component={Public} />
         <Route exact={true} path="/login" component={Login} />
         <PrivateRoute path="/main" component={AppContainer} />
       </div>

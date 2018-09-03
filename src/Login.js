@@ -104,7 +104,7 @@ const AppContainer = () => (
 export default function Login() {
   return (
     <Router>
-      <div>
+      <div className="height_full">
         <Route exact={true} path="/public" component={Public} />
         <Route exact={true} path="/login" component={Login} />
         <PrivateRoute path="/main" component={AppContainer} />

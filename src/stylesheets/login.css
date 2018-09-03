@@ -2,8 +2,8 @@
 	all:unset;
 	display:grid;
 	grid-template-columns: 1fr repeat(2,minmax(auto, 16em)) 1fr;
-	grid-template-rows: 1fr repeat(2,minmax(auto, 1fr)) 1fr;
-	overflow-y: hidden; 
+	grid-template-rows: 1fr repeat(2,minmax(auto, 30em)) 1fr;
+	overflow-y: auto; 
 	overflow-x: hidden;
 }
 
@@ -11,7 +11,6 @@
 	grid-column: 2/4;
 	grid-row: 2/3;
 	align-self: end;
-	width:50px;
 }
 
 .login_box2{

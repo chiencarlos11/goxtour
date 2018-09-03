@@ -21,10 +21,10 @@ export default class Navigation extends Component {
                 <a href="#">Stores</a>
               </li>
               <li>
-                <a href="/">Executives</a>
+                <a href="#">Executives</a>
               </li>
               <li>
-                <a href="contact">Contact</a>
+                <a href="#">Contact</a>
               </li>
             </ul>
           </nav>

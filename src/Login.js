@@ -4,9 +4,7 @@ import InstagramLogin from "react-instagram-login";
 import {
   BrowserRouter as Router,
   Route,
-  Link,
   Redirect,
-  withRouter
 } from "react-router-dom";
 import logo from "./static/goXtour_logo.png";
 import './stylesheets/login.css'
@@ -23,10 +21,7 @@ const fakeAuth = {
   }
 };
 
-const Public = () => <h3>Public</h3>;
-const Protected = () => <h3>Protected</h3>;
-
-class Login extends React.Component {
+class LoginGo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -38,7 +33,7 @@ class Login extends React.Component {
   }
 
   responseInstagramSuccess(response) {
-    console.log("login successful!" + response);
+    console.log("login successful!");
     // this.props.route.setAuth(response.access_token);
 
     this.setState({ redirectToReferrer: true });
@@ -112,7 +107,7 @@ export default function Login() {
   return (
     <Router>
       <div className="height_full">
-        <Route exact={true} path="/login" component={Login} />
+        <Route exact={true} path="/login" component={LoginGo} />
         <PrivateRoute path="/main" component={AppContainer} />
       </div>
     </Router>

@@ -1,16 +1,13 @@
 import React from "react";
 import App from "./App";
 import InstagramLogin from "react-instagram-login";
-import {
-  BrowserRouter as Router,
-  Route,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import logo from "./static/goXtour_logo.png";
-import './stylesheets/login.css'
+import "./stylesheets/login.css";
 
 const fakeAuth = {
   isAuthenticated: false,
+  access_token: "",
   authenticate(cb) {
     this.isAuthenticated = true;
     setTimeout(cb, 100);
@@ -25,7 +22,7 @@ class LoginGo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      redirectToReferrer: false
+      redirectToReferrer: false,
     };
 
     this.responseInstagramSuccess = this.responseInstagramSuccess.bind(this);
@@ -36,8 +33,9 @@ class LoginGo extends React.Component {
     console.log("login successful!");
     // this.props.route.setAuth(response.access_token);
 
-    this.setState({ redirectToReferrer: true });
+    this.setState({ redirectToReferrer: true});
     fakeAuth.isAuthenticated = true;
+    fakeAuth.access_token = response;
   }
 
   responseInstagramError(response) {
@@ -45,14 +43,11 @@ class LoginGo extends React.Component {
   }
 
   render() {
-    const { from } = this.props.location.state || {
-      from: { pathname: "/main" }
-    };
+
 
     if (this.state.redirectToReferrer === true) {
-      console.log("redirectToReferrer == True");
-      console.log("from = " + JSON.stringify({ from }));
-      return <Redirect to={from} />;
+
+      return <Redirect to={{pathname: '/main'}} />;
     }
 
     return (
@@ -68,9 +63,8 @@ class LoginGo extends React.Component {
             onFailure={this.responseInstagramError}
             implicitAuth={true}
           >
-            
-          <span> Login with Instagram</span>
-        </InstagramLogin>
+            <span> Login with Instagram</span>
+          </InstagramLogin>
         </div>
       </div>
     );
@@ -98,7 +92,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 const AppContainer = () => (
   <div className="height_full">
     <div className="App height_full">
-      <App />
+      <App access_token={fakeAuth.access_token}/>
     </div>
   </div>
 );

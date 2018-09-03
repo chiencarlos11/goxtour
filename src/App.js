@@ -75,7 +75,7 @@ class App extends Component {
         </div>
 
         <div className="footer">
-          <Instagram tags={this.state.currentTags} />
+          <Instagram access_token={this.props.access_token} tags={this.state.currentTags} />
         </div>
       </div>
     );

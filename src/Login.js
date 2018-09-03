@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import logo from "./static/goXtour_logo.png";
 import "./stylesheets/login.css";
 
-const fakeAuth = {
+const Auth = {
   isAuthenticated: false,
   access_token: "",
   authenticate(cb) {
@@ -34,8 +34,8 @@ class LoginGo extends React.Component {
     // this.props.route.setAuth(response.access_token);
 
     this.setState({ redirectToReferrer: true});
-    fakeAuth.isAuthenticated = true;
-    fakeAuth.access_token = response;
+    Auth.isAuthenticated = true;
+    Auth.access_token = response;
   }
 
   responseInstagramError(response) {
@@ -75,7 +75,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
     render={props =>
-      fakeAuth.isAuthenticated === true ? (
+      Auth.isAuthenticated === true ? (
         <Component {...props} />
       ) : (
         <Redirect
@@ -92,7 +92,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 const AppContainer = () => (
   <div className="height_full">
     <div className="App height_full">
-      <App access_token={fakeAuth.access_token}/>
+      <App access_token={Auth.access_token}/>
     </div>
   </div>
 );

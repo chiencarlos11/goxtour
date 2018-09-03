@@ -1,22 +1,23 @@
 .login_container{
+	all:unset;
 	display:grid;
-	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr repeat(2,minmax(auto, 16em)) 1fr;
+	grid-template-rows: 1fr repeat(2,minmax(auto, 1fr)) 1fr;
+	overflow-y: hidden; 
+	overflow-x: hidden;
 }
 
 .login_box1{
-	grid-column: 1/2;
+	grid-column: 2/4;
 	grid-row: 2/3;
-	align-self: center;
-	justify-self: center;
-	margin-left: auto;
-	margin-right: auto;
-	margin-left: 37%;
+	align-self: end;
+	width:50px;
 }
 
 .login_box2{
-	grid-column: 1/2;
+	grid-column: 2/4;
 	grid-row: 3/4;
-	align-self: end;
+	align-self: start;
 	justify-self: center;
 }
 
@@ -33,3 +34,4 @@
 .elementToAnimate{
     animation: yourAnimation 2s 0s ease-in;
 }
+

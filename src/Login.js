@@ -9,7 +9,7 @@ import {
   withRouter
 } from "react-router-dom";
 import logo from "./static/goXtour_logo.png";
-import './stylesheets/login.css'
+import "./stylesheets/login.css";
 
 const fakeAuth = {
   isAuthenticated: false,
@@ -73,9 +73,16 @@ class Login extends React.Component {
             onFailure={this.responseInstagramError}
             implicitAuth={true}
           >
-            
-          <span> Login with Instagram</span>
-        </InstagramLogin>
+            <span>Login with Instagram</span>
+          </InstagramLogin>
+        </div>
+
+        <div className="login_box3">
+          <br />
+          <br />
+          <br />
+          *By continuing, I am giving permission for the goX website to display
+          public images from the signed in Instagram account.
         </div>
       </div>
     );

@@ -15,16 +15,10 @@ export default class Navigation extends Component {
           <nav>
             <ul>
               <li>
-                <a href="#">Cities</a>
-              </li>
-              <li>
-                <a href="#">Stores</a>
-              </li>
-              <li>
                 <a href="#">Executives</a>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <a href="#">Tour Stops</a>
               </li>
             </ul>
           </nav>

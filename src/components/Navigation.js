@@ -6,11 +6,11 @@ import "../stylesheets/navigation.css";
 export default class Navigation extends Component {
   render() {
     return (
-      <div>
+      <div className="height_full">
         <header>
-          <h1 className="logo">
-            <img src={logo} height="80" alt="" />
-          </h1>
+          <div className="logo">
+            <img className="headerImage" src={logo} alt="" />
+          </div>
           <input type="checkbox" id="nav-toggle" className="nav-toggle" />
           <nav>
             <ul>

@@ -6,11 +6,17 @@
 .container {
   display: grid;
   grid-template-columns: 40% 60%;
-  grid-template-rows: 80px auto 20%;
+  grid-template-rows: 80px 20px auto 20%;
   height: 100%;
   min-width: 850px;
 
   background: url("./static/background-single.png");
+}
+
+.separator_row {
+  grid-column: span 2;
+  height: 20px;
+  background: url("./static/menu-line-single.png");
 }
 
 .header {
@@ -28,7 +34,7 @@
 .main_left {
   display: grid;
   grid-template-columns: 100%;
-  grid-auto-rows: minmax(10px, 500px);
+  grid-auto-rows: minmax(10px, 600px);
   grid-auto-columns: minmax(10px, 300px);
   justify-items: end;
   align-content: center;
@@ -38,7 +44,7 @@
 .main_right {
   display: grid;
   grid-template-columns: 100%;
-  grid-auto-rows: minmax(10px, 500px);
+  grid-auto-rows: minmax(10px, 600px);
   grid-auto-columns: minmax(10px, 500px);
   justify-items: start;
   align-content: center;
@@ -48,20 +54,20 @@
 .menuBox {
   height: 100%;
   width: 100%;
-  max-height: 500px;
+  max-height: 560px;
   max-width: 500px;
 }
 
 .mapBox {
   height: 100%;
   width: 100%;
-  max-height: 500px;
+  max-height: 560px;
   max-width: 850px;
 }
 
 @media (max-height: 780px) {
   .container {
-    grid-template-rows: 80px auto 100px;
+    grid-template-rows: 80px 20px auto 20%;
     overflow-y: scroll;
   }
 }

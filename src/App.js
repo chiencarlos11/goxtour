@@ -26,7 +26,7 @@ class App extends Component {
   browserHandler = {
     ie: () => {
       console.log("This is IE");
-      this.setState({ie_detected: true})
+      this.setState({ ie_detected: true });
       return null;
     },
     default: browser => {
@@ -68,43 +68,49 @@ class App extends Component {
   }
 
   render() {
+    let display = (
+      <div>
+        <h1>We are Sorry!</h1>{" "}
+        <h3>This website is optimized for Chrome, Firefox or Safari.</h3>
+      </div>
+    );
 
+    if (!this.state.ie_detected) {
+      console.log("Displaying non IE");
+      display = (
+        <div className="container">
+          <div className="header">
+            <Navigation />
+          </div>
 
-    let display = <div><h1>We are Sorry!</h1> <h3>This website is optimized for Chrome, Firefox or Safari.</h3></div>
+          <div className="separator_row" />
 
-    if (!this.state.ie_detected){
-      console.log("Displaying non IE")
-      display=  <div className="container">
-        <div className="header">
-                      <Navigation />
-                    </div>
-        <div className="main_left">
-          <div className="menuBox">
-            <Menu
-              changeTag={this.changeTag}
-              changeTagStore={this.changeTagStore}
+          <div className="main_left">
+            <div className="menuBox">
+              <Menu
+                changeTag={this.changeTag}
+                changeTagStore={this.changeTagStore}
+              />
+            </div>
+          </div>
+
+          <div className="main_right">
+            <div className="mapBox">
+              <MapContainer />
+            </div>
+          </div>
+
+          <div className="footer">
+            <Instagram
+              access_token={this.props.access_token}
+              tags={this.state.currentTags}
             />
           </div>
         </div>
-
-        <div className="main_right">
-          <div className="mapBox">
-            <MapContainer />
-          </div>
-        </div>
-
-        <div className="footer">
-          <Instagram
-            access_token={this.props.access_token}
-            tags={this.state.currentTags}
-          />
-        </div>
-        </div>
+      );
     }
 
-
     return (
-
       <div className="height_full">
         <BrowserDetection>{this.browserHandler}</BrowserDetection>
         {display}

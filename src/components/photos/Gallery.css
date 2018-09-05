@@ -3,11 +3,16 @@
 }
 
 body {
-  height: unset;
+
+}
+
+.container{
 }
 
 .imageList {
+  all:unset;
   display: grid;
+  
 
 }
 

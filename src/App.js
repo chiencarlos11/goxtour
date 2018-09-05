@@ -114,12 +114,12 @@ class App extends Component {
               tags={this.state.currentTags}
             />
           </div>
-        </div>
+          </div>
       );
 
       if (this.state.display_main === 'GALLERY'){
         display = (
-           <div className="container">
+           <div className="containerGallery">
           <div className="header">
             <Navigation setDisplay={this.setDisplay}/>
           </div>

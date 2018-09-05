@@ -4,6 +4,17 @@ import menuLine from "../static/menu-line.png";
 import "../stylesheets/navigation.css";
 
 export default class Navigation extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  setDisplay(display){
+    console.log(JSON.stringify(this.props))
+    this.props.setDisplay(display);
+  }
+
+
   render() {
     return (
       <div className="height_full">
@@ -15,16 +26,16 @@ export default class Navigation extends Component {
           <nav>
             <ul>
               <li>
-                <a href="#">Tour Members</a>
+                <a onClick={this.setDisplay.bind(this,"TOUR MEMBERS")}>Tour Members</a>
               </li>
               <li>
-                <a href="#">Tour Stops</a>
+                <a >Tour Stops</a>
               </li>
               <li>
-                <a href="/gallery">Gallery</a>
+                <a onClick={this.setDisplay.bind(this,"GALLERY")}>Gallery</a>
               </li>
               <li>
-                <a href="#">STATS</a>
+                <a >STATS</a>
               </li>
             </ul>
           </nav>

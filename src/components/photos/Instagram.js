@@ -5,8 +5,10 @@ import InstagramEmbed from "react-instagram-embed";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./instagramSlider.css";
-import leftIcon from "../../static/white-plane-left.png";
-import rightIcon from "../../static/white-plane-right.png";
+//import leftIcon from "../../static/white-plane-left.png";
+//import rightIcon from "../../static/white-plane-right.png";
+import leftIcon from "../../static/arrowLeft.png";
+import rightIcon from "../../static/arrowRight.png";
 
 const customStyles = {
   content: {
@@ -77,8 +79,10 @@ export default class Instagram extends Component {
     var url =
       "https://api.instagram.com/v1/users/self/media/recent/?access_token=8473644139.0b82872.2185f3d55dbb4622a3fe542f43a3d098";
 
-    if (this.props.access_token){
-      url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=" + this.props.access_token;
+    if (this.props.access_token) {
+      url =
+        "https://api.instagram.com/v1/users/self/media/recent/?access_token=" +
+        this.props.access_token;
     }
 
     fetch(url)
@@ -101,9 +105,8 @@ export default class Instagram extends Component {
 
   filterResultsByTag(tags) {
     if (tags === undefined || tags.length === 0) {
-      
       this.filteredInstagramData = this.state.instagramData.data;
-    } else if (tags == '__show_all__'){
+    } else if (tags == "__show_all__") {
       this.filteredInstagramData = this.state.instagramData.data;
     } else {
       var photoList = [];
@@ -121,9 +124,8 @@ export default class Instagram extends Component {
 
   shouldComponentUpdate(nextProps, nextState) {
     if (nextProps.tags === undefined || nextProps.tags.length <= 0) {
-
       return true;
-    } else if (nextProps.tags === ['__show_all__']) {
+    } else if (nextProps.tags === ["__show_all__"]) {
       this.filterResultsByTag(nextProps.tags);
       return true;
     }

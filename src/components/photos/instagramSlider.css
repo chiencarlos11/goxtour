@@ -24,8 +24,8 @@
 }
 
 .arrow_image {
-  height: 25px;
-  width: 50px;
+  height: 77px;
+  width: 47px;
 }
 
 .slick-slider,
@@ -86,8 +86,7 @@
   background: transparent;
 }
 
-
-.frontfacing{
+.frontfacing {
   position: absolute;
   z-index: 900;
 }

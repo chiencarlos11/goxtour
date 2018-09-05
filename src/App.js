@@ -3,7 +3,7 @@ import "./App.css";
 import MapContainer from "./components/maps/MapContainer";
 import Instagram from "./components/photos/Instagram";
 import Navigation from "./components/Navigation";
-import Menu from "./components//Menu";
+import Menu from "./components/Menu";
 import BrowserDetection from "react-browser-detection";
 
 const storesData = require("./data/stores.json");

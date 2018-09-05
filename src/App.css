@@ -34,7 +34,7 @@
 .main_left {
   display: grid;
   grid-template-columns: 100%;
-  grid-auto-rows: minmax(10px, 600px);
+  grid-auto-rows: minmax(10px, 515px);
   grid-auto-columns: minmax(10px, 300px);
   justify-items: end;
   align-content: center;
@@ -43,7 +43,7 @@
 .main_right {
   display: grid;
   grid-template-columns: 100%;
-  grid-auto-rows: minmax(10px, 600px);
+  grid-auto-rows: minmax(10px, 515px);
   grid-auto-columns: minmax(10px, 500px);
   justify-items: start;
   align-content: center;
@@ -52,13 +52,13 @@
 .menuBox {
   height: 100%;
   width: 100%;
-  max-height: 600px;
+  max-height: 515px;
   max-width: 500px;
 }
 
 .mapBox {
   height: 100%;
   width: 100%;
-  max-height: 600px;
+  max-height: 515px;
   max-width: 850px;
 }

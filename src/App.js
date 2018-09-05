@@ -84,7 +84,7 @@ class App extends Component {
 
     if (!this.state.ie_detected) {
       console.log("Displaying non IE");
-
+      document.body.style.height = "100%";
       display = (
         <div className="container">
           <div className="header">
@@ -118,6 +118,7 @@ class App extends Component {
       );
 
       if (this.state.display_main === 'GALLERY'){
+        document.body.style.height = "unset";
         display = (
            <div className="containerGallery">
           <div className="header">

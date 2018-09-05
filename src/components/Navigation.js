@@ -17,7 +17,7 @@ export default class Navigation extends Component {
 
   render() {
     return (
-      <div className="height_full">
+      <div className="height_full navigation">
         <header>
           <div className="logo">
             <img className="headerImage" src={logo} alt="" />

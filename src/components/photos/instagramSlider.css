@@ -89,5 +89,5 @@
 
 .frontfacing{
   position: absolute;
-  z-index: 900;
+  z-index: 999;
 }

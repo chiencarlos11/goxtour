@@ -145,6 +145,7 @@ export default class Gallery extends Component {
       slidesPerRow: 1,
       lazyLoad: true,
     };
+    document.body.style.height = "unset";
     if (this.state.loaded == "true") {
       return (
         <div className="imageList">

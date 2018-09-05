@@ -149,10 +149,10 @@ export default class Gallery extends Component {
       return (
         <div className="imageList">
             <div className="list hover11">
-              <LazyLoad height={200}>
+              <LazyLoad height={200} offset={100}>
               {this.filteredInstagramData.map(photo => (
                 <img
-                  className="insta_image brightness"
+                  className="insta_image loading"
                   key={photo.id}
                   src={photo.images.standard_resolution.url}
                   alt={photo.id}

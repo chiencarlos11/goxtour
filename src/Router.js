@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import App from "./App";
+import Gallery from "./components/photos/Gallery"
 import ExecMenu from "./components/menu/ExecMenu";
 
 import { BrowserRouter, Route } from "react-router-dom";
@@ -20,6 +21,7 @@ class Router extends Component {
             )}
           />
           <Route exact={true} path="/menu" render={() => <ExecMenu />} />
+          <Route exact={true} path="/gallery" render={() => <Gallery />} />
         </div>
       </BrowserRouter>
     );

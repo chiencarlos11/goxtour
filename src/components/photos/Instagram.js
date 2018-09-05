@@ -145,7 +145,7 @@ export default class Instagram extends Component {
       speed: 500,
       slidesToShow: 7,
       slidesToScroll: 1,
-      autoplay: false,
+      autoplay: true,
       autoplaySpeed: 1500,
       lazyLoad: true,
       arrows: false,

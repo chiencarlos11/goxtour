@@ -36,6 +36,9 @@ class App extends Component {
   };
 
   changeTag(execID) {
+    this.setState({ selectedExec: execID });
+    console.log("EXECID = " + this.state.selectedExec);
+
     if (execID === null) {
       this.setState({ currentTags: [] });
       return;
@@ -96,7 +99,7 @@ class App extends Component {
 
           <div className="main_right">
             <div className="mapBox">
-              <MapContainer />
+              <MapContainer execId={this.state.selectedExec} />
             </div>
           </div>
 

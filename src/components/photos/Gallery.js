@@ -15,7 +15,8 @@ const customStyles = {
     marginLeft: "auto",
     marginRight: "auto",
     transform: "translate(-50%, -50%)",
-    zIndex: "900"
+    position: "fixed",
+    zIndex: "999"
   }
 };
 

@@ -93,7 +93,9 @@
 
 .ModalBox{
   display: grid;
-  grid-template-columns: 1fr repeat(2,minmax(auto, 16em)) 1fr
+  grid-template-columns: 1fr repeat(2,minmax(auto, 16em)) 1fr;
+  background-color: white;
+  border-style: none;
 }
 
 .ModalBox div.box1 {

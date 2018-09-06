@@ -86,3 +86,7 @@ body {
 .loading{
     animation: image_loading 1s 0s linear;
 }
+
+.ReactModal__Overlay{
+  z-index: 999;
+}

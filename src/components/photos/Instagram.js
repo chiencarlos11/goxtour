@@ -270,6 +270,7 @@ export default class Instagram extends Component {
               onRequestClose={this.closeModal}
               style={customStyles}
               contentLabel="Example Modal"
+              className="frontfacing"
             >
               <h2 ref={subtitle => (this.subtitle = subtitle)} />
 

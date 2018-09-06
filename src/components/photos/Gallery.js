@@ -149,7 +149,7 @@ export default class Gallery extends Component {
     if (this.state.loaded == "true") {
       return (
         <div className="imageList">
-            <div className="list hover11">
+            <div className="hover11">
               <LazyLoad height={200} offset={100}>
               {this.filteredInstagramData.map(photo => (
                 <img

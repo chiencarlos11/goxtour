@@ -68,6 +68,8 @@ body {
 }
 .hover11 img:hover {
   opacity: .8;
+  position: float;
+  z-index:0;
 }
 
 

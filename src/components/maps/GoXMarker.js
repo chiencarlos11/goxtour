@@ -12,7 +12,7 @@ export default class GoXMarker extends React.Component {
     if (this.props.state == "active") {
       return <Marker position={this.props.location} icon={PlaneIcon} />;
     } else {
-      return <Marker position={this.props.location} />;
+      return null;
     }
   }
 }

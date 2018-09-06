@@ -18,25 +18,32 @@ const customStyles = {
     marginLeft: "auto",
     marginRight: "auto",
     transform: "translate(-50%, -50%)",
-    zIndex: "900"
+    zIndex: "900",
+    opacity: "0.5,"
   }
 };
 
 Modal.setAppElement("#root");
 
+function matchID(element, imageID) {
+  console.log("element = " + element.id);
+  console.log("imageID = " + imageID);
+  return element.id === imageID;
+}
+
 export default class Instagram extends Component {
   constructor(props) {
     super(props);
 
-    this.filteredInstagramData = null;
+    this.filteredInstagramData = "";
 
     this.state = {
       currentExecId: this.props.execId,
       currentStoreId: this.props.storeId,
-      currentTag: this.props.tag,
+      currentTag: this.props.tags,
       loaded: "false",
       modalIsOpen: false,
-      current_photo_link: null
+      current_photo: ""
     };
 
     this.nextSlide = this.nextSlide.bind(this);
@@ -45,11 +52,15 @@ export default class Instagram extends Component {
     //Modal
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+
+    //Instagram
+    this.previousImage = this.previousImage.bind(this);
+    this.nextImage = this.nextImage.bind(this);
   }
 
   openModal(instagram_link) {
     this.setState({ modalIsOpen: true });
-    this.setState({ current_photo_link: instagram_link });
+    this.setState({ current_photo: instagram_link });
   }
 
   afterOpenModal() {
@@ -77,8 +88,10 @@ export default class Instagram extends Component {
     var url =
       "https://api.instagram.com/v1/users/self/media/recent/?access_token=8473644139.0b82872.2185f3d55dbb4622a3fe542f43a3d098";
 
-    if (this.props.access_token){
-      url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=" + this.props.access_token;
+    if (this.props.access_token) {
+      url =
+        "https://api.instagram.com/v1/users/self/media/recent/?access_token=" +
+        this.props.access_token;
     }
 
     fetch(url)
@@ -101,9 +114,8 @@ export default class Instagram extends Component {
 
   filterResultsByTag(tags) {
     if (tags === undefined || tags.length === 0) {
-      
       this.filteredInstagramData = this.state.instagramData.data;
-    } else if (tags == '__show_all__'){
+    } else if (tags == "__show_all__") {
       this.filteredInstagramData = this.state.instagramData.data;
     } else {
       var photoList = [];
@@ -121,9 +133,8 @@ export default class Instagram extends Component {
 
   shouldComponentUpdate(nextProps, nextState) {
     if (nextProps.tags === undefined || nextProps.tags.length <= 0) {
-
       return true;
-    } else if (nextProps.tags === ['__show_all__']) {
+    } else if (nextProps.tags === ["__show_all__"]) {
       this.filterResultsByTag(nextProps.tags);
       return true;
     }
@@ -134,6 +145,53 @@ export default class Instagram extends Component {
     }
 
     return false;
+  }
+
+  previousImage(imageID) {
+    let index = 0;
+    let array = [];
+
+    let curr = this.state.current_photo;
+
+    if (this.state.currentTag) {
+      array = this.filteredInstagramData;
+    } else {
+      array = this.state.instagramData.data;
+    }
+
+    index = array.findIndex(function(instagramImage) {
+      return curr.id === instagramImage.id;
+    });
+
+    if (index === 0) {
+      this.setState({ current_photo: array[array.length - 1] });
+    } else {
+      this.setState({ current_photo: array[index - 1] });
+    }
+
+  }
+
+  nextImage(imageID) {
+    let index = 0;
+    let array = [];
+
+    let curr = this.state.current_photo;
+
+    if (this.state.currentTag) {
+      array = this.filteredInstagramData;
+    } else {
+      array = this.state.instagramData.data;
+    }
+
+    index = array.findIndex(function(instagramImage) {
+      return curr.id === instagramImage.id;
+    });
+
+    if (index === (array.length -1)) {
+      this.setState({ current_photo: array[0] });
+    } else {
+      this.setState({ current_photo: array[index + 1] });
+    }
   }
 
   render() {
@@ -193,7 +251,7 @@ export default class Instagram extends Component {
                   key={photo.id}
                   src={photo.images.standard_resolution.url}
                   alt={photo.id}
-                  onClick={this.openModal.bind(this, photo.link)}
+                  onClick={this.openModal.bind(this, photo)}
                 />
               ))}
             </Slider>
@@ -214,18 +272,47 @@ export default class Instagram extends Component {
               contentLabel="Example Modal"
             >
               <h2 ref={subtitle => (this.subtitle = subtitle)} />
-              <InstagramEmbed
-                url={this.state.current_photo_link}
-                maxWidth={600}
-                hideCaption={false}
-                containerTagName="div"
-                protocol=""
-                injectScript
-                onLoading={() => {}}
-                onSuccess={() => {}}
-                onAfterRender={() => {}}
-                onFailure={() => {}}
-              />
+
+              <div className="ModalBox">
+                <div className="box2">
+                  <InstagramEmbed
+                    url={this.state.current_photo.link}
+                    maxWidth={600}
+                    hideCaption={false}
+                    containerTagName="div"
+                    protocol=""
+                    injectScript
+                    onLoading={() => {}}
+                    onSuccess={() => {}}
+                    onAfterRender={() => {}}
+                    onFailure={() => {}}
+                  />
+                </div>
+
+                <div className="sliderButton box1">
+                  <button
+                    onClick={this.previousImage.bind(
+                      this,
+                      this.state.current_photo.id
+                    )}
+                  >
+                    {" "}
+                    BACK{" "}
+                  </button>
+                </div>
+
+                <div className="sliderButton box3">
+                  <button
+                    onClick={this.nextImage.bind(
+                      this,
+                      this.state.current_photo.id
+                    )}
+                  >
+                    {" "}
+                    NEXT{" "}
+                  </button>
+                </div>
+              </div>
             </Modal>
           </div>
         </div>

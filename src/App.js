@@ -15,7 +15,7 @@ class App extends Component {
 
     this.state = {
       currentTags: [],
-      selectedExec: null,
+      selectedExec: -1,
       ie_detected: false
     };
 

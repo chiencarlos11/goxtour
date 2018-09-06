@@ -19,14 +19,10 @@ export default class MapContainer extends React.Component {
     }
 
     return false;
-
-    console.log("componentUpdate: " + nextProps.execId);
   }
 
   render() {
-    console.log("RENDER: " + this.state.currentExecId);
-
-    if (this.state.currentExecId) {
+    if (this.state.currentExecId >= 0) {
       return (
         <div
           style={{

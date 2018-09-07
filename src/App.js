@@ -16,7 +16,7 @@ class App extends Component {
 
     this.state = {
       currentTags: [],
-      selectedExec: -1,,
+      selectedExec: -1,
       ie_detected: false,
       display_main: "TOUR MEMBERS"
     };

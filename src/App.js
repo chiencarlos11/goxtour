@@ -5,6 +5,7 @@ import Instagram from "./components/photos/Instagram";
 import Navigation from "./components/Navigation";
 import Menu from "./components/Menu";
 import BrowserDetection from "react-browser-detection";
+import Gallery from "./components/photos/Gallery"
 
 const storesData = require("./data/stores.json");
 const avatarsData = require("./data/avatars.json");
@@ -15,12 +16,14 @@ class App extends Component {
 
     this.state = {
       currentTags: [],
-      selectedExec: -1,
-      ie_detected: false
+      selectedExec: -1,,
+      ie_detected: false,
+      display_main: "TOUR MEMBERS"
     };
 
     this.changeTag = this.changeTag.bind(this);
     this.changeTagStore = this.changeTagStore.bind(this);
+    this.setDisplay = this.setDisplay.bind(this);
   }
 
   browserHandler = {
@@ -70,6 +73,10 @@ class App extends Component {
     }
   }
 
+  setDisplay(display){
+    this.setState({display_main: display})
+  }
+
   render() {
     let display = (
       <div>
@@ -80,10 +87,11 @@ class App extends Component {
 
     if (!this.state.ie_detected) {
       console.log("Displaying non IE");
+      document.body.style.height = "100%";
       display = (
         <div className="container">
           <div className="header">
-            <Navigation />
+            <Navigation setDisplay={this.setDisplay}/>
           </div>
 
           <div className="separator_row" />
@@ -109,8 +117,22 @@ class App extends Component {
               tags={this.state.currentTags}
             />
           </div>
-        </div>
+          </div>
       );
+
+      if (this.state.display_main === 'GALLERY'){
+        document.body.style.height = "unset";
+        display = (
+           <div className="containerGallery">
+          <div className="header">
+            <Navigation setDisplay={this.setDisplay}/>
+          </div>
+
+          <div className="separator_row" />
+          <Gallery/>
+          </div>
+          )
+      }
     }
 
     return (

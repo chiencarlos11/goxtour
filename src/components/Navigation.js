@@ -38,12 +38,6 @@ export default class Navigation extends Component {
               <li>
                 <a >STATS</a>
               </li>
-              <li>
-                <a href="#">Gallery</a>
-              </li>
-              <li>
-                <a href="#">Stats</a>
-              </li>
             </ul>
           </nav>
           <label htmlFor="nav-toggle" className="nav-toggle-label">

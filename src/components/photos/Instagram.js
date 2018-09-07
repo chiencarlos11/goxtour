@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./instagramSlider.css";
 import leftIcon from "../../static/white-plane-left.png";
 import rightIcon from "../../static/white-plane-right.png";
+import "../../stylesheets/line-awesome/css/line-awesome.min.css"
 
 const customStyles = {
   content: {
@@ -18,8 +19,6 @@ const customStyles = {
     marginLeft: "auto",
     marginRight: "auto",
     transform: "translate(-50%, -50%)",
-    zIndex: "900",
-    opacity: "0.5,"
   }
 };
 
@@ -269,7 +268,6 @@ export default class Instagram extends Component {
               onAfterOpen={this.afterOpenModal}
               onRequestClose={this.closeModal}
               style={customStyles}
-              contentLabel="Example Modal"
               className="frontfacing"
             >
               <h2 ref={subtitle => (this.subtitle = subtitle)} />
@@ -291,27 +289,26 @@ export default class Instagram extends Component {
                 </div>
 
                 <div className="sliderButton box1">
-                  <button
+                  <a
                     onClick={this.previousImage.bind(
                       this,
                       this.state.current_photo.id
                     )}
                   >
-                    {" "}
-                    BACK{" "}
-                  </button>
+                  <i class="la la-chevron-left la-4x"></i>
+                  </a>
+
                 </div>
 
                 <div className="sliderButton box3">
-                  <button
+                  <a className="HBoOv coreSpriteRightPaginationArrow"
                     onClick={this.nextImage.bind(
                       this,
                       this.state.current_photo.id
                     )}
                   >
-                    {" "}
-                    NEXT{" "}
-                  </button>
+                  <i class="la la-chevron-right la-4x"></i>
+                  </a>
                 </div>
               </div>
             </Modal>

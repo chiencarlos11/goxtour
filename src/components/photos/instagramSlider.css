@@ -94,7 +94,6 @@
 .ModalBox{
   display: grid;
   grid-template-columns: 1fr repeat(2,minmax(auto, 16em)) 1fr;
-  background-color: white;
   border-style: none;
 }
 
@@ -117,4 +116,18 @@
   justify-self: center;
   align-self: center;
   column-span: 5%;
+}
+
+@keyframes image_loading{
+    0%{
+        opacity: 0;
+        }
+    99%{
+        transform: rotate(xx);
+        opacity: 1;
+        }
+}
+
+.loadingModal{
+    animation: image_loading 2s 0s linear;
 }

@@ -149,7 +149,7 @@ export default class Gallery extends Component {
       return (
         <div className="imageList">
           <div className="hover11">
-            <LazyLoad height={200} offset={100}>
+            <LazyLoad height={200} offset={100} once>
               {this.filteredInstagramData.map(photo => (
                 <img
                   className="insta_image loading"

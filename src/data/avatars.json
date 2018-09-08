@@ -2,7 +2,7 @@
   "avatars": [
     {
       "id": 0,
-      "stores": [0],
+      "stores": [2203, 2219, 3209, 3225],
       "tag": "goxtour2018",
       "name": "DAVID INGRAM",
       "title": "CHIEF EXECUTIVE OFFICER",
@@ -11,7 +11,7 @@
     },
     {
       "id": 1,
-      "stores": [1, 2, 3,4],
+      "stores": [1, 2, 3, 4],
       "tag": "scmississauga",
       "name": "JASON MULLIMS",
       "title": "PRESIDENT & COO",

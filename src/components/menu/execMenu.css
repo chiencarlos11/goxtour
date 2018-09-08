@@ -95,6 +95,16 @@
   text-transform: uppercase;
 }
 
+.storeListContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  align-content: top;
+  justify-content: center;
+  align-items: top;
+  justify-items: center;
+}
+
 @media screen and (max-width: 1000px) {
   .execName {
     font-size: 24px;

@@ -12,9 +12,18 @@ import execIcon_4 from "../../static/ExecPortraits/StevenPoole.png";
 const execData = require("../../data/avatars.json");
 
 class ExecMenu extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      currentExecId: this.props.execId
+    };
+  }
+
   handleClick(id) {
     this.props.changeTag(id);
     this.props.displayStore(id);
+    this.setState({ currentExecId: id });
   }
 
   getPortrait(id) {
@@ -34,7 +43,15 @@ class ExecMenu extends Component {
     }
   }
 
-  render() {
+  getRender() {
+    if (this.state.currentExecId >= 0) {
+      return this.getStores();
+    } else {
+      return this.getExecs();
+    }
+  }
+
+  getExecs() {
     let Execs = execData.avatars.map(exec => (
       <div
         className="menu-cell"
@@ -51,12 +68,46 @@ class ExecMenu extends Component {
       </div>
     ));
 
+    return Execs;
+  }
+
+  getStores() {
+    let exec = execData.avatars[this.state.currentExecId];
+    let StoreList = exec.stores.map(e => <div key={e}>{e}</div>);
+
+    return (
+      <div>
+        <div
+          className="menu-cell"
+          key={exec.id}
+          onClick={this.handleClick.bind(this, exec.id)}
+        >
+          <div className="execImageBox">
+            <img className="execImage" src={this.getPortrait(exec.id)} alt="" />
+          </div>
+          <div className="execNameBox">
+            <div className="execName">{exec.name}</div>
+            <div className="execTitle">{exec.title}</div>
+          </div>
+        </div>
+        <br />
+        <div className="storeListContainer">{StoreList}</div>
+      </div>
+    );
+  }
+
+  render() {
     return (
       <div className="container-menu">
         <div className="menu-top">
-          <img className="image-top" src={logo} alt="" onClick={this.handleClick.bind(this, '__show_all__')} />
+          <img
+            className="image-top"
+            src={logo}
+            alt=""
+            onClick={this.handleClick.bind(this, "__show_all__")}
+          />
         </div>
-        <div className="menu-main">{Execs}</div>
+        <div className="menu-main">{this.getRender()}</div>
       </div>
     );
   }

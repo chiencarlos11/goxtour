@@ -5,7 +5,7 @@ import Instagram from "./components/photos/Instagram";
 import Navigation from "./components/Navigation";
 import Menu from "./components/Menu";
 import BrowserDetection from "react-browser-detection";
-import Gallery from "./components/photos/Gallery"
+import Gallery from "./components/photos/Gallery";
 
 const storesData = require("./data/stores.json");
 const avatarsData = require("./data/avatars.json");
@@ -73,8 +73,8 @@ class App extends Component {
     }
   }
 
-  setDisplay(display){
-    this.setState({display_main: display})
+  setDisplay(display) {
+    this.setState({ display_main: display });
   }
 
   render() {
@@ -91,7 +91,7 @@ class App extends Component {
       display = (
         <div className="container">
           <div className="header">
-            <Navigation setDisplay={this.setDisplay}/>
+            <Navigation setDisplay={this.setDisplay} />
           </div>
 
           <div className="separator_row" />
@@ -117,21 +117,21 @@ class App extends Component {
               tags={this.state.currentTags}
             />
           </div>
-          </div>
+        </div>
       );
 
-      if (this.state.display_main === 'GALLERY'){
+      if (this.state.display_main === "GALLERY") {
         document.body.style.height = "unset";
         display = (
-           <div className="containerGallery">
-          <div className="header">
-            <Navigation setDisplay={this.setDisplay}/>
-          </div>
+          <div className="containerGallery">
+            <div className="header">
+              <Navigation setDisplay={this.setDisplay} />
+            </div>
 
-          <div className="separator_row" />
-          <Gallery/>
+            <div className="separator_row" />
+            <Gallery />
           </div>
-          )
+        );
       }
     }
 

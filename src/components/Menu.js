@@ -8,7 +8,7 @@ export default class Menu extends Component {
 
     this.state = {
       content: "Executives",
-      execID: null
+      execID: this.props.execId
     };
 
     this.displayStore = this.displayStore.bind(this);
@@ -34,6 +34,7 @@ export default class Menu extends Component {
       case "Executives":
         Show = (
           <ExecMenu
+            execId={this.state.execID}
             changeTag={this.props.changeTag}
             displayStore={this.displayStore}
           />

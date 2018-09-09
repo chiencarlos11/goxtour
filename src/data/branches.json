@@ -7,7 +7,8 @@
       "Latitude": 50.006977,
       "Longitude": -110.644779,
       "State": "active",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2219,
@@ -15,8 +16,9 @@
       "Region": 68,
       "Latitude": 50.965848,
       "Longitude": -114.074109,
-      "State": "Inactive",
-      "Tag": ""
+      "State": "active",
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2103,
@@ -24,8 +26,9 @@
       "Region": 63,
       "Latitude": 49.144747,
       "Longitude": -121.958789,
-      "State": "Inactive",
-      "Tag": ""
+      "State": "active",
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2530,
@@ -33,8 +36,9 @@
       "Region": 64,
       "Latitude": 49.14441,
       "Longitude": -121.95818,
-      "State": "Inactive",
-      "Tag": ""
+      "State": "active",
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2597,
@@ -43,7 +47,8 @@
       "Latitude": 42.77945,
       "Longitude": -81.17661,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 3527,
@@ -52,7 +57,8 @@
       "Latitude": 45.83142,
       "Longitude": -77.14672,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3550,
@@ -61,7 +67,8 @@
       "Latitude": 45.3694,
       "Longitude": -75.77147,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3924,
@@ -70,7 +77,8 @@
       "Latitude": 48.94582,
       "Longitude": -55.65397,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3928,
@@ -79,7 +87,8 @@
       "Latitude": 47.72768,
       "Longitude": -53.24443,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3931,
@@ -88,7 +97,8 @@
       "Latitude": 47.50135,
       "Longitude": -52.81051,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3929,
@@ -97,7 +107,8 @@
       "Latitude": 45.61298,
       "Longitude": -61.33657,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3556,
@@ -106,7 +117,8 @@
       "Latitude": 45.39946,
       "Longitude": -75.62393,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3905,
@@ -115,7 +127,8 @@
       "Latitude": 46.25133,
       "Longitude": -63.13863,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3923,
@@ -124,7 +137,8 @@
       "Latitude": 46.41161,
       "Longitude": -63.78238,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3706,
@@ -133,7 +147,8 @@
       "Latitude": 46.35252,
       "Longitude": -72.54559,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3554,
@@ -142,7 +157,8 @@
       "Latitude": 42.29858,
       "Longitude": -83.02076,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3209,
@@ -151,7 +167,8 @@
       "Latitude": 51.08177,
       "Longitude": -113.98419,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3225,
@@ -160,7 +177,8 @@
       "Latitude": 51.79552,
       "Longitude": -114.13368,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3595,
@@ -169,7 +187,8 @@
       "Latitude": 44.1061,
       "Longitude": -77.5577,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 2540,
@@ -178,7 +197,8 @@
       "Latitude": 42.86213,
       "Longitude": -80.72884,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2408,
@@ -187,7 +207,8 @@
       "Latitude": 49.82307,
       "Longitude": -97.11429,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2920,
@@ -196,7 +217,8 @@
       "Latitude": 44.68227,
       "Longitude": -63.5394,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2508,
@@ -205,7 +227,8 @@
       "Latitude": 43.13218,
       "Longitude": -80.74703,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 3107,
@@ -214,7 +237,8 @@
       "Latitude": 49.19858,
       "Longitude": -122.84614,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3525,
@@ -223,7 +247,8 @@
       "Latitude": 44.89525,
       "Longitude": -76.02732,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3909,
@@ -232,7 +257,8 @@
       "Latitude": 45.27766,
       "Longitude": -66.07901,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3306,
@@ -241,7 +267,8 @@
       "Latitude": 50.4374,
       "Longitude": -104.61813,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3221,
@@ -250,7 +277,8 @@
       "Latitude": 54.40771,
       "Longitude": -110.20419,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3925,
@@ -259,7 +287,8 @@
       "Latitude": 45.81237,
       "Longitude": -64.20001,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3915,
@@ -268,7 +297,8 @@
       "Latitude": 45.59111,
       "Longitude": -62.64804,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3511,
@@ -277,7 +307,8 @@
       "Latitude": 43.71948,
       "Longitude": -79.63794,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3578,
@@ -286,7 +317,8 @@
       "Latitude": 42.83481,
       "Longitude": -80.30831,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3223,
@@ -295,7 +327,8 @@
       "Latitude": 55.272889,
       "Longitude": -114.784569,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3112,
@@ -304,7 +337,8 @@
       "Latitude": 49.882811,
       "Longitude": -119.430799,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3701,
@@ -313,7 +347,8 @@
       "Latitude": 45.532421,
       "Longitude": -73.484451,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3702,
@@ -322,7 +357,8 @@
       "Latitude": 45.395794,
       "Longitude": -71.895371,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3934,
@@ -331,7 +367,8 @@
       "Latitude": 48.961472,
       "Longitude": -54.598475,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3528,
@@ -340,7 +377,8 @@
       "Latitude": 45.028011,
       "Longitude": -74.733785,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3210,
@@ -349,7 +387,8 @@
       "Latitude": 51.03823,
       "Longitude": -113.992694,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3588,
@@ -358,7 +397,8 @@
       "Latitude": 44.158958,
       "Longitude": -80.99801,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3913,
@@ -367,7 +407,8 @@
       "Latitude": 47.030791,
       "Longitude": -65.493437,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3534,
@@ -376,7 +417,8 @@
       "Latitude": 43.741204,
       "Longitude": -79.583828,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3539,
@@ -385,7 +427,8 @@
       "Latitude": 42.304899,
       "Longitude": -82.97895,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3311,
@@ -394,7 +437,8 @@
       "Latitude": 52.113878,
       "Longitude": -106.60801,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 2208,
@@ -403,7 +447,8 @@
       "Latitude": 52.283975,
       "Longitude": -113.765788,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2226,
@@ -412,7 +457,8 @@
       "Latitude": 53.468511,
       "Longitude": -113.488749,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2102,
@@ -421,7 +467,8 @@
       "Latitude": 49.219991,
       "Longitude": -124.028043,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2105,
@@ -430,7 +477,8 @@
       "Latitude": 49.050569,
       "Longitude": -122.324574,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2109,
@@ -439,7 +487,8 @@
       "Latitude": 50.653841,
       "Longitude": -120.376535,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2505,
@@ -448,7 +497,8 @@
       "Latitude": 43.224092,
       "Longitude": -79.748268,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 3230,
@@ -457,7 +507,8 @@
       "Latitude": 51.055761,
       "Longitude": -113.985341,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3105,
@@ -466,7 +517,8 @@
       "Latitude": 53.910447,
       "Longitude": -122.760778,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3113,
@@ -475,7 +527,8 @@
       "Latitude": 50.278136,
       "Longitude": -119.275378,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3901,
@@ -484,7 +537,8 @@
       "Latitude": 47.629241,
       "Longitude": -65.686157,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3510,
@@ -493,7 +547,8 @@
       "Latitude": 43.759087,
       "Longitude": -79.518808,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3537,
@@ -502,7 +557,8 @@
       "Latitude": 43.707879,
       "Longitude": -79.476261,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3703,
@@ -511,7 +567,8 @@
       "Latitude": 46.821622,
       "Longitude": -71.256985,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3304,
@@ -520,7 +577,8 @@
       "Latitude": 53.198816,
       "Longitude": -105.732905,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 2215,
@@ -529,7 +587,8 @@
       "Latitude": 49.727688,
       "Longitude": -112.796826,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2224,
@@ -538,7 +597,8 @@
       "Latitude": 51.07377,
       "Longitude": -114.061953,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 22032,
@@ -547,7 +607,8 @@
       "Latitude": 50.006969,
       "Longitude": -110.644733,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2101,
@@ -556,7 +617,8 @@
       "Latitude": 48.425564,
       "Longitude": -123.361931,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2110,
@@ -565,7 +627,8 @@
       "Latitude": 49.244965,
       "Longitude": -124.79592,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2107,
@@ -574,7 +637,8 @@
       "Latitude": 49.262406,
       "Longitude": -123.095744,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2118,
@@ -583,7 +647,8 @@
       "Latitude": 49.231861,
       "Longitude": -123.005444,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 21032,
@@ -592,7 +657,8 @@
       "Latitude": 49.144401,
       "Longitude": -121.95885,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 21092,
@@ -601,7 +667,8 @@
       "Latitude": 50.653795,
       "Longitude": -120.376541,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2144,
@@ -610,7 +677,8 @@
       "Latitude": 50.699861,
       "Longitude": -120.362269,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2140,
@@ -619,7 +687,8 @@
       "Latitude": 49.118304,
       "Longitude": -122.6704,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2145,
@@ -628,7 +697,8 @@
       "Latitude": 49.280142,
       "Longitude": -122.968662,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2306,
@@ -637,7 +707,8 @@
       "Latitude": 51.209306,
       "Longitude": -102.451747,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2307,
@@ -646,7 +717,8 @@
       "Latitude": 50.404583,
       "Longitude": -105.533936,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2527,
@@ -655,7 +727,8 @@
       "Latitude": 43.374464,
       "Longitude": -80.31745,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2607,
@@ -664,7 +737,8 @@
       "Latitude": 45.028017,
       "Longitude": -74.73378,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2205,
@@ -673,7 +747,8 @@
       "Latitude": 49.655901,
       "Longitude": -112.791633,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2918,
@@ -682,7 +757,8 @@
       "Latitude": 47.727435,
       "Longitude": -53.245395,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2903,
@@ -691,7 +767,8 @@
       "Latitude": 45.590874,
       "Longitude": -62.648222,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2905,
@@ -700,7 +777,8 @@
       "Latitude": 44.656204,
       "Longitude": -63.630445,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2942,
@@ -709,7 +787,8 @@
       "Latitude": 45.93141,
       "Longitude": -66.661485,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2953,
@@ -718,7 +797,8 @@
       "Latitude": 48.960108,
       "Longitude": -54.597699,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2911,
@@ -727,7 +807,8 @@
       "Latitude": 44.968838,
       "Longitude": -64.927264,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2927,
@@ -736,7 +817,8 @@
       "Latitude": 44.671988,
       "Longitude": -63.579619,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2535,
@@ -745,7 +827,8 @@
       "Latitude": 45.821036,
       "Longitude": -77.084465,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2539,
@@ -754,7 +837,8 @@
       "Latitude": 45.369595,
       "Longitude": -75.771685,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2541,
@@ -763,7 +847,8 @@
       "Latitude": 45.474713,
       "Longitude": -76.661489,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2950,
@@ -772,7 +857,8 @@
       "Latitude": 45.256615,
       "Longitude": -66.1017,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2904,
@@ -781,7 +867,8 @@
       "Latitude": 47.534505,
       "Longitude": -52.749548,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2946,
@@ -790,7 +877,8 @@
       "Latitude": 48.94743,
       "Longitude": -55.654038,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2915,
@@ -799,7 +887,8 @@
       "Latitude": 45.370864,
       "Longitude": -63.302831,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2932,
@@ -808,7 +897,8 @@
       "Latitude": 43.841635,
       "Longitude": -66.095701,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2938,
@@ -817,7 +907,8 @@
       "Latitude": 45.069663,
       "Longitude": -64.442569,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2951,
@@ -826,7 +917,8 @@
       "Latitude": 44.607024,
       "Longitude": -65.771156,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2562,
@@ -835,7 +927,8 @@
       "Latitude": 45.135399,
       "Longitude": -76.123904,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2579,
@@ -844,7 +937,8 @@
       "Latitude": 43.176213,
       "Longitude": -79.214405,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2910,
@@ -853,7 +947,8 @@
       "Latitude": 46.241887,
       "Longitude": -63.134696,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2937,
@@ -862,7 +957,8 @@
       "Latitude": 46.41683,
       "Longitude": -63.779221,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2606,
@@ -871,7 +967,8 @@
       "Latitude": 43.609563,
       "Longitude": -79.586559,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2301,
@@ -880,7 +977,8 @@
       "Latitude": 52.12975,
       "Longitude": -106.679395,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2218,
@@ -889,7 +987,8 @@
       "Latitude": 51.06038,
       "Longitude": -113.981096,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2501,
@@ -898,7 +997,8 @@
       "Latitude": 43.577878,
       "Longitude": -79.614385,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2565,
@@ -907,7 +1007,8 @@
       "Latitude": 43.583312,
       "Longitude": -79.756478,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2543,
@@ -916,7 +1017,8 @@
       "Latitude": 43.667045,
       "Longitude": -79.385576,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2547,
@@ -925,7 +1027,8 @@
       "Latitude": 43.72519,
       "Longitude": -79.290161,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2571,
@@ -934,7 +1037,8 @@
       "Latitude": 43.771802,
       "Longitude": -79.185195,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2575,
@@ -943,7 +1047,8 @@
       "Latitude": 43.716947,
       "Longitude": -79.447232,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2603,
@@ -952,7 +1057,8 @@
       "Latitude": 43.696158,
       "Longitude": -79.545112,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2614,
@@ -961,7 +1067,8 @@
       "Latitude": 43.784922,
       "Longitude": -79.476593,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2908,
@@ -970,7 +1077,8 @@
       "Latitude": 44.774884,
       "Longitude": -63.693089,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2510,
@@ -979,7 +1087,8 @@
       "Latitude": 42.934136,
       "Longitude": -81.221195,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2552,
@@ -988,7 +1097,8 @@
       "Latitude": 43.226,
       "Longitude": -79.881883,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2713,
@@ -997,7 +1107,8 @@
       "Latitude": 45.744091,
       "Longitude": -73.45187,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2589,
@@ -1006,7 +1117,8 @@
       "Latitude": 45.356318,
       "Longitude": -75.737445,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2216,
@@ -1015,7 +1127,8 @@
       "Latitude": 52.956815,
       "Longitude": -113.391048,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2209,
@@ -1024,7 +1137,8 @@
       "Latitude": 54.432064,
       "Longitude": -110.204049,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2214,
@@ -1033,7 +1147,8 @@
       "Latitude": 53.459475,
       "Longitude": -113.433427,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2221,
@@ -1042,7 +1157,8 @@
       "Latitude": 53.564706,
       "Longitude": -113.519839,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2227,
@@ -1051,7 +1167,8 @@
       "Latitude": 53.517847,
       "Longitude": -113.485396,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2117,
@@ -1060,7 +1177,8 @@
       "Latitude": 49.881552,
       "Longitude": -119.475251,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2126,
@@ -1069,7 +1187,8 @@
       "Latitude": 49.13237,
       "Longitude": -122.321949,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2135,
@@ -1078,7 +1197,8 @@
       "Latitude": 49.165013,
       "Longitude": -122.800973,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2138,
@@ -1087,7 +1207,8 @@
       "Latitude": 48.448979,
       "Longitude": -123.398103,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 21402,
@@ -1096,7 +1217,8 @@
       "Latitude": 49.118479,
       "Longitude": -122.669559,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2143,
@@ -1105,7 +1227,8 @@
       "Latitude": 49.836736,
       "Longitude": -119.618209,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 21442,
@@ -1114,7 +1237,8 @@
       "Latitude": 50.699725,
       "Longitude": -120.362264,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2592,
@@ -1123,7 +1247,8 @@
       "Latitude": 45.46907,
       "Longitude": -75.530196,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2594,
@@ -1132,7 +1257,8 @@
       "Latitude": 45.416302,
       "Longitude": -75.696986,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2600,
@@ -1141,7 +1267,8 @@
       "Latitude": 44.101852,
       "Longitude": -77.575679,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2604,
@@ -1150,7 +1277,8 @@
       "Latitude": 43.262448,
       "Longitude": -79.889029,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 3106,
@@ -1159,7 +1287,8 @@
       "Latitude": 49.262474,
       "Longitude": -123.097128,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3104,
@@ -1168,7 +1297,8 @@
       "Latitude": 49.155724,
       "Longitude": -123.952068,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3102,
@@ -1177,7 +1307,8 @@
       "Latitude": 49.050544,
       "Longitude": -122.324569,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3120,
@@ -1186,7 +1317,8 @@
       "Latitude": 49.151976,
       "Longitude": -121.978167,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3103,
@@ -1195,7 +1327,8 @@
       "Latitude": 48.425262,
       "Longitude": -123.361744,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 2402,
@@ -1204,7 +1337,8 @@
       "Latitude": 49.953415,
       "Longitude": -97.148861,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2403,
@@ -1213,7 +1347,8 @@
       "Latitude": 49.884994,
       "Longitude": -97.170678,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2404,
@@ -1222,7 +1357,8 @@
       "Latitude": 49.882262,
       "Longitude": -97.127303,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2406,
@@ -1231,7 +1367,8 @@
       "Latitude": 49.958968,
       "Longitude": -97.089954,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2407,
@@ -1240,7 +1377,8 @@
       "Latitude": 50.142081,
       "Longitude": -96.877514,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2409,
@@ -1249,7 +1387,8 @@
       "Latitude": 49.898696,
       "Longitude": -97.064939,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2907,
@@ -1258,7 +1397,8 @@
       "Latitude": 45.978482,
       "Longitude": -66.658022,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2926,
@@ -1267,7 +1407,8 @@
       "Latitude": 45.277845,
       "Longitude": -66.078727,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2902,
@@ -1276,7 +1417,8 @@
       "Latitude": 45.311659,
       "Longitude": -66.021949,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2941,
@@ -1285,7 +1427,8 @@
       "Latitude": 45.726121,
       "Longitude": -65.529302,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2947,
@@ -1294,7 +1437,8 @@
       "Latitude": 46.108587,
       "Longitude": -64.82467,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2901,
@@ -1303,7 +1447,8 @@
       "Latitude": 46.123004,
       "Longitude": -64.851712,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2916,
@@ -1312,7 +1457,8 @@
       "Latitude": 48.949936,
       "Longitude": -54.614819,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2923,
@@ -1321,7 +1467,8 @@
       "Latitude": 47.5919,
       "Longitude": -52.711187,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2931,
@@ -1330,7 +1477,8 @@
       "Latitude": 47.5584,
       "Longitude": -52.760793,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2913,
@@ -1339,7 +1487,8 @@
       "Latitude": 47.509173,
       "Longitude": -52.976909,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2917,
@@ -1348,7 +1497,8 @@
       "Latitude": 45.812184,
       "Longitude": -64.199762,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2933,
@@ -1357,7 +1507,8 @@
       "Latitude": 44.649339,
       "Longitude": -63.677148,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2909,
@@ -1366,7 +1517,8 @@
       "Latitude": 45.616769,
       "Longitude": -61.333308,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2502,
@@ -1375,7 +1527,8 @@
       "Latitude": 43.540872,
       "Longitude": -80.279273,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2507,
@@ -1384,7 +1537,8 @@
       "Latitude": 42.290369,
       "Longitude": -83.060192,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2513,
@@ -1393,7 +1547,8 @@
       "Latitude": 42.311979,
       "Longitude": -82.938581,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2516,
@@ -1402,7 +1557,8 @@
       "Latitude": 45.027622,
       "Longitude": -74.753531,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2526,
@@ -1411,7 +1567,8 @@
       "Latitude": 43.743646,
       "Longitude": -79.214651,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2528,
@@ -1420,7 +1577,8 @@
       "Latitude": 42.037785,
       "Longitude": -82.601621,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2546,
@@ -1429,7 +1587,8 @@
       "Latitude": 43.249936,
       "Longitude": -79.807333,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2551,
@@ -1438,7 +1597,8 @@
       "Latitude": 43.398103,
       "Longitude": -80.326342,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2558,
@@ -1447,7 +1607,8 @@
       "Latitude": 43.002538,
       "Longitude": -81.184822,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2559,
@@ -1456,7 +1617,8 @@
       "Latitude": 42.289079,
       "Longitude": -83.022202,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2620,
@@ -1465,7 +1627,8 @@
       "Latitude": 43.499327,
       "Longitude": -80.189821,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2929,
@@ -1474,7 +1637,8 @@
       "Latitude": 46.267849,
       "Longitude": -63.147109,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2704,
@@ -1483,7 +1647,8 @@
       "Latitude": 46.821786,
       "Longitude": -71.24994,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2706,
@@ -1492,7 +1657,8 @@
       "Latitude": 46.790474,
       "Longitude": -71.171429,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2708,
@@ -1501,7 +1667,8 @@
       "Latitude": 45.404371,
       "Longitude": -71.953905,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2710,
@@ -1510,7 +1677,8 @@
       "Latitude": 45.567297,
       "Longitude": -73.654271,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2716,
@@ -1519,7 +1687,8 @@
       "Latitude": 46.76448,
       "Longitude": -71.308359,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2717,
@@ -1528,7 +1697,8 @@
       "Latitude": 45.892507,
       "Longitude": -72.517061,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2304,
@@ -1537,7 +1707,8 @@
       "Latitude": 50.455837,
       "Longitude": -104.607055,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2308,
@@ -1546,7 +1717,8 @@
       "Latitude": 50.496874,
       "Longitude": -104.644553,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2309,
@@ -1555,7 +1727,8 @@
       "Latitude": 52.158502,
       "Longitude": -106.658869,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 3213,
@@ -1564,7 +1737,8 @@
       "Latitude": 53.570211,
       "Longitude": -113.46762,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3519,
@@ -1573,7 +1747,8 @@
       "Latitude": 46.334794,
       "Longitude": -79.467678,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3551,
@@ -1582,7 +1757,8 @@
       "Latitude": 46.523025,
       "Longitude": -80.960175,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3581,
@@ -1591,7 +1767,8 @@
       "Latitude": 42.946684,
       "Longitude": -81.61319,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 3615,
@@ -1600,7 +1777,8 @@
       "Latitude": 43.743732,
       "Longitude": -79.214735,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     },
     {
       "Id": 2701,
@@ -1609,7 +1787,8 @@
       "Latitude": 45.567014,
       "Longitude": -73.731214,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2615,
@@ -1618,7 +1797,8 @@
       "Latitude": 43.007328,
       "Longitude": -81.239421,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2954,
@@ -1627,7 +1807,8 @@
       "Latitude": 46.094071,
       "Longitude": -64.768701,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 2621,
@@ -1636,7 +1817,8 @@
       "Latitude": 43.760505,
       "Longitude": -79.719347,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "financial"
     },
     {
       "Id": 3115,
@@ -1645,7 +1827,8 @@
       "Latitude": 49.221094,
       "Longitude": -122.600495,
       "State": "Inactive",
-      "Tag": ""
+      "Tag": "",
+      "Type": "home"
     }
   ]
 }

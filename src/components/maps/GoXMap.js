@@ -1,10 +1,9 @@
 import React from "react";
 import { withScriptjs, withGoogleMap, GoogleMap } from "react-google-maps";
 import GoXMarker from "./GoXMarker";
-//import GoXOverlay from "./GoXOverlay";
 const mapStyle = require("./style2.json");
 const storesData = require("../../data/branches.json");
-const avatarsData = require("../../data/avatars.json");
+const execsData = require("../../data/execs.json");
 
 // Store Pin Markers
 const markers = storesData.stores.map(store => {
@@ -13,24 +12,39 @@ const markers = storesData.stores.map(store => {
       key={store.Id}
       location={{ lat: store.Latitude, lng: store.Longitude }}
       state={store.State}
+      icon={store.Type}
     />
   );
   return marker;
 });
 
-// Avatar Image Overlays (None for now, use Markers instead)
-/*
-const overlays = avatarsData.avatars.map(avatar => {
-  let overlay = (
-    <GoXOverlay
-      key={avatar.name}
-      location={{ lat: avatar.latitude, lng: avatar.longitude }}
-      state={avatar.state}
+const execMarkers = execsData.execs.map(exec => {
+  let execs = (
+    <GoXMarker
+      key={exec.id}
+      location={{ lat: exec.latitude, lng: exec.longitude }}
+      state={"active"}
+      icon={exec.id}
     />
   );
-  return overlay;
+  return execs;
 });
-*/
+
+function getLocation(execId) {
+  var latitude = 44.6;
+  var longitude = -79.639026;
+
+  // Find Exec
+  for (var i = 0; i < execsData.execs.length; i++) {
+    var exec = execsData.execs[i];
+    if (exec.id == execId) {
+      latitude = exec.latitude;
+      longitude = exec.longitude;
+    }
+  }
+
+  return { lat: latitude, lng: longitude };
+}
 
 // GoogleMaps Options
 const options = {
@@ -44,11 +58,12 @@ const GoXMap = withScriptjs(
   withGoogleMap(props => {
     return (
       <GoogleMap
-        defaultZoom={3}
-        center={{ lat: 43.595105, lng: -79.639026 }}
+        defaultZoom={8}
+        center={getLocation(props.execId)}
         options={options}
       >
         {markers}
+        {execMarkers}
       </GoogleMap>
     );
   })

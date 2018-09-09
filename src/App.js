@@ -8,7 +8,7 @@ import BrowserDetection from "react-browser-detection";
 import Gallery from "./components/photos/Gallery";
 
 const storesData = require("./data/stores.json");
-const avatarsData = require("./data/avatars.json");
+const execsData = require("./data/execs.json");
 
 class App extends Component {
   constructor(props) {
@@ -51,7 +51,7 @@ class App extends Component {
     }
 
     //Returning all stores that matches execID
-    let exec_tag = avatarsData.avatars[execID].tag;
+    let exec_tag = execsData.execs[execID].tag;
 
     //Getting a list of all tags
     let tags = [];

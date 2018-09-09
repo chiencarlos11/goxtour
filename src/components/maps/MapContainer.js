@@ -40,6 +40,7 @@ export default class MapContainer extends React.Component {
             loadingElement={<div style={{ height: `100%` }} />}
             containerElement={<div style={{ width: `100%`, height: `100%` }} />}
             mapElement={<div style={{ height: `100%` }} />}
+            execId={this.state.currentExecId}
           />
         </div>
       );

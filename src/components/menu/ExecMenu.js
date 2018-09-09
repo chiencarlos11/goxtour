@@ -78,7 +78,7 @@ class ExecMenu extends Component {
   }
 
   getExecs() {
-    let Execs = execData.avatars.map(exec => (
+    let Execs = execData.execs.map(exec => (
       <div
         className="menu-cell"
         key={exec.id}
@@ -98,7 +98,7 @@ class ExecMenu extends Component {
   }
 
   getStores() {
-    let exec = execData.avatars[this.state.currentExecId];
+    let exec = execData.execs[this.state.currentExecId];
     let StoreList = exec.stores.map(e => <div key={e}>{e}</div>);
 
     return (

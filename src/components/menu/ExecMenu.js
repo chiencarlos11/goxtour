@@ -1,15 +1,23 @@
 import React, { Component } from "react";
 import "./execMenu.css";
 
-//import execIcon_0 from "./images/Exec_icon_1.png";
 import logo from "../../static/goXtour_logo.png";
-import execIcon_0 from "../../static/ExecPortraits/DavidIngram.png";
-import execIcon_1 from "../../static/ExecPortraits/JasonAppel.png";
-import execIcon_2 from "../../static/ExecPortraits/JasonMullims.png";
-import execIcon_3 from "../../static/ExecPortraits/ShanePennell.png";
-import execIcon_4 from "../../static/ExecPortraits/StevenPoole.png";
+import execIcon_0 from "../../static/ExecPortraits/1_Ingram_profile.png";
+import execIcon_1 from "../../static/ExecPortraits/2_Mullins_profile.png";
+import execIcon_2 from "../../static/ExecPortraits/3_Fiederer_profile.png";
+import execIcon_3 from "../../static/ExecPortraits/4_Appel_profile.png";
+import execIcon_4 from "../../static/ExecPortraits/5_Yielding_profile.png";
+import execIcon_5 from "../../static/ExecPortraits/6_Pennell_profile.png";
+import execIcon_6 from "../../static/ExecPortraits/7_Poole_profile.png";
+import execIcon_7 from "../../static/ExecPortraits/8_Cooper_profile.png";
+import execIcon_8 from "../../static/ExecPortraits/9_McGuire_profile.png";
+import execIcon_9 from "../../static/ExecPortraits/10_Nijjar_profile.png";
+import execIcon_10 from "../../static/ExecPortraits/11_Amjad_profile.png";
+import execIcon_11 from "../../static/ExecPortraits/12_Ross_profile.png";
+import execIcon_12 from "../../static/ExecPortraits/13_Raj_profile.png";
+import execIcon_13 from "../../static/ExecPortraits/14_Ellens_profile.png";
 
-const execData = require("../../data/avatars.json");
+const execData = require("../../data/execs.json");
 
 class ExecMenu extends Component {
   constructor(props) {
@@ -38,6 +46,24 @@ class ExecMenu extends Component {
         return execIcon_3;
       case 4:
         return execIcon_4;
+      case 5:
+        return execIcon_5;
+      case 6:
+        return execIcon_6;
+      case 7:
+        return execIcon_7;
+      case 8:
+        return execIcon_8;
+      case 9:
+        return execIcon_9;
+      case 10:
+        return execIcon_10;
+      case 11:
+        return execIcon_11;
+      case 12:
+        return execIcon_12;
+      case 13:
+        return execIcon_13;
       default:
         return execIcon_0;
     }

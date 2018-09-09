@@ -1,0 +1,130 @@
+{
+  "avatars": [
+    {
+      "id": 0,
+      "stores": [2203, 2219, 3209, 3225],
+      "tag": "goXIngram",
+      "name": "DAVID INGRAM",
+      "title": "CHIEF EXECUTIVE OFFICER",
+      "latitude": 43.764253,
+      "longitude": -79.502539
+    },
+    {
+      "id": 1,
+      "stores": [1, 2, 3, 4],
+      "tag": "goXMullims",
+      "name": "JASON MULLIMS",
+      "title": "PRESIDENT & COO",
+      "latitude": 44.199331,
+      "longitude": -79.471783
+    },
+    {
+      "id": 2,
+      "stores": [2, 4],
+      "tag": "goXFiederer",
+      "name": "Fiederer",
+      "title": "<TITLE>",
+      "latitude": 44.199331,
+      "longitude": -79.471783
+    },
+    {
+      "id": 3,
+      "stores": [3, 5],
+      "tag": "goXAppel",
+      "name": "JASON APPEL",
+      "title": "SVP & CRO",
+      "latitude": 44.199331,
+      "longitude": -79.471783
+    },
+    {
+      "id": 4,
+      "stores": [4, 0],
+      "tag": "goXYielding",
+      "name": "Yielding",
+      "title": "<TITLE>",
+      "latitude": 44.199331,
+      "longitude": -79.471783
+    },
+    {
+      "id": 5,
+      "stores": [4, 0],
+      "tag": "goXPennell",
+      "name": "Pennell",
+      "title": "<TITLE>",
+      "latitude": 44.199331,
+      "longitude": -79.471783
+    },
+    {
+      "id": 6,
+      "stores": [4, 0],
+      "tag": "goXPoole",
+      "name": "Poole",
+      "title": "<TITLE>",
+      "latitude": 44.199331,
+      "longitude": -79.471783
+    },
+    {
+      "id": 7,
+      "stores": [4, 0],
+      "tag": "goXCooper",
+      "name": "Cooper",
+      "title": "<TITLE>",
+      "latitude": 44.199331,
+      "longitude": -79.471783
+    },
+    {
+      "id": 8,
+      "stores": [4, 0],
+      "tag": "goXMcGuire",
+      "name": "McGuire",
+      "title": "<TITLE>",
+      "latitude": 44.199331,
+      "longitude": -79.471783
+    },
+    {
+      "id": 9,
+      "stores": [4, 0],
+      "tag": "goXNijjar",
+      "name": "Nijjar",
+      "title": "<TITLE>",
+      "latitude": 44.199331,
+      "longitude": -79.471783
+    },
+    {
+      "id": 10,
+      "stores": [4, 0],
+      "tag": "goXAmjad",
+      "name": "Amjad",
+      "title": "<TITLE>",
+      "latitude": 44.199331,
+      "longitude": -79.471783
+    },
+    {
+      "id": 11,
+      "stores": [4, 0],
+      "tag": "goXRoss",
+      "name": "Ross",
+      "title": "<TITLE>",
+      "latitude": 44.199331,
+      "longitude": -79.471783
+    },
+    {
+      "id": 12,
+      "stores": [4, 0],
+      "tag": "goXRaj",
+      "name": "Raj",
+      "title": "<TITLE>",
+      "latitude": 44.199331,
+      "longitude": -79.471783
+    },
+    {
+      "id": 13,
+      "stores": [4, 0],
+      "tag": "goXEllens",
+      "name": "Ellens",
+      "title": "<TITLE>",
+      "latitude": 44.199331,
+      "longitude": -79.471783
+    }
+  ]
+}

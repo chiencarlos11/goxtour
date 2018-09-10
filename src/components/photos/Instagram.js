@@ -10,7 +10,6 @@ import rightIcon from "../../static/arrowRight.png";
 import "../../stylesheets/line-awesome/css/line-awesome.min.css";
 import instagramData from "../../data/instagram.json";
 
-
 const customStyles = {
   content: {
     top: "50%",
@@ -85,13 +84,11 @@ export default class Instagram extends Component {
     // this.refreshData();
   }
 
-
   filterResultsByTag(tags) {
     if (tags === undefined || tags.length === 0) {
       this.filteredInstagramData = instagramData;
     } else if (tags == "__show_all__") {
       this.filteredInstagramData = instagramData;
-
     } else {
       var photoList = [];
       for (var tag of tags) {
@@ -176,7 +173,7 @@ export default class Instagram extends Component {
       slidesToShow: 7,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 1500,
+      autoplaySpeed: 3000,
       lazyLoad: true,
       arrows: false,
       responsive: [
@@ -277,9 +274,7 @@ export default class Instagram extends Component {
                 </div>
 
                 <div className="sliderButton box3">
-                  <a
-                    onClick={this.nextImage.bind(this.state.current_photo.id)}
-                  >
+                  <a onClick={this.nextImage.bind(this.state.current_photo.id)}>
                     <i className="la la-chevron-right la-4x" />
                   </a>
                 </div>

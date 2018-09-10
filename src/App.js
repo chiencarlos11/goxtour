@@ -24,6 +24,25 @@ class App extends Component {
     this.changeTag = this.changeTag.bind(this);
     this.changeTagStore = this.changeTagStore.bind(this);
     this.setDisplay = this.setDisplay.bind(this);
+
+    //this.getData();
+  }
+
+  getData() {
+    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    var url = "https://goeasy-gox.azurewebsites.net/data/instagramData.json";
+
+    fetch(proxyurl + url)
+      .then(response => {
+        return response.json();
+      })
+      .then(responseData => {
+        console.log(responseData);
+        return responseData;
+      })
+      .catch(err => {
+        console.log("fetch error" + err);
+      });
   }
 
   browserHandler = {

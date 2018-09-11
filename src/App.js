@@ -7,8 +7,8 @@ import Menu from "./components/Menu";
 import BrowserDetection from "react-browser-detection";
 import Gallery from "./components/photos/Gallery";
 
-const storesData = require("./data/stores.json");
-const execsData = require("./data/execs.json");
+//const storesData = require("./data/stores.json");
+//const execsData = require("./data/execs.json");
 
 class App extends Component {
   constructor(props) {
@@ -18,31 +18,17 @@ class App extends Component {
       currentTags: [],
       selectedExec: -1,
       ie_detected: false,
-      display_main: "TOUR MEMBERS"
+      display_main: "TOUR MEMBERS",
+      storesData: 0,
+      execsData: 0,
+      instagramData: 0
     };
 
     this.changeTag = this.changeTag.bind(this);
     this.changeTagStore = this.changeTagStore.bind(this);
     this.setDisplay = this.setDisplay.bind(this);
 
-    //this.getData();
-  }
-
-  getData() {
-    const proxyurl = "https://cors-anywhere.herokuapp.com/";
-    var url = "https://goeasy-gox.azurewebsites.net/data/instagramData.json";
-
-    fetch(proxyurl + url)
-      .then(response => {
-        return response.json();
-      })
-      .then(responseData => {
-        console.log(responseData);
-        return responseData;
-      })
-      .catch(err => {
-        console.log("fetch error" + err);
-      });
+    this.getData();
   }
 
   browserHandler = {
@@ -57,9 +43,82 @@ class App extends Component {
     }
   };
 
+  shouldComponentUpdate(nextProps, nextState) {
+    if (
+      nextState.storesData &&
+      this.state.execsData &&
+      this.state.instagramData
+    ) {
+      return true;
+    }
+
+    if (
+      this.state.storesData &&
+      nextState.execsData &&
+      this.state.instagramData
+    ) {
+      return true;
+    }
+
+    if (
+      this.state.storesData &&
+      this.state.execsData &&
+      nextState.instagramData
+    ) {
+      return true;
+    }
+
+    console.log("shouldComponentUpdate: ");
+
+    return false;
+  }
+
+  getData() {
+    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    var url = "https://s3.amazonaws.com/goeasy2018/";
+
+    // Get Instagram Data
+    fetch(proxyurl + url + "instagram.json")
+      .then(response => {
+        return response.json();
+      })
+      .then(responseData => {
+        this.setState({ instagramData: responseData });
+        return responseData;
+      })
+      .catch(err => {
+        console.log("Instagram Fetch Error: " + err);
+      });
+
+    // Get Exec Data
+    fetch(proxyurl + url + "execs.json")
+      .then(response => {
+        return response.json();
+      })
+      .then(responseData => {
+        this.setState({ execsData: responseData });
+        return responseData;
+      })
+      .catch(err => {
+        console.log("Exec Fetch Error: " + err);
+      });
+
+    // Get Store Data
+    fetch(proxyurl + url + "branches.json")
+      .then(response => {
+        return response.json();
+      })
+      .then(responseData => {
+        this.setState({ storesData: responseData });
+        return responseData;
+      })
+      .catch(err => {
+        console.log("Store Fetch Error: " + err);
+      });
+  }
+
   changeTag(execID) {
     this.setState({ selectedExec: execID });
-    console.log("EXECID = " + this.state.selectedExec);
 
     if (execID === null) {
       this.setState({ currentTags: [] });
@@ -70,7 +129,7 @@ class App extends Component {
     }
 
     //Returning all stores that matches execID
-    let exec_tag = execsData.execs[execID].tag;
+    let exec_tag = this.state.execsData.execs[execID].tag;
 
     //Getting a list of all tags
     let tags = [];
@@ -88,7 +147,9 @@ class App extends Component {
       console.log("setting currentTags to `empty");
       this.setState({ currentTags: [] });
     } else {
-      this.setState({ currentTags: [storesData.stores[storeId].tag] });
+      this.setState({
+        currentTags: [this.state.storesData.stores[storeId].tag]
+      });
     }
   }
 
@@ -120,13 +181,18 @@ class App extends Component {
               <Menu
                 changeTag={this.changeTag}
                 changeTagStore={this.changeTagStore}
+                execsData={this.state.execsData}
               />
             </div>
           </div>
 
           <div className="main_right">
             <div className="mapBox">
-              <MapContainer execId={this.state.selectedExec} />
+              <MapContainer
+                execId={this.state.selectedExec}
+                execsData={this.state.execsData}
+                storesData={this.state.storesData}
+              />
             </div>
           </div>
 
@@ -134,6 +200,7 @@ class App extends Component {
             <Instagram
               access_token={this.props.access_token}
               tags={this.state.currentTags}
+              instagramData={this.state.instagramData}
             />
           </div>
         </div>
@@ -148,9 +215,17 @@ class App extends Component {
             </div>
 
             <div className="separator_row" />
-            <Gallery />
+            <Gallery instagramData={this.state.instagramData} />
           </div>
         );
+      }
+
+      if (
+        !this.state.instagramData ||
+        !this.state.execsData ||
+        !this.state.storesData
+      ) {
+        display = <div>Loading...</div>;
       }
     }
 

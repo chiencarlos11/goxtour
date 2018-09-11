@@ -8,7 +8,9 @@ export default class MapContainer extends React.Component {
     super(props);
 
     this.state = {
-      currentExecId: this.props.execId
+      currentExecId: this.props.execId,
+      execsData: this.props.execsData,
+      storesData: this.props.storesData
     };
   }
 
@@ -41,6 +43,8 @@ export default class MapContainer extends React.Component {
             containerElement={<div style={{ width: `100%`, height: `100%` }} />}
             mapElement={<div style={{ height: `100%` }} />}
             execId={this.state.currentExecId}
+            execsData={this.state.execsData}
+            storesData={this.state.storesData}
           />
         </div>
       );

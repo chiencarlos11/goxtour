@@ -8,7 +8,8 @@ export default class Menu extends Component {
 
     this.state = {
       content: "Executives",
-      execID: this.props.execId
+      execID: this.props.execId,
+      execsData: this.props.execsData
     };
 
     this.displayStore = this.displayStore.bind(this);
@@ -37,6 +38,7 @@ export default class Menu extends Component {
             execId={this.state.execID}
             changeTag={this.props.changeTag}
             displayStore={this.displayStore}
+            execsData={this.state.execsData}
           />
         );
         break;
@@ -46,6 +48,7 @@ export default class Menu extends Component {
             changeTagStore={this.props.changeTagStore}
             execID={this.state.execID}
             displayStore={this.displayStore}
+            execsData={this.state.execsData}
           />
         );
         break;
@@ -54,6 +57,7 @@ export default class Menu extends Component {
           <ExecMenu
             changeTag={this.props.changeTag}
             displayStore={this.displayStore}
+            execsData={this.state.execsData}
           />
         );
         break;

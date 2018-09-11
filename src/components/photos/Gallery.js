@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Modal from "react-modal";
 import InstagramEmbed from "react-instagram-embed";
 import InfiniteScroll from "react-infinite-scroll-component";
-import instagram from "../../data/instagram.json";
 import "./Gallery.css";
 
 const customStyles = {
@@ -31,8 +30,9 @@ export default class Gallery extends Component {
       loaded: "false",
       modalIsOpen: false,
       current_photo: "",
-      instagramData: instagram.slice(0, 19),
-      displayIndex: 19
+      instagramData: this.props.instagramData.slice(0, 19),
+      displayIndex: 19,
+      instagram: this.props.instagramData
     };
 
     this.nextSlide = this.nextSlide.bind(this);
@@ -47,13 +47,13 @@ export default class Gallery extends Component {
     let currIndex = this.state.displayIndex;
 
     let newIndex = currIndex + 10;
-    if (newIndex >= instagram.length - 1) {
-      newIndex = instagram.length - 1;
+    if (newIndex >= this.state.instagram.length - 1) {
+      newIndex = this.state.instagram.length - 1;
     }
     this.setState({ displayIndex: newIndex });
 
     this.setState({
-      instagramData: instagram.slice(0, newIndex)
+      instagramData: this.state.instagram.slice(0, newIndex)
     });
   };
 

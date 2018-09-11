@@ -17,14 +17,13 @@ import execIcon_11 from "../../static/ExecPortraits/12_Ross_profile.png";
 import execIcon_12 from "../../static/ExecPortraits/13_Raj_profile.png";
 import execIcon_13 from "../../static/ExecPortraits/14_Ellens_profile.png";
 
-const execData = require("../../data/execs.json");
-
 class ExecMenu extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      currentExecId: this.props.execId
+      currentExecId: this.props.execId,
+      execsData: this.props.execsData
     };
   }
 
@@ -78,7 +77,7 @@ class ExecMenu extends Component {
   }
 
   getExecs() {
-    let Execs = execData.execs.map(exec => (
+    let Execs = this.state.execsData.execs.map(exec => (
       <div
         className="menu-cell"
         key={exec.id}
@@ -98,7 +97,7 @@ class ExecMenu extends Component {
   }
 
   getStores() {
-    let exec = execData.execs[this.state.currentExecId];
+    let exec = this.state.execsData.execs[this.state.currentExecId];
     let StoreList = exec.stores.map(e => <div key={e}>{e}</div>);
 
     return (

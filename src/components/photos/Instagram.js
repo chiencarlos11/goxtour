@@ -8,7 +8,6 @@ import "./instagramSlider.css";
 import leftIcon from "../../static/arrowLeft.png";
 import rightIcon from "../../static/arrowRight.png";
 import "../../stylesheets/line-awesome/css/line-awesome.min.css";
-import instagramData from "../../data/instagram.json";
 
 const customStyles = {
   content: {
@@ -33,16 +32,17 @@ export default class Instagram extends Component {
   constructor(props) {
     super(props);
 
-    this.filteredInstagramData = instagramData;
-
     this.state = {
       currentExecId: this.props.execId,
       currentStoreId: this.props.storeId,
       currentTag: this.props.tags,
       loaded: "false",
       modalIsOpen: false,
-      current_photo: ""
+      current_photo: "",
+      instagramData: this.props.instagramData
     };
+
+    this.filteredInstagramData = this.props.instagramData;
 
     this.nextSlide = this.nextSlide.bind(this);
     this.previousSlide = this.previousSlide.bind(this);
@@ -81,19 +81,18 @@ export default class Instagram extends Component {
   componentDidMount() {
     this.filterResultsByTag(this.state.currentTag);
     this.setState({ loaded: "true" });
-    // this.refreshData();
   }
 
   filterResultsByTag(tags) {
     if (tags === undefined || tags.length === 0) {
-      this.filteredInstagramData = instagramData;
+      this.filteredInstagramData = this.state.instagramData;
     } else if (tags == "__show_all__") {
-      this.filteredInstagramData = instagramData;
+      this.filteredInstagramData = this.state.instagramData;
     } else {
       var photoList = [];
       for (var tag of tags) {
-        for (var i = 0; i < instagramData.length; i++) {
-          var element = instagramData[i];
+        for (var i = 0; i < this.state.instagramData.length; i++) {
+          var element = this.state.instagramData[i];
           if (element.tags.indexOf(tag) >= 0) {
             photoList.push(element);
           }
@@ -104,6 +103,9 @@ export default class Instagram extends Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
+    console.log("shouldComponentUpdate");
+    console.log(JSON.stringify(nextProps));
+
     if (nextProps.tags === undefined || nextProps.tags.length <= 0) {
       return true;
     } else if (nextProps.tags === ["__show_all__"]) {
@@ -111,7 +113,7 @@ export default class Instagram extends Component {
       return true;
     }
 
-    if (instagramData && nextProps.tags !== this.state.currentTags) {
+    if (this.state.instagramData && nextProps.tags !== this.state.currentTags) {
       this.filterResultsByTag(nextProps.tags);
       return true;
     }
@@ -128,7 +130,7 @@ export default class Instagram extends Component {
     if (this.state.currentTag) {
       array = this.filteredInstagramData;
     } else {
-      array = instagramData;
+      array = this.state.instagramData;
     }
 
     index = array.findIndex(function(instagramImage) {
@@ -151,7 +153,7 @@ export default class Instagram extends Component {
     if (this.state.currentTag) {
       array = this.filteredInstagramData;
     } else {
-      array = instagramData;
+      array = this.state.instagramData;
     }
 
     index = array.findIndex(function(instagramImage) {
@@ -204,7 +206,7 @@ export default class Instagram extends Component {
       ]
     };
 
-    if (this.state.loaded == "true") {
+    if (this.state.instagramData) {
       return (
         <div className="container-instagram-gallery">
           <div className="sliderButton">
@@ -216,7 +218,7 @@ export default class Instagram extends Component {
           </div>
           <div className="slider">
             <Slider ref="slider" {...settings}>
-              {instagramData.map(photo => (
+              {this.state.instagramData.map(photo => (
                 <img
                   className="image"
                   key={photo.id}

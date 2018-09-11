@@ -8,7 +8,7 @@
   all: unset;
   display: grid;
   grid-template-columns: 40% 60%;
-  grid-template-rows: 80px 20px calc(98% - 225px) 125px;
+  grid-template-rows: 100px calc(98% - 225px) 125px;
   height: 100%;
   min-width: 850px;
 }
@@ -19,16 +19,9 @@
   background: url("./static/background-single.png") repeat;
 }
 
-.separator_row {
-  grid-column: span 2;
-  height: 20px;
-  background: url("./static/menu-line-single.png");
-  z-index: 900;
-}
-
 .header {
   grid-column: span 2;
-  height: 80px;
+  height: 100px;
 }
 
 .footer {

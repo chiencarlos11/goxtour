@@ -8,6 +8,13 @@
   z-index: 900;
 }
 
+.separator_row {
+  grid-column: span 2;
+  height: 20px;
+  background: url("../static/menu-line-single.png");
+  z-index: 950;
+}
+
 body {
   margin: 0;
   /*  background: #222;*/
@@ -33,7 +40,7 @@ header {
   position: fixed;
 
   width: 100%;
-  height: 80px !important;
+
 }
 
 .headerImage {
@@ -94,7 +101,6 @@ nav {
   left: 0;
   background: var(--background);
   width: 100%;
-  height: 80px !important;
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
@@ -104,6 +110,9 @@ nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  align-items: center;
+  justify-content: center;
+  grid-row: 2/3;
 }
 
 nav li {
@@ -139,6 +148,8 @@ nav a:hover {
     display: none;
   }
 
+
+
   header {
     display: grid;
     grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
@@ -146,16 +157,25 @@ nav a:hover {
 
   .logo {
     grid-column: 2 / 3;
+    grid-row: 1 / 2;
   }
+
+  .separator_row {
+  height: 20px;
+  background: url("../static/menu-line-single.png");
+  z-index: 950;
+  grid-column: 1 / 5;
+  grid-row: 2 / 3;
+}
 
   nav {
     all: unset;
     grid-column: 3 / 4;
+    grid-row: 1 / 2;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: absolute;
-    z-index:980;
+    justify-content: end;
+    align-items: end;
+    padding-top: 25px;
   }
 
   nav ul {

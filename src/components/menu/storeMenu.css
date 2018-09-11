@@ -1,0 +1,70 @@
+.container-menu {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 30% 70%;
+  background-color: white;
+}
+
+.menu-top {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.image-top {
+  height: 95%;
+  object-fit: cover;
+}
+
+.menu-main {
+  display: grid;
+  grid-template-columns: 100%;
+  overflow: auto;
+
+  padding-left: 20px;
+}
+
+.menu-province {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.provinceTitle {
+  justify-self: left;
+  align-self: top;
+
+  font-family: "Work Sans", sans-serif;
+  font-size: 26px;
+  letter-spacing: 0px;
+  word-spacing: 2px;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+}
+
+.storeLabel {
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  justify-self: left;
+  align-self: top;
+
+  color: gray;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0px;
+  word-spacing: 2px;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+}

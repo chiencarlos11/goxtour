@@ -7,9 +7,6 @@ import Menu from "./components/Menu";
 import BrowserDetection from "react-browser-detection";
 import Gallery from "./components/photos/Gallery";
 
-//const storesData = require("./data/stores.json");
-//const execsData = require("./data/execs.json");
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -18,7 +15,7 @@ class App extends Component {
       currentTags: [],
       selectedExec: -1,
       ie_detected: false,
-      display_main: "TOUR MEMBERS",
+      display_main: "Executives",
       storesData: 0,
       execsData: 0,
       instagramData: 0
@@ -67,9 +64,6 @@ class App extends Component {
     ) {
       return true;
     }
-
-    console.log("shouldComponentUpdate: ");
-
     return false;
   }
 
@@ -182,6 +176,7 @@ class App extends Component {
                 changeTag={this.changeTag}
                 changeTagStore={this.changeTagStore}
                 execsData={this.state.execsData}
+                content={this.state.display_main}
               />
             </div>
           </div>

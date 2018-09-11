@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import ExecMenu from "./menu/ExecMenu.js";
-import Stores from "./stores/Stores";
+import StoreMenu from "./menu/StoreMenu.js";
 
 export default class Menu extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      content: "Executives",
+      content: this.props.content,
       execID: this.props.execId,
       execsData: this.props.execsData
     };
@@ -29,6 +29,19 @@ export default class Menu extends Component {
     }
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextProps.content != this.state.content) {
+      this.setState({ content: nextProps.content });
+      return true;
+    }
+
+    if (nextState.content != this.state.content) {
+      return true;
+    }
+
+    return false;
+  }
+
   render() {
     let Show;
     switch (this.state.content) {
@@ -44,9 +57,8 @@ export default class Menu extends Component {
         break;
       case "Stores":
         Show = (
-          <Stores
-            changeTagStore={this.props.changeTagStore}
-            execID={this.state.execID}
+          <StoreMenu
+            changeTag={this.props.changeTag}
             displayStore={this.displayStore}
             execsData={this.state.execsData}
           />

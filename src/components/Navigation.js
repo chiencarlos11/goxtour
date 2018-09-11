@@ -4,16 +4,13 @@ import menuLine from "../static/menu-line.png";
 import "../stylesheets/navigation.css";
 
 export default class Navigation extends Component {
-
   constructor(props) {
     super(props);
   }
 
-  setDisplay(display){
-    console.log(JSON.stringify(this.props))
+  setDisplay(display) {
     this.props.setDisplay(display);
   }
-
 
   render() {
     return (
@@ -26,17 +23,18 @@ export default class Navigation extends Component {
           <nav>
             <ul>
               <li>
-
-                <a onClick={this.setDisplay.bind(this,"TOUR MEMBERS")}>Tour Members</a>
+                <a onClick={this.setDisplay.bind(this, "Executives")}>
+                  Tour Members
+                </a>
               </li>
               <li>
-                <a >Tour Stops</a>
+                <a onClick={this.setDisplay.bind(this, "Stores")}>Tour Stops</a>
               </li>
               <li>
-                <a onClick={this.setDisplay.bind(this,"GALLERY")}>Gallery</a>
+                <a onClick={this.setDisplay.bind(this, "GALLERY")}>Gallery</a>
               </li>
               <li>
-                <a >STATS</a>
+                <a>STATS</a>
               </li>
             </ul>
           </nav>

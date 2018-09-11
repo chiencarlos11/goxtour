@@ -103,9 +103,6 @@ export default class Instagram extends Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log("shouldComponentUpdate");
-    console.log(JSON.stringify(nextProps));
-
     if (nextProps.tags === undefined || nextProps.tags.length <= 0) {
       return true;
     } else if (nextProps.tags === ["__show_all__"]) {

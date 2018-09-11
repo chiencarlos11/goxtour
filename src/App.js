@@ -112,8 +112,7 @@ class App extends Component {
           <div className="header">
             <Navigation setDisplay={this.setDisplay} />
           </div>
-
-          <div className="separator_row" />
+          
 
           <div className="main_left">
             <div className="menuBox">
@@ -146,8 +145,6 @@ class App extends Component {
             <div className="header">
               <Navigation setDisplay={this.setDisplay} />
             </div>
-
-            <div className="separator_row" />
             <Gallery />
           </div>
         );

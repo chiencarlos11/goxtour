@@ -43,7 +43,9 @@ export default class Navigation extends Component {
           <label htmlFor="nav-toggle" className="nav-toggle-label">
             <span />
           </label>
+          <div className="separator_row" />
         </header>
+
       </div>
     );
   }

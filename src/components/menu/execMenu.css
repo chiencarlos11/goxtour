@@ -24,6 +24,10 @@
   object-fit: cover;
 }
 
+.image-top:hover {
+  cursor: pointer;
+}
+
 .menu-main {
   display: grid;
   grid-template-columns: 100%;
@@ -37,6 +41,10 @@
   grid-gap: 15px;
 
   height: 100px;
+}
+
+.menu-cell:hover {
+  cursor: pointer;
 }
 
 .execImageBox {

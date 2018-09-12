@@ -98,7 +98,11 @@ class ExecMenu extends Component {
 
   getStores() {
     let exec = this.state.execsData.execs[this.state.currentExecId];
-    let StoreList = exec.stores.map(e => <div key={e}>{e}</div>);
+    let StoreList = exec.stores.map(e => (
+      <div key={e} className="execStoreLabel">
+        {e}
+      </div>
+    ));
 
     return (
       <div>

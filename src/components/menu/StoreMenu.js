@@ -107,19 +107,19 @@ class StoreMenu extends Component {
           <div className="provinceTitle">Manitoba</div>
           <div className="storeLabel">{this.renderStoreList(mb)}</div>
           <div className="provinceTitle">New Brunswick</div>
-          <div className="storeLabel">&emsp;</div>
+          <div className="storeLabel">{this.renderStoreList(nb)}</div>
           <div className="provinceTitle">Newfoundland and Labrador</div>
-          <div className="storeLabel">&emsp;</div>
+          <div className="storeLabel">{this.renderStoreList(nl)}</div>
           <div className="provinceTitle">Nova Scotia</div>
-          <div className="storeLabel">&emsp;</div>
+          <div className="storeLabel">{this.renderStoreList(ns)}</div>
           <div className="provinceTitle">Ontario</div>
-          <div className="storeLabel">&emsp;</div>
+          <div className="storeLabel">{this.renderStoreList(on)}</div>
           <div className="provinceTitle">Prince Edward Island</div>
-          <div className="storeLabel">&emsp;</div>
+          <div className="storeLabel">{this.renderStoreList(pe)}</div>
           <div className="provinceTitle">Quebec</div>
-          <div className="storeLabel">&emsp;</div>
+          <div className="storeLabel">{this.renderStoreList(qc)}</div>
           <div className="provinceTitle">Saskatchewan</div>
-          <div className="storeLabel">&emsp;</div>
+          <div className="storeLabel">{this.renderStoreList(sk)}</div>
         </div>
       </div>
     );

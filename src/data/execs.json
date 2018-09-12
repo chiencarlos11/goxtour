@@ -2,16 +2,16 @@
   "execs": [
     {
       "id": 0,
-      "stores": [2203, 2219, 3209, 3225],
+      "stores": [],
       "tag": "goXIngram",
       "name": "DAVID INGRAM",
       "title": "CHIEF EXECUTIVE OFFICER",
-      "latitude": 47.908793,
-      "longitude": -55.03495
+      "latitude": 50.989781,
+      "longitude": -114.139278
     },
     {
       "id": 1,
-      "stores": [1, 2, 3, 4],
+      "stores": [],
       "tag": "goXMullims",
       "name": "JASON MULLIMS",
       "title": "PRESIDENT & COO",
@@ -20,16 +20,16 @@
     },
     {
       "id": 2,
-      "stores": [2, 4],
+      "stores": [],
       "tag": "goXFiederer",
-      "name": "Fiederer",
-      "title": "<TITLE>",
+      "name": "Andrea Fiederer",
+      "title": "EVP & CMO",
       "latitude": 45.78085,
       "longitude": -60.437126
     },
     {
       "id": 3,
-      "stores": [3, 5],
+      "stores": [],
       "tag": "goXAppel",
       "name": "JASON APPEL",
       "title": "SVP & CRO",
@@ -38,91 +38,91 @@
     },
     {
       "id": 4,
-      "stores": [4, 0],
+      "stores": [],
       "tag": "goXYielding",
-      "name": "Yielding",
-      "title": "<TITLE>",
+      "name": "David Yeilding",
+      "title": "Interim, CFO",
       "latitude": 45.954001,
       "longitude": -73.123736
     },
     {
       "id": 5,
-      "stores": [4, 0],
+      "stores": [],
       "tag": "goXPennell",
-      "name": "Pennell",
-      "title": "<TITLE>",
+      "name": "Shane Pennell",
+      "title": "SVP, Operations, EFS",
       "latitude": 43.614462,
       "longitude": -79.651135
     },
     {
       "id": 6,
-      "stores": [4, 0],
+      "stores": [],
       "tag": "goXPoole",
-      "name": "Poole",
-      "title": "<TITLE>",
+      "name": "Steven Poole",
+      "title": "SVP, Operations and Merchandising, EH",
       "latitude": 42.633016,
       "longitude": -82.209011
     },
     {
       "id": 7,
-      "stores": [4, 0],
+      "stores": [],
       "tag": "goXCooper",
-      "name": "Cooper",
-      "title": "<TITLE>",
+      "name": "David Cooper",
+      "title": "VP, HR",
       "latitude": 49.857501,
       "longitude": -97.398095
     },
     {
       "id": 8,
-      "stores": [4, 0],
+      "stores": [],
       "tag": "goXMcGuire",
-      "name": "McGuire",
-      "title": "<TITLE>",
+      "name": "Keran McGuire",
+      "title": "VP, IT Shared Services",
       "latitude": 49.826804,
       "longitude": -99.778395
     },
     {
       "id": 9,
-      "stores": [4, 0],
+      "stores": [],
       "tag": "goXNijjar",
-      "name": "Nijjar",
-      "title": "<TITLE>",
+      "name": "Hetal Nijjar",
+      "title": "VP, Audit & Compliance",
       "latitude": 50.321134,
       "longitude": -104.613228
     },
     {
       "id": 10,
-      "stores": [4, 0],
+      "stores": [],
       "tag": "goXAmjad",
-      "name": "Amjad",
-      "title": "<TITLE>",
+      "name": "Aun Amjad",
+      "title": "VP, Enterprise Systems",
       "latitude": 52.124084,
       "longitude": -106.714114
     },
     {
       "id": 11,
-      "stores": [4, 0],
+      "stores": [],
       "tag": "goXRoss",
-      "name": "Ross",
-      "title": "<TITLE>",
+      "name": "Adam Ross",
+      "title": "Director, Marketing",
       "latitude": 53.503963,
       "longitude": -113.412058
     },
     {
       "id": 12,
-      "stores": [4, 0],
+      "stores": [],
       "tag": "goXRaj",
-      "name": "Raj",
-      "title": "<TITLE>",
+      "name": "Harjas Rai",
+      "title": "Director, HR",
       "latitude": 51.066143,
       "longitude": -114.142066
     },
     {
       "id": 13,
-      "stores": [4, 0],
+      "stores": [],
       "tag": "goXEllens",
-      "name": "Ellens",
-      "title": "<TITLE>",
+      "name": "Melissa Ellens",
+      "title": "Director, Operations",
       "latitude": 49.241901,
       "longitude": -123.152811
     }

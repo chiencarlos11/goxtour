@@ -111,6 +111,7 @@ class App extends Component {
       });
   }
 
+
   changeTag(execID) {
     this.setState({ selectedExec: execID });
 
@@ -123,7 +124,7 @@ class App extends Component {
     }
 
     //Returning all stores that matches execID
-    let exec_tag = this.state.execsData.execs[execID].tag;
+    let exec_tag = this.state.execsData.execs.find(x => x.id === execID).tag;
 
     //Getting a list of all tags
     let tags = [];

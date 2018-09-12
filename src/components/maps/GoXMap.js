@@ -63,7 +63,7 @@ const GoXMap = withScriptjs(
   withGoogleMap(props => {
     return (
       <GoogleMap
-        defaultZoom={8}
+        defaultZoom={11}
         center={getLocation(props.execId, props.execsData)}
         options={options}
       >

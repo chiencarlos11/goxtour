@@ -12,12 +12,21 @@ export default class Navigation extends Component {
     this.props.setDisplay(display);
   }
 
+  handleLogoClicked() {
+    window.location.reload();
+  }
+
   render() {
     return (
       <div className="height_full navigation">
         <header>
           <div className="logo">
-            <img className="headerImage" src={logo} alt="" />
+            <img
+              className="headerImage"
+              src={logo}
+              alt=""
+              onClick={this.handleLogoClicked}
+            />
           </div>
           <input type="checkbox" id="nav-toggle" className="nav-toggle" />
           <nav>
@@ -43,7 +52,6 @@ export default class Navigation extends Component {
           </label>
           <div className="separator_row" />
         </header>
-
       </div>
     );
   }

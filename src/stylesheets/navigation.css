@@ -46,6 +46,10 @@ header {
   height: 80px;
 }
 
+.headerImage:hover {
+  cursor: pointer;
+}
+
 /* changed this from the tutorial video to
    allow it to gain focus, making it tabbable */
 .nav-toggle {
@@ -131,6 +135,7 @@ nav a {
 
 nav a:hover {
   color: #000;
+  cursor: pointer;
 }
 
 .nav-toggle:checked ~ nav {

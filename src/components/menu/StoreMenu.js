@@ -36,42 +36,44 @@ class StoreMenu extends Component {
 
     for (var j = 0; j < this.state.execsData.execs.length; j++) {
       var exec = this.state.execsData.execs[j];
-      for (var k = 0; k < exec.stores.length; k++) {
-        var storeID = exec.stores[k];
-        for (var i = 0; i < this.state.storesData.stores.length; i++) {
-          var store = this.state.storesData.stores[i];
-          if (store.Id == storeID) {
-            switch (store.Province) {
-              case "AB":
-                ab[store.Id] = exec.id;
-                break;
-              case "BC":
-                bc[store.Id] = exec.id;
-                break;
-              case "MB":
-                mb[store.Id] = exec.id;
-                break;
-              case "NB":
-                nb[store.Id] = exec.id;
-                break;
-              case "NL":
-                nl[store.Id] = exec.id;
-                break;
-              case "NS":
-                ns[store.Id] = exec.id;
-                break;
-              case "ON":
-                on[store.Id] = exec.id;
-                break;
-              case "PE":
-                pe[store.Id] = exec.id;
-                break;
-              case "QC":
-                qc[store.Id] = exec.id;
-                break;
-              case "SK":
-                sk[store.Id] = exec.id;
-                break;
+      if (exec.stores.length > 0) {
+        for (var k = 0; k < exec.stores[0].length; k++) {
+          var storeID = exec.stores[0][k];
+          for (var i = 0; i < this.state.storesData.stores.length; i++) {
+            var store = this.state.storesData.stores[i];
+            if (store.Id == storeID) {
+              switch (store.Province) {
+                case "AB":
+                  ab[store.Id] = exec.id;
+                  break;
+                case "BC":
+                  bc[store.Id] = exec.id;
+                  break;
+                case "MB":
+                  mb[store.Id] = exec.id;
+                  break;
+                case "NB":
+                  nb[store.Id] = exec.id;
+                  break;
+                case "NL":
+                  nl[store.Id] = exec.id;
+                  break;
+                case "NS":
+                  ns[store.Id] = exec.id;
+                  break;
+                case "ON":
+                  on[store.Id] = exec.id;
+                  break;
+                case "PE":
+                  pe[store.Id] = exec.id;
+                  break;
+                case "QC":
+                  qc[store.Id] = exec.id;
+                  break;
+                case "SK":
+                  sk[store.Id] = exec.id;
+                  break;
+              }
             }
           }
         }

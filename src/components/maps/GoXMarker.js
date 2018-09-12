@@ -28,7 +28,7 @@ export default class GoXMarker extends React.Component {
     }
 
     switch (id) {
-      case 0:
+      case 30:
         return pin_0;
       case 1:
         return pin_1;

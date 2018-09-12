@@ -97,21 +97,22 @@ class ExecMenu extends Component {
   }
 
   getStores() {
+    let exec = this.state.execsData.execs.find(
+      x => x.id === this.state.currentExecId
+    );
 
-    let exec = this.state.execsData.execs.find(x => x.id === this.state.currentExecId);
-    let StoreList = exec.stores.map(e => (
-      <div key={e} className="execStoreLabel">
-        {e}
-      </div>
-    ));
+    let StoreList;
+    if (exec.stores.length > 0) {
+      StoreList = exec.stores[0].map(e => (
+        <div key={e} className="execStoreLabel">
+          {e}
+        </div>
+      ));
+    }
 
     return (
       <div>
-        <div
-          className="menu-cell"
-          key={exec.id}
-          onClick={this.handleClick.bind(this, exec.id)}
-        >
+        <div className="menu-cell" key={exec.id}>
           <div className="execImageBox">
             <img className="execImage" src={this.getPortrait(exec.id)} alt="" />
           </div>

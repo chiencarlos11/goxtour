@@ -9,7 +9,8 @@ export default class Menu extends Component {
     this.state = {
       content: this.props.content,
       execID: this.props.execId,
-      execsData: this.props.execsData
+      execsData: this.props.execsData,
+      storesData: this.props.storesData
     };
 
     this.displayStore = this.displayStore.bind(this);
@@ -61,6 +62,7 @@ export default class Menu extends Component {
             changeTag={this.props.changeTag}
             displayStore={this.displayStore}
             execsData={this.state.execsData}
+            storesData={this.state.storesData}
           />
         );
         break;

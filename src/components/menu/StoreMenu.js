@@ -3,20 +3,94 @@ import "./storeMenu.css";
 
 import logo from "../../static/goXtour_logo.png";
 
+let ab = {};
+let bc = {};
+let mb = {};
+let nb = {};
+let nl = {};
+let ns = {};
+let on = {};
+let pe = {};
+let qc = {};
+let sk = {};
+
 class StoreMenu extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      currentExecId: this.props.execId,
-      execsData: this.props.execsData
+      execsData: this.props.execsData,
+      storesData: this.props.storesData
     };
+
+    this.loadStoreData();
   }
 
   handleClick(id) {
     this.props.changeTag(id);
     this.props.displayStore(id);
-    this.setState({ currentExecId: id });
+  }
+
+  loadStoreData() {
+    console.log(this.state.execsData.execs);
+
+    for (var j = 0; j < this.state.execsData.execs.length; j++) {
+      var exec = this.state.execsData.execs[j];
+      for (var k = 0; k < exec.stores.length; k++) {
+        var storeID = exec.stores[k];
+        for (var i = 0; i < this.state.storesData.stores.length; i++) {
+          var store = this.state.storesData.stores[i];
+          if (store.Id == storeID) {
+            switch (store.Province) {
+              case "AB":
+                ab[store.Id] = exec.id;
+                break;
+              case "BC":
+                bc[store.Id] = exec.id;
+                break;
+              case "MB":
+                mb[store.Id] = exec.id;
+                break;
+              case "NB":
+                nb[store.Id] = exec.id;
+                break;
+              case "NL":
+                nl[store.Id] = exec.id;
+                break;
+              case "NS":
+                ns[store.Id] = exec.id;
+                break;
+              case "ON":
+                on[store.Id] = exec.id;
+                break;
+              case "PE":
+                pe[store.Id] = exec.id;
+                break;
+              case "QC":
+                qc[store.Id] = exec.id;
+                break;
+              case "SK":
+                sk[store.Id] = exec.id;
+                break;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  renderStoreList(province) {
+    return Object.keys(province).map(key => (
+      <a
+        key={key}
+        onClick={() => {
+          this.handleClick(province[key]);
+        }}
+      >
+        {key}
+        &emsp;
+      </a>
+    ));
   }
 
   render() {
@@ -26,28 +100,26 @@ class StoreMenu extends Component {
           <img className="image-top" src={logo} alt="" />
         </div>
         <div className="menu-main">
-          <div className="provinceTitle">Ontario</div>
-          <div className="storeLabel">
-            #2000&emsp;|&emsp;#2001&emsp;|&emsp;#2002&emsp;|&emsp;#2003&emsp;
-          </div>
-
-          <div className="provinceTitle">Quebec</div>
-          <div className="storeLabel">
-            #2000&emsp;|&emsp;#2001&emsp;|&emsp;#2002&emsp;|&emsp;#2003&emsp;|&emsp;#2003&emsp;
-          </div>
-
-          <div className="provinceTitle">Manitoba</div>
-          <div className="storeLabel">
-            #2000&emsp;|&emsp;#2001&emsp;|&emsp;#2002&emsp;|&emsp;#2003&emsp;|&emsp;#2003&emsp;|&emsp;#2003&emsp;
-          </div>
-
-          <div className="provinceTitle">British Columbia</div>
-          <div className="storeLabel">
-            #2000&emsp;|&emsp;#2001&emsp;|&emsp;#2002&emsp;|&emsp;#2003&emsp;|&emsp;#2001&emsp;|&emsp;#2002&emsp;|&emsp;#2003&emsp;|&emsp;#2001&emsp;|&emsp;#2002&emsp;|&emsp;#2003&emsp;|&emsp;#2001&emsp;|&emsp;#2002&emsp;|&emsp;#2003
-          </div>
-
           <div className="provinceTitle">Alberta</div>
-          <div className="storeLabel">#2000</div>
+          <div className="storeLabel">{this.renderStoreList(ab)}</div>
+          <div className="provinceTitle">British Columbia</div>
+          <div className="storeLabel">{this.renderStoreList(bc)}</div>
+          <div className="provinceTitle">Manitoba</div>
+          <div className="storeLabel">{this.renderStoreList(mb)}</div>
+          <div className="provinceTitle">New Brunswick</div>
+          <div className="storeLabel">&emsp;</div>
+          <div className="provinceTitle">Newfoundland and Labrador</div>
+          <div className="storeLabel">&emsp;</div>
+          <div className="provinceTitle">Nova Scotia</div>
+          <div className="storeLabel">&emsp;</div>
+          <div className="provinceTitle">Ontario</div>
+          <div className="storeLabel">&emsp;</div>
+          <div className="provinceTitle">Prince Edward Island</div>
+          <div className="storeLabel">&emsp;</div>
+          <div className="provinceTitle">Quebec</div>
+          <div className="storeLabel">&emsp;</div>
+          <div className="provinceTitle">Saskatchewan</div>
+          <div className="storeLabel">&emsp;</div>
         </div>
       </div>
     );

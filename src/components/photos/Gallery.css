@@ -1,22 +1,19 @@
 .container-instagram-gallery {
-
 }
 
 body {
   height: unset;
 }
 
-.container{
+.container {
 }
 
 .imageList {
-  all:unset;
+  all: unset;
   display: grid;
-  
-
 }
 
-.insta_image{
+.insta_image {
   height: 200px;
   margin: 2%;
 }
@@ -25,8 +22,8 @@ body {
 .hover08 figure img {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-  -webkit-transition: .3s ease-in-out;
-  transition: .2s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .hover08 figure:hover img {
   -webkit-filter: grayscale(0);
@@ -35,13 +32,12 @@ body {
 
 /*Image Effects*/
 
-
 /* Zoom In #1 */
 .hover01 figure img {
   -webkit-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .hover01 figure:hover img {
   -webkit-transform: scale(1.3);
@@ -52,8 +48,8 @@ body {
 .hover03 figure img {
   -webkit-transform: scale(1.5);
   transform: scale(1.5);
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .hover03 figure:hover img {
   -webkit-transform: scale(1);
@@ -63,30 +59,29 @@ body {
 /* Opacity #1 */
 .hover11 img {
   opacity: 1;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .hover11 img:hover {
-  opacity: .8;
+  opacity: 0.8;
   position: float;
-  z-index:0;
+  z-index: 0;
 }
 
-
-@keyframes image_loading{
-    0%{
-        opacity: 0;
-        }
-    99%{
-        transform: rotate(xx);
-        opacity: 1;
-        }
+@keyframes image_loading {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    transform: rotate(xx);
+    opacity: 1;
+  }
 }
 
-.loading{
-    animation: image_loading 1s 0s linear;
+.loading {
+  animation: image_loading 1s 0s linear;
 }
 
-.ReactModal__Overlay{
+.ReactModal__Overlay {
   z-index: 999;
 }

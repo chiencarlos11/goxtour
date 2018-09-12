@@ -167,7 +167,6 @@ class App extends Component {
           <div className="header">
             <Navigation setDisplay={this.setDisplay} />
           </div>
-          
 
           <div className="main_left">
             <div className="menuBox">
@@ -175,6 +174,7 @@ class App extends Component {
                 changeTag={this.changeTag}
                 changeTagStore={this.changeTagStore}
                 execsData={this.state.execsData}
+                storesData={this.state.storesData}
                 content={this.state.display_main}
               />
             </div>

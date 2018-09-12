@@ -98,6 +98,7 @@ export default class Instagram extends Component {
           }
         }
       }
+
       this.filteredInstagramData = photoList;
     }
   }
@@ -215,7 +216,7 @@ export default class Instagram extends Component {
           </div>
           <div className="slider">
             <Slider ref="slider" {...settings}>
-              {this.state.instagramData.map(photo => (
+              {this.filteredInstagramData.map(photo => (
                 <img
                   className="image"
                   key={photo.id}

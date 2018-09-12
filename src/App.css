@@ -1,64 +1,122 @@
-.height_full {
-  height: 100%;
-  overflow-y: hidden;
-  background: url("./static/background-single.png") repeat;
-}
+  .height_full {
+    height: 100%;
+    overflow-y: hidden;
+    background: url("./static/background-single.png") repeat;
+  }
 
-.container {
-  all: unset;
-  display: grid;
-  grid-template-columns: 40% 60%;
-  grid-template-rows: 100px calc(98% - 225px) 125px;
-  height: 100%;
-  min-width: 850px;
-}
+  .container {
+    all: unset;
+  }
 
-.containerGallery {
-  display: grid;
-  grid-template-columns: 100%;
-  background: url("./static/background-single.png") repeat;
-}
+  .containerGallery {
+    display: grid;
+    grid-template-columns: 100%;
+    background: url("./static/background-single.png") repeat;
+  }
 
-.header {
-  grid-column: span 2;
-  height: 100px;
-}
+  .header {
+    grid-column: span 2;
+    height: 100px;
+  }
 
-.footer {
-  grid-column: span 2;
+  .footer {
+    display: none;
+  }
 
-  max-height: 200px;
-  max-width: 100%;
-}
+  .main_left {
+    display: flex;
+    flex-direction: column
 
-.main_left {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-auto-rows: minmax(10px, 515px);
-  grid-auto-columns: minmax(10px, 300px);
-  justify-items: end;
-  align-content: center;
-}
+  }
 
-.main_right {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-auto-rows: minmax(10px, 515px);
-  grid-auto-columns: minmax(10px, 500px);
-  justify-items: start;
-  align-content: center;
-}
+  .main_right {
+    display: none;
+    grid-template-columns: 100%;
+    grid-auto-rows: minmax(10px, 515px);
+    grid-auto-columns: minmax(10px, 500px);
+    justify-items: start;
+    align-content: center;
+  }
 
-.menuBox {
-  height: 100%;
-  width: 100%;
-  max-height: 515px;
-  max-width: 500px;
-}
+  .menuBox {
+    height: 100%;
+    width: 100%;
+    max-height: 515px;
+    max-width: 500px;
+  }
 
-.mapBox {
-  height: 100%;
-  width: 100%;
-  max-height: 515px;
-  max-width: 850px;
+  .mapBox {
+    height: 100%;
+    width: 100%;
+    max-height: 515px;
+    max-width: 850px;
+  }
+
+@media screen and (min-width: 800px) {
+
+  .height_full {
+    height: 100%;
+    overflow-y: hidden;
+    background: url("./static/background-single.png") repeat;
+  }
+
+  .container {
+    all: unset;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 100px calc(98% - 225px) 125px;
+    height: 100%;
+    min-width: 850px;
+  }
+
+  .containerGallery {
+    display: grid;
+    grid-template-columns: 100%;
+    background: url("./static/background-single.png") repeat;
+  }
+
+  .header {
+    grid-column: span 2;
+    height: 100px;
+  }
+
+  .footer {
+    grid-column: span 2;
+
+    max-height: 200px;
+    max-width: 100%;
+  }
+
+  .main_left {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: minmax(10px, 515px);
+    grid-auto-columns: minmax(10px, 300px);
+    justify-items: end;
+    align-content: center;
+  }
+
+  .main_right {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: minmax(10px, 515px);
+    grid-auto-columns: minmax(10px, 500px);
+    justify-items: start;
+    align-content: center;
+  }
+
+  .menuBox {
+    height: 100%;
+    width: 100%;
+    max-height: 515px;
+    max-width: 500px;
+  }
+
+  .mapBox {
+    height: 100%;
+    width: 100%;
+    max-height: 515px;
+    max-width: 850px;
+  }
+
 }

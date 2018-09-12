@@ -192,16 +192,16 @@ class App extends Component {
           </div>
 
           <div className="footer">
-            <Instagram
+          {/*  <Instagram
               access_token={this.props.access_token}
               tags={this.state.currentTags}
               instagramData={this.state.instagramData}
-            />
+            />*/}
           </div>
         </div>
       );
 
-      if (this.state.display_main === "GALLERY") {
+      {/*if (this.state.display_main === "GALLERY") {
         document.body.style.height = "unset";
         display = (
           <div className="containerGallery">
@@ -211,7 +211,7 @@ class App extends Component {
             <Gallery instagramData={this.state.instagramData} />
           </div>
         );
-      }
+      }*/}
 
       if (
         !this.state.instagramData ||

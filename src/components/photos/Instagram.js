@@ -93,11 +93,12 @@ export default class Instagram extends Component {
       for (var tag of tags) {
         for (var i = 0; i < this.state.instagramData.length; i++) {
           var element = this.state.instagramData[i];
-          if (element.tags.indexOf(tag) >= 0) {
+          if (element.tags !== null && element.tags.indexOf(tag) >= 0) {
             photoList.push(element);
           }
         }
       }
+
       this.filteredInstagramData = photoList;
     }
   }
@@ -215,7 +216,7 @@ export default class Instagram extends Component {
           </div>
           <div className="slider">
             <Slider ref="slider" {...settings}>
-              {this.state.instagramData.map(photo => (
+              {this.filteredInstagramData.map(photo => (
                 <img
                   className="image"
                   key={photo.id}

@@ -72,7 +72,7 @@ class App extends Component {
   }
 
   getData() {
-    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    const proxyurl = "https://goeasy-cors.herokuapp.com/";
     var url = "https://s3.amazonaws.com/goeasy2018/";
 
     // Get Instagram Data

@@ -6,7 +6,7 @@ import Navigation from "./components/Navigation";
 import Menu from "./components/Menu";
 import BrowserDetection from "react-browser-detection";
 import Gallery from "./components/photos/Gallery";
-import Stats from './components/stats/Stats'
+import Stats from "./components/stats/Stats";
 
 class App extends Component {
   constructor(props) {
@@ -169,7 +169,7 @@ class App extends Component {
             <Navigation setDisplay={this.setDisplay} />
           </div>
 
-          <div className="main_left">
+          <div className="main_both">
             <div className="menuBox">
               <Menu
                 changeTag={this.changeTag}
@@ -179,9 +179,6 @@ class App extends Component {
                 content={this.state.display_main}
               />
             </div>
-          </div>
-
-          <div className="main_right">
             <div className="mapBox">
               <MapContainer
                 execId={this.state.selectedExec}

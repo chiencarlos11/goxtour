@@ -23,21 +23,46 @@ class Voting extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      option1_selected: "votingBox",
-      option2_selected: "votingBox",
-      option3_selected: "votingBox",
-      option4_selected: "votingBox",
-      option5_selected: "votingBox",
+    console.log("hasVoted: " + this.props.hasVoted);
 
-      select_button: "selectButton",
+    if (this.props.hasVoted > 0) {
+      this.state = {
+        option1_selected: "disabledVotingBox",
+        option2_selected: "disabledVotingBox",
+        option3_selected: "disabledVotingBox",
+        option4_selected: "disabledVotingBox",
+        option5_selected: "disabledVotingBox",
 
-      vote_button: "disabledVoteButton",
-      vote_sent: false,
+        select_button: "invisibleSelectButton",
+        vote_button: "disabledVoteButton",
 
-      current_photo: "",
-      modalIsOpen: false
-    };
+        vote_sent: this.props.hasVoted,
+        current_photo: "",
+        modalIsOpen: false
+      };
+
+      if (this.props.hasVoted == 1) option1_selected: "votingBox";
+      if (this.props.hasVoted == 2) option1_selected: "votingBox";
+      if (this.props.hasVoted == 3) option1_selected: "votingBox";
+      if (this.props.hasVoted == 4) option1_selected: "votingBox";
+      if (this.props.hasVoted == 5) option1_selected: "votingBox";
+    } else {
+      this.state = {
+        option1_selected: "votingBox",
+        option2_selected: "votingBox",
+        option3_selected: "votingBox",
+        option4_selected: "votingBox",
+        option5_selected: "votingBox",
+
+        select_button: "selectButton",
+
+        vote_button: "disabledVoteButton",
+        vote_sent: this.props.hasVoted,
+
+        current_photo: "",
+        modalIsOpen: false
+      };
+    }
 
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -78,13 +103,11 @@ class Voting extends Component {
     if (typeof this.state.selectedImage !== "undefined") {
       this.setState({ vote_sent: true });
       this.setState({ select_button: "invisibleSelectButton" });
-      console.log("TRUE");
+      this.props.castVote(this.state.selectedImage);
     }
   }
 
   renderAction() {
-    console.log("renderAction");
-
     let action;
 
     if (this.state.vote_sent) {

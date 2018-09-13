@@ -20,12 +20,14 @@ class App extends Component {
       display_main: "Executives",
       storesData: 0,
       execsData: 0,
-      instagramData: 0
+      instagramData: 0,
+      hasVoted: 0
     };
 
     this.changeTag = this.changeTag.bind(this);
     this.changeTagStore = this.changeTagStore.bind(this);
     this.setDisplay = this.setDisplay.bind(this);
+    this.setVoted = this.setVoted.bind(this);
 
     this.getData();
   }
@@ -153,6 +155,10 @@ class App extends Component {
     this.setState({ display_main: display });
   }
 
+  setVoted(imageId) {
+    this.setState({ hasVoted: imageId });
+  }
+
   render() {
     let display = (
       <div>
@@ -212,7 +218,7 @@ class App extends Component {
       } else if (this.state.display_main === "STATS") {
         document.body.style.height = "unset";
         display = (
-          <div >
+          <div>
             <div className="header">
               <Navigation setDisplay={this.setDisplay} />
             </div>
@@ -233,7 +239,7 @@ class App extends Component {
             <div className="header">
               <Navigation setDisplay={this.setDisplay} />
             </div>
-            <Voting />
+            <Voting hasVoted={this.state.hasVoted} castVote={this.setVoted} />
           </div>
         );
       }

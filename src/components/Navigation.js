@@ -58,7 +58,6 @@ export default class Navigation extends Component {
         selected_voting: "current"
       });
     }
-
   }
 
   handleLogoClicked() {
@@ -85,15 +84,7 @@ export default class Navigation extends Component {
                   className={this.state.selected_executive}
                   onClick={this.setDisplay.bind(this, "Executives")}
                 >
-                  Tour Members
-                </a>
-              </li>
-              <li>
-                <a
-                  className={this.state.selected_tourstops}
-                  onClick={this.setDisplay.bind(this, "Stores")}
-                >
-                  Tour Stops
+                  Home
                 </a>
               </li>
               <li>
@@ -109,15 +100,7 @@ export default class Navigation extends Component {
                   className={this.state.selected_stats}
                   onClick={this.setDisplay.bind(this, "STATS")}
                 >
-                  STATS
-                </a>
-              </li>
-              <li>
-                <a
-                  className={this.state.selected_voting}
-                  onClick={this.setDisplay.bind(this, "VOTING")}
-                >
-                  VOTING
+                  TRAVEL STATS
                 </a>
               </li>
             </ul>

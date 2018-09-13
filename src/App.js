@@ -7,6 +7,7 @@ import Menu from "./components/Menu";
 import BrowserDetection from "react-browser-detection";
 import Gallery from "./components/photos/Gallery";
 import Stats from "./components/stats/Stats";
+import Voting from "./components/voting/Voting";
 
 class App extends Component {
   constructor(props) {
@@ -227,13 +228,12 @@ class App extends Component {
           </div>
         );
       } else if (this.state.display_main === "VOTING") {
-        document.body.style.height = "unset";
         display = (
-          <div className="containerGallery">
+          <div className="height_full">
             <div className="header">
               <Navigation setDisplay={this.setDisplay} />
             </div>
-            <Gallery instagramData={this.state.instagramData} />
+            <Voting />
           </div>
         );
       }

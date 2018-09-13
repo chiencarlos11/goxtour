@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,600");
+
+.container-voting {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+
+  grid-gap: 75px;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.votingBox {
+  display: grid;
+  grid-row-gap: 20px;
+  width: 100%;
+}
+
+.votingImage {
+  width: 100%;
+
+  object-fit: cover;
+  border-color: rgb(25, 186, 226);
+  border-style: solid;
+}
+
+.selectBox {
+  background: white;
+}
+
+.selectButton {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0px;
+  word-spacing: 2px;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+
+  justify-self: center;
+}
+
+.voteButtonLine {
+  grid-column: span 5;
+  display: grid;
+
+  width: 100%;
+}
+
+.voteButton {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 30px 64px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+  font-family: "Work Sans", sans-serif;
+  font-size: 32px;
+  letter-spacing: 0px;
+  word-spacing: 2px;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+
+  justify-self: center;
+}
+
+.greyedOut {
+  filter: grayscale(100%);
+}

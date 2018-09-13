@@ -26,6 +26,7 @@
 
   height: 100%;
   align-content: center;
+  justify-content: center;
 
   padding-right: 30px;
   padding-left: 30px;
@@ -37,8 +38,12 @@
   grid-template-columns: 1fr 1fr 1fr;
   overflow: auto;
 
+  width: 1365px;
+
   background-color: white;
   padding-top: 20px;
+
+  justify-self: center;
 }
 
 .statsCell {
@@ -59,13 +64,15 @@
 }
 
 .statsBox2 {
+  display: grid;
+
   grid-column: 2/3;
   grid-row: 1/2;
   width: 100%;
 }
 
 .execNameStats {
-  justify-self: center;
+  justify-self: left;
   align-self: end;
   font-family: "Work Sans", sans-serif;
   font-size: 16px;
@@ -79,17 +86,22 @@
 }
 
 .execTitleStats {
-  justify-self: center;
+  justify-self: left;
   align-self: top;
   font-family: "Work Sans", sans-serif;
   font-size: 12px;
   letter-spacing: 0px;
   word-spacing: 2px;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
   font-style: normal;
   font-variant: normal;
-  text-transform: uppercase;
   word-wrap: break-word;
   width: 150px;
+}
+
+@media screen and (max-width: 1364px) {
+  .statsMain {
+    width: 95%;
+  }
 }

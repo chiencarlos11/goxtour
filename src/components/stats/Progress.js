@@ -26,7 +26,7 @@ export default class Prog extends Component {
 
 	render() {
 		const containerStyle = {
-			width: "250px"
+			width: "200px"
 		};
 
 		return (

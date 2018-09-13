@@ -6,6 +6,7 @@ import Navigation from "./components/Navigation";
 import Menu from "./components/Menu";
 import BrowserDetection from "react-browser-detection";
 import Gallery from "./components/photos/Gallery";
+import Stats from './components/stats/Stats'
 
 class App extends Component {
   constructor(props) {
@@ -201,6 +202,34 @@ class App extends Component {
       );
 
       if (this.state.display_main === "GALLERY") {
+        document.body.style.height = "unset";
+        display = (
+          <div className="containerGallery">
+            <div className="header">
+              <Navigation setDisplay={this.setDisplay} />
+            </div>
+            <Gallery instagramData={this.state.instagramData} />
+          </div>
+        );
+      } else if (this.state.display_main === "STATS") {
+        document.body.style.height = "unset";
+        display = (
+          <div className="containerGallery">
+            <div className="header">
+              <Navigation setDisplay={this.setDisplay} />
+            </div>
+            <div className="menuBox">
+              <Stats
+                changeTag={this.changeTag}
+                changeTagStore={this.changeTagStore}
+                execsData={this.state.execsData}
+                storesData={this.state.storesData}
+                content={this.state.display_main}
+              />
+            </div>
+          </div>
+        );
+      } else if (this.state.display_main === "VOTING") {
         document.body.style.height = "unset";
         display = (
           <div className="containerGallery">

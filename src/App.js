@@ -8,6 +8,7 @@ import BrowserDetection from "react-browser-detection";
 import Gallery from "./components/photos/Gallery";
 import Stats from "./components/stats/Stats";
 import Voting from "./components/voting/Voting";
+import { isMobile } from "react-device-detect";
 
 class App extends Component {
   constructor(props) {
@@ -180,6 +181,11 @@ class App extends Component {
         <h3>This website is optimized for Chrome, Firefox or Safari.</h3>
       </div>
     );
+
+    if (isMobile) {
+      document.body.style.height = "100%";
+      return <div className="mobile_container" />;
+    }
 
     if (!this.state.ie_detected) {
       console.log("Displaying non IE");

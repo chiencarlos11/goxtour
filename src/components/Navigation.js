@@ -10,7 +10,9 @@ export default class Navigation extends Component {
     this.state = {
       selected_executive: "current",
       selected_tourstops: "none",
-      selected_gallery: "none"
+      selected_gallery: "none",
+      selected_stats: "none",
+      selected_voting: "none"
     };
   }
 
@@ -27,6 +29,12 @@ export default class Navigation extends Component {
     this.setState({
       selected_gallery: "none"
     });
+    this.setState({
+      selected_stats: "none"
+    });
+    this.setState({
+      selected_voting: "none"
+    });
 
     if (display == "Executives") {
       selected_executive: "current";
@@ -41,7 +49,16 @@ export default class Navigation extends Component {
       this.setState({
         selected_gallery: "current"
       });
+    } else if (display == "STATS") {
+      this.setState({
+        selected_stats: "current"
+      });
+    } else if (display == "VOTING") {
+      this.setState({
+        selected_voting: "current"
+      });
     }
+
   }
 
   handleLogoClicked() {
@@ -88,7 +105,20 @@ export default class Navigation extends Component {
                 </a>
               </li>
               <li>
-                <a>STATS</a>
+                <a
+                  className={this.state.selected_stats}
+                  onClick={this.setDisplay.bind(this, "STATS")}
+                >
+                  STATS
+                </a>
+              </li>
+              <li>
+                <a
+                  className={this.state.selected_voting}
+                  onClick={this.setDisplay.bind(this, "VOTING")}
+                >
+                  VOTING
+                </a>
               </li>
             </ul>
           </nav>

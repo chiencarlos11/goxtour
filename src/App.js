@@ -158,6 +158,15 @@ class App extends Component {
 
   setDisplay(display) {
     this.setState({ display_main: display });
+
+    /*
+    // To Reset Instgram and Map
+    // Need to Reset Menu too!!!
+
+    if (display == "Executives") {
+      this.changeTag("__show_all__");
+    }
+*/
   }
 
   setVoted(imageId) {

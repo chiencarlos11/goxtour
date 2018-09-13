@@ -30,7 +30,10 @@ class Voting extends Component {
       option4_selected: "votingBox",
       option5_selected: "votingBox",
 
+      select_button: "selectButton",
+
       vote_button: "disabledVoteButton",
+      vote_sent: false,
 
       current_photo: "",
       modalIsOpen: false
@@ -46,7 +49,6 @@ class Voting extends Component {
   }
 
   afterOpenModal() {
-    // references are now sync'd and can be accessed.
     this.subtitle.style.color = "#f00";
   }
 
@@ -55,6 +57,8 @@ class Voting extends Component {
   }
 
   handleSelectClicked(imageId) {
+    this.setState({ selectedImage: imageId });
+
     this.setState({ option1_selected: "disabledVotingBox" });
     this.setState({ option2_selected: "disabledVotingBox" });
     this.setState({ option3_selected: "disabledVotingBox" });
@@ -70,6 +74,37 @@ class Voting extends Component {
     this.setState({ vote_button: "voteButton" });
   }
 
+  handleVoteClicked() {
+    if (typeof this.state.selectedImage !== "undefined") {
+      this.setState({ vote_sent: true });
+      this.setState({ select_button: "invisibleSelectButton" });
+      console.log("TRUE");
+    }
+  }
+
+  renderAction() {
+    console.log("renderAction");
+
+    let action;
+
+    if (this.state.vote_sent) {
+      action = <div className="finishedLabel">Thanks for your input</div>;
+    } else {
+      action = (
+        <div
+          className={this.state.vote_button}
+          onClick={() => {
+            this.handleVoteClicked();
+          }}
+        >
+          VOTE
+        </div>
+      );
+    }
+
+    return action;
+  }
+
   render() {
     return (
       <div className="container-voting">
@@ -80,7 +115,7 @@ class Voting extends Component {
             onClick={this.openModal.bind(this, data[0])}
           />
           <div
-            className="selectButton"
+            className={this.state.select_button}
             onClick={() => {
               this.handleSelectClicked(1);
             }}
@@ -95,7 +130,7 @@ class Voting extends Component {
             onClick={this.openModal.bind(this, data[1])}
           />
           <div
-            className="selectButton"
+            className={this.state.select_button}
             onClick={() => {
               this.handleSelectClicked(2);
             }}
@@ -110,7 +145,7 @@ class Voting extends Component {
             onClick={this.openModal.bind(this, data[2])}
           />
           <div
-            className="selectButton"
+            className={this.state.select_button}
             onClick={() => {
               this.handleSelectClicked(3);
             }}
@@ -125,7 +160,7 @@ class Voting extends Component {
             onClick={this.openModal.bind(this, data[3])}
           />
           <div
-            className="selectButton"
+            className={this.state.select_button}
             onClick={() => {
               this.handleSelectClicked(4);
             }}
@@ -140,7 +175,7 @@ class Voting extends Component {
             onClick={this.openModal.bind(this, data[4])}
           />
           <div
-            className="selectButton"
+            className={this.state.select_button}
             onClick={() => {
               this.handleSelectClicked(5);
             }}
@@ -148,9 +183,7 @@ class Voting extends Component {
             SELECT
           </div>
         </div>
-        <div className="voteButtonLine">
-          <div className={this.state.vote_button}>VOTE</div>
-        </div>
+        <div className="voteButtonLine">{this.renderAction()}</div>
 
         <Modal
           isOpen={this.state.modalIsOpen}

@@ -76,7 +76,7 @@ class Voting extends Component {
         <div className={this.state.option1_selected}>
           <img
             className="votingImage"
-            src="https://scontent-iad3-1.cdninstagram.com/vp/1f5344a40e9cd2b2405c0232cdbe5f8e/5C27CF1D/t51.2885-15/fr/e15/s1080x1080/40543138_294790494638880_8047632972603841698_n.jpg?ig_cache_key=MTg2NzE1MDQzMTEwOTc4MjY0OQ%3D%3D.2"
+            src={data[0].display_url}
             onClick={this.openModal.bind(this, data[0])}
           />
           <div
@@ -91,8 +91,8 @@ class Voting extends Component {
         <div className={this.state.option2_selected}>
           <img
             className="votingImage"
-            src="https://scontent-iad3-1.cdninstagram.com/vp/1f5344a40e9cd2b2405c0232cdbe5f8e/5C27CF1D/t51.2885-15/fr/e15/s1080x1080/40543138_294790494638880_8047632972603841698_n.jpg?ig_cache_key=MTg2NzE1MDQzMTEwOTc4MjY0OQ%3D%3D.2"
-            onClick={this.openModal.bind(this, data[0])}
+            src={data[1].display_url}
+            onClick={this.openModal.bind(this, data[1])}
           />
           <div
             className="selectButton"
@@ -106,8 +106,8 @@ class Voting extends Component {
         <div className={this.state.option3_selected}>
           <img
             className="votingImage"
-            src="https://scontent-iad3-1.cdninstagram.com/vp/1f5344a40e9cd2b2405c0232cdbe5f8e/5C27CF1D/t51.2885-15/fr/e15/s1080x1080/40543138_294790494638880_8047632972603841698_n.jpg?ig_cache_key=MTg2NzE1MDQzMTEwOTc4MjY0OQ%3D%3D.2"
-            onClick={this.openModal.bind(this, data[0])}
+            src={data[2].display_url}
+            onClick={this.openModal.bind(this, data[2])}
           />
           <div
             className="selectButton"
@@ -121,8 +121,8 @@ class Voting extends Component {
         <div className={this.state.option4_selected}>
           <img
             className="votingImage"
-            src="https://scontent-iad3-1.cdninstagram.com/vp/1f5344a40e9cd2b2405c0232cdbe5f8e/5C27CF1D/t51.2885-15/fr/e15/s1080x1080/40543138_294790494638880_8047632972603841698_n.jpg?ig_cache_key=MTg2NzE1MDQzMTEwOTc4MjY0OQ%3D%3D.2"
-            onClick={this.openModal.bind(this, data[0])}
+            src={data[3].display_url}
+            onClick={this.openModal.bind(this, data[3])}
           />
           <div
             className="selectButton"
@@ -136,8 +136,8 @@ class Voting extends Component {
         <div className={this.state.option5_selected}>
           <img
             className="votingImage"
-            src="https://scontent-iad3-1.cdninstagram.com/vp/1f5344a40e9cd2b2405c0232cdbe5f8e/5C27CF1D/t51.2885-15/fr/e15/s1080x1080/40543138_294790494638880_8047632972603841698_n.jpg?ig_cache_key=MTg2NzE1MDQzMTEwOTc4MjY0OQ%3D%3D.2"
-            onClick={this.openModal.bind(this, data[0])}
+            src={data[4].display_url}
+            onClick={this.openModal.bind(this, data[4])}
           />
           <div
             className="selectButton"

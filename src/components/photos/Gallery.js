@@ -94,6 +94,7 @@ export default class Gallery extends Component {
               next={this.fetchMoreData}
               hasMore={true}
               loader={<h4>Loading...</h4>}
+              style={"max-width: 1600px"}
             >
               {this.state.instagramData.map(photo => (
                 <img
@@ -105,32 +106,30 @@ export default class Gallery extends Component {
                 />
               ))}
 
-              <div>
-                <Modal
-                  isOpen={this.state.modalIsOpen}
-                  onAfterOpen={this.afterOpenModal}
-                  onRequestClose={this.closeModal}
-                  style={customStyles}
-                  contentLabel="Example Modal"
-                >
-                  <h2 ref={subtitle => (this.subtitle = subtitle)} />
-                  <InstagramEmbed
-                    url={
-                      "https://www.instagram.com/p/" +
-                      this.state.current_photo.shortcode
-                    }
-                    maxWidth={600}
-                    hideCaption={false}
-                    containerTagName="div"
-                    protocol=""
-                    injectScript
-                    onLoading={() => {}}
-                    onSuccess={() => {}}
-                    onAfterRender={() => {}}
-                    onFailure={() => {}}
-                  />
-                </Modal>
-              </div>
+              <Modal
+                isOpen={this.state.modalIsOpen}
+                onAfterOpen={this.afterOpenModal}
+                onRequestClose={this.closeModal}
+                style={customStyles}
+                contentLabel="Example Modal"
+              >
+                <h2 ref={subtitle => (this.subtitle = subtitle)} />
+                <InstagramEmbed
+                  url={
+                    "https://www.instagram.com/p/" +
+                    this.state.current_photo.shortcode
+                  }
+                  maxWidth={600}
+                  hideCaption={false}
+                  containerTagName="div"
+                  protocol=""
+                  injectScript
+                  onLoading={() => {}}
+                  onSuccess={() => {}}
+                  onAfterRender={() => {}}
+                  onFailure={() => {}}
+                />
+              </Modal>
             </InfiniteScroll>
           </div>
         </div>

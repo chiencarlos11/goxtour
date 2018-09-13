@@ -74,11 +74,10 @@ class App extends Component {
   }
 
   getData() {
-    const proxyurl = "https://goeasy-cors.herokuapp.com/";
     var url = "https://s3.amazonaws.com/goeasy2018/";
 
     // Get Instagram Data
-    fetch(proxyurl + url + "instagram.json")
+    fetch(url + "instagram.json")
       .then(response => {
         return response.json();
       })
@@ -91,7 +90,7 @@ class App extends Component {
       });
 
     // Get Exec Data
-    fetch(proxyurl + url + "execs.json")
+    fetch(url + "execs.json")
       .then(response => {
         return response.json();
       })
@@ -104,7 +103,7 @@ class App extends Component {
       });
 
     // Get Store Data
-    fetch(proxyurl + url + "branches.json")
+    fetch(url + "branches.json")
       .then(response => {
         return response.json();
       })

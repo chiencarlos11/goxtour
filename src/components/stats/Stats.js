@@ -78,7 +78,6 @@ class Stats extends Component {
       <div
         className="statsCell"
         key={exec.id}
-        onClick={this.handleClick.bind(this, exec.id)}
       >
         <div className="statsBox1">
           <img className="execImage" src={this.getPortrait(exec.id)} alt="" />

@@ -21,6 +21,22 @@
   width: 100%;
 }
 
+.disabledVotingBox {
+  display: grid;
+  grid-row-gap: 20px;
+  width: 100%;
+
+  filter: grayscale(100%);
+}
+
+.votingBox:hover {
+  cursor: pointer;
+}
+
+.disabledVotingBox:hover {
+  cursor: pointer;
+}
+
 .votingImage {
   width: 100%;
 
@@ -34,7 +50,7 @@
 }
 
 .selectButton {
-  background-color: #4caf50; /* Green */
+  background-color: rgb(25, 186, 226);
   border: none;
   color: white;
   padding: 15px 32px;
@@ -84,6 +100,30 @@
   justify-self: center;
 }
 
-.greyedOut {
+.voteButton:hover {
+  cursor: pointer;
+}
+
+.disabledVoteButton {
   filter: grayscale(100%);
+
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 30px 64px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+  font-family: "Work Sans", sans-serif;
+  font-size: 32px;
+  letter-spacing: 0px;
+  word-spacing: 2px;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+
+  justify-self: center;
 }

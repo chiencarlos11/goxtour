@@ -7,7 +7,8 @@
       "name": "DAVID INGRAM",
       "title": "CHIEF EXECUTIVE OFFICER",
       "latitude": 50.989781,
-      "longitude": -114.139278
+      "longitude": -114.139278,
+      "storeCount": 10
     },
     {
       "id": 1,
@@ -16,8 +17,8 @@
       "name": "JASON MULLIMS",
       "title": "PRESIDENT & COO",
       "latitude": 43.756319,
-      "longitude": -79.53942
-      
+      "longitude": -79.53942,
+      "storeCount": 12
     },
     {
       "id": 2,
@@ -26,7 +27,8 @@
       "name": "Andrea Fiederer",
       "title": "EVP & CMO",
       "latitude": 45.78085,
-      "longitude": -60.437126
+      "longitude": -60.437126,
+      "storeCount": 12
     },
     {
       "id": 3,
@@ -35,7 +37,8 @@
       "name": "JASON APPEL",
       "title": "SVP & CRO",
       "latitude": 45.042571,
-      "longitude": -64.602168
+      "longitude": -64.602168,
+      "storeCount": 10
     },
     {
       "id": 4,
@@ -44,7 +47,8 @@
       "name": "David Yeilding",
       "title": "Interim, CFO",
       "latitude": 45.954001,
-      "longitude": -73.123736
+      "longitude": -73.123736,
+      "storeCount": 11
     },
     {
       "id": 5,
@@ -53,7 +57,8 @@
       "name": "Shane Pennell",
       "title": "SVP, Operations, EFS",
       "latitude": 43.614462,
-      "longitude": -79.651135
+      "longitude": -79.651135,
+      "storeCount": 16
     },
     {
       "id": 6,
@@ -62,7 +67,8 @@
       "name": "Steven Poole",
       "title": "SVP, Operations and Merchandising, EH",
       "latitude": 42.633016,
-      "longitude": -82.209011
+      "longitude": -82.209011,
+      "storeCount": 18
     },
     {
       "id": 7,
@@ -71,7 +77,8 @@
       "name": "David Cooper",
       "title": "VP, HR",
       "latitude": 49.857501,
-      "longitude": -97.398095
+      "longitude": -97.398095,
+      "storeCount": 10
     },
     {
       "id": 8,
@@ -80,7 +87,8 @@
       "name": "Keran McGuire",
       "title": "VP, IT Shared Services",
       "latitude": 49.826804,
-      "longitude": -99.778395
+      "longitude": -99.778395,
+      "storeCount": 10
     },
     {
       "id": 9,
@@ -89,7 +97,8 @@
       "name": "Hetal Nijjar",
       "title": "VP, Audit & Compliance",
       "latitude": 50.321134,
-      "longitude": -104.613228
+      "longitude": -104.613228,
+      "storeCount": 11
     },
     {
       "id": 10,
@@ -98,7 +107,8 @@
       "name": "Aun Amjad",
       "title": "VP, Enterprise Systems",
       "latitude": 52.124084,
-      "longitude": -106.714114
+      "longitude": -106.714114,
+      "storeCount": 9
     },
     {
       "id": 11,
@@ -107,7 +117,8 @@
       "name": "Adam Ross",
       "title": "Director, Marketing",
       "latitude": 53.503963,
-      "longitude": -113.412058
+      "longitude": -113.412058,
+      "storeCount": 12
     },
     {
       "id": 12,
@@ -116,7 +127,8 @@
       "name": "Harjas Rai",
       "title": "Director, HR",
       "latitude": 51.066143,
-      "longitude": -114.142066
+      "longitude": -114.142066,
+      "storeCount": 4
     },
     {
       "id": 13,
@@ -125,7 +137,8 @@
       "name": "Melissa Ellens",
       "title": "Director, Operations",
       "latitude": 49.241901,
-      "longitude": -123.152811
+      "longitude": -123.152811,
+      "storeCount": 8
     }
   ]
 }

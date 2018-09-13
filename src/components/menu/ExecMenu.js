@@ -122,6 +122,8 @@ class ExecMenu extends Component {
           </div>
         </div>
         <br />
+        <div className="provinceContainer">Visiting: {exec.province}</div>
+        <br />
         <div className="storeListContainer">{StoreList}</div>
       </div>
     );

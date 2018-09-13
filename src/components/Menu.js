@@ -51,6 +51,7 @@ export default class Menu extends Component {
           <ExecMenu
             execId={this.state.execID}
             changeTag={this.props.changeTag}
+            changeStoreTag={this.props.changeStoreTag}
             displayStore={this.displayStore}
             execsData={this.state.execsData}
           />

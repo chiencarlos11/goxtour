@@ -35,16 +35,29 @@ function getExecMarkers(data) {
   return execMarkers;
 }
 
-function getLocation(execId, data) {
+function getLocation(execId, storeId, execData, storeData) {
   var latitude = 44.6;
   var longitude = -79.639026;
 
+  // Find Store
+  if (storeId >= 0) {
+    for (var i = 0; i < storeData.stores.length; i++) {
+      var store = storeData.stores[i];
+      if (store.Id == storeId) {
+        latitude = store.Latitude;
+        longitude = store.Longitude;
+      }
+    }
+  }
+
   // Find Exec
-  for (var i = 0; i < data.execs.length; i++) {
-    var exec = data.execs[i];
-    if (exec.id == execId) {
-      latitude = exec.latitude;
-      longitude = exec.longitude;
+  if (execId >= 0) {
+    for (var i = 0; i < execData.execs.length; i++) {
+      var exec = execData.execs[i];
+      if (exec.id == execId) {
+        latitude = exec.latitude;
+        longitude = exec.longitude;
+      }
     }
   }
 
@@ -64,7 +77,12 @@ const GoXMap = withScriptjs(
     return (
       <GoogleMap
         defaultZoom={11}
-        center={getLocation(props.execId, props.execsData)}
+        center={getLocation(
+          props.execId,
+          props.storeId,
+          props.execsData,
+          props.storesData
+        )}
         options={options}
       >
         {getStoreMarkers(props.storesData)}

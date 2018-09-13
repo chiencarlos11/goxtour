@@ -16,16 +16,18 @@ class App extends Component {
     this.state = {
       currentTags: [],
       selectedExec: -1,
+      selectedStore: -1,
       ie_detected: false,
       display_main: "Executives",
       storesData: 0,
       execsData: 0,
       instagramData: 0,
-      hasVoted: 0
+      hasVoted: 0,
+      location: {}
     };
 
     this.changeTag = this.changeTag.bind(this);
-    this.changeTagStore = this.changeTagStore.bind(this);
+    this.changeStoreTag = this.changeStoreTag.bind(this);
     this.setDisplay = this.setDisplay.bind(this);
     this.setVoted = this.setVoted.bind(this);
 
@@ -138,16 +140,19 @@ class App extends Component {
 
     //Updating current Exec
     this.setState({ selectedExec: execID });
+    this.setState({ selectedStore: -1 });
   }
 
-  changeTagStore(storeId) {
+  changeStoreTag(storeId) {
+    console.log("changeStoreTag: " + storeId);
+
     if (storeId === null) {
-      console.log("setting currentTags to `empty");
       this.setState({ currentTags: [] });
     } else {
-      this.setState({
-        currentTags: [this.state.storesData.stores[storeId].tag]
-      });
+      console.log("update selectedStore");
+
+      this.setState({ selectedStore: storeId });
+      this.setState({ selectedExec: -1 });
     }
   }
 
@@ -180,7 +185,7 @@ class App extends Component {
             <div className="menuBox">
               <Menu
                 changeTag={this.changeTag}
-                changeTagStore={this.changeTagStore}
+                changeStoreTag={this.changeStoreTag}
                 execsData={this.state.execsData}
                 storesData={this.state.storesData}
                 content={this.state.display_main}
@@ -189,6 +194,7 @@ class App extends Component {
             <div className="mapBox">
               <MapContainer
                 execId={this.state.selectedExec}
+                storeId={this.state.selectedStore}
                 execsData={this.state.execsData}
                 storesData={this.state.storesData}
               />
@@ -200,6 +206,7 @@ class App extends Component {
               access_token={this.props.access_token}
               tags={this.state.currentTags}
               instagramData={this.state.instagramData}
+              storeId={this.state.selectedStore}
             />
           </div>
         </div>

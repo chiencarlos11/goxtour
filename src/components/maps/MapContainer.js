@@ -8,6 +8,7 @@ export default class MapContainer extends React.Component {
     super(props);
 
     this.state = {
+      currentStoreId: this.props.storeId,
       currentExecId: this.props.execId,
       execsData: this.props.execsData,
       storesData: this.props.storesData
@@ -20,11 +21,16 @@ export default class MapContainer extends React.Component {
       return true;
     }
 
+    if (nextProps.storeId != this.state.currentStoreId) {
+      this.setState({ currentStoreId: nextProps.storeId });
+      return true;
+    }
+
     return false;
   }
 
   render() {
-    if (this.state.currentExecId >= 0) {
+    if (this.state.currentExecId >= 0 || this.state.currentStoreId >= 0) {
       return (
         <div
           style={{
@@ -43,6 +49,7 @@ export default class MapContainer extends React.Component {
             containerElement={<div style={{ width: `100%`, height: `100%` }} />}
             mapElement={<div style={{ height: `100%` }} />}
             execId={this.state.currentExecId}
+            storeId={this.state.currentStoreId}
             execsData={this.state.execsData}
             storesData={this.state.storesData}
           />

@@ -146,6 +146,11 @@
   text-transform: uppercase;
 }
 
+.execStoreLabel:hover {
+  color: rgb(11, 186, 224);
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1000px) {
   .execName {
     font-size: 24px;

@@ -9,7 +9,9 @@
       "latitude": 50.989781,
       "longitude": -114.139278,
       "storeCount": 10,
-      "province": "Halifax, Nova Scotia, PEI"
+      "province": "Halifax, Nova Scotia, PEI",
+      "currentDistance": 100,
+      "totalDistance": 1000
     },
     {
       "id": 1,
@@ -20,7 +22,9 @@
       "latitude": 43.756319,
       "longitude": -79.53942,
       "storeCount": 12,
-      "province": "Ontaio: GTA & Niagara"
+      "province": "Ontaio: GTA & Niagara",
+      "currentDistance": 100,
+      "totalDistance": 1000
     },
     {
       "id": 2,
@@ -31,7 +35,9 @@
       "latitude": 45.78085,
       "longitude": -60.437126,
       "storeCount": 12,
-      "province": "Manitoba"
+      "province": "Manitoba",
+      "currentDistance": 100,
+      "totalDistance": 1000
     },
     {
       "id": 3,
@@ -42,7 +48,9 @@
       "latitude": 45.042571,
       "longitude": -64.602168,
       "storeCount": 10,
-      "province": "Ontario: Ottawa"
+      "province": "Ontario: Ottawa",
+      "currentDistance": 100,
+      "totalDistance": 1000
     },
     {
       "id": 4,
@@ -53,7 +61,9 @@
       "latitude": 45.954001,
       "longitude": -73.123736,
       "storeCount": 11,
-      "province": "Newfoundland"
+      "province": "Newfoundland",
+      "currentDistance": 100,
+      "totalDistance": 1000
     },
     {
       "id": 5,
@@ -64,7 +74,9 @@
       "latitude": 43.614462,
       "longitude": -79.651135,
       "storeCount": 16,
-      "province": "BC: Kamploops & Kelowna"
+      "province": "BC: Kamploops & Kelowna",
+      "currentDistance": 100,
+      "totalDistance": 1000
     },
     {
       "id": 6,
@@ -75,7 +87,9 @@
       "latitude": 42.633016,
       "longitude": -82.209011,
       "storeCount": 18,
-      "province": "BC: Vancouver + Victoria"
+      "province": "BC: Vancouver + Victoria",
+      "currentDistance": 100,
+      "totalDistance": 1000
     },
     {
       "id": 7,
@@ -86,7 +100,9 @@
       "latitude": 49.857501,
       "longitude": -97.398095,
       "storeCount": 10,
-      "province": "SW Ontario"
+      "province": "SW Ontario",
+      "currentDistance": 100,
+      "totalDistance": 1000
     },
     {
       "id": 8,
@@ -97,7 +113,9 @@
       "latitude": 49.826804,
       "longitude": -99.778395,
       "storeCount": 10,
-      "province": "New Brunswick & Nova Scotia"
+      "province": "New Brunswick & Nova Scotia",
+      "currentDistance": 100,
+      "totalDistance": 1000
     },
     {
       "id": 9,
@@ -108,7 +126,9 @@
       "latitude": 50.321134,
       "longitude": -104.613228,
       "storeCount": 11,
-      "province": "Upper Alberta"
+      "province": "Upper Alberta",
+      "currentDistance": 100,
+      "totalDistance": 1000
     },
     {
       "id": 10,
@@ -119,7 +139,9 @@
       "latitude": 52.124084,
       "longitude": -106.714114,
       "storeCount": 9,
-      "province": "New Brunswick & Nova Scotia"
+      "province": "New Brunswick & Nova Scotia",
+      "currentDistance": 100,
+      "totalDistance": 1000
     },
     {
       "id": 11,
@@ -130,7 +152,9 @@
       "latitude": 53.503963,
       "longitude": -113.412058,
       "storeCount": 12,
-      "province": "Quebec"
+      "province": "Quebec",
+      "currentDistance": 100,
+      "totalDistance": 1000
     },
     {
       "id": 12,
@@ -141,7 +165,9 @@
       "latitude": 51.066143,
       "longitude": -114.142066,
       "storeCount": 4,
-      "province": "Ontario: Sudbury & North Bay"
+      "province": "Ontario: Sudbury & North Bay",
+      "currentDistance": 100,
+      "totalDistance": 1000
     },
     {
       "id": 13,
@@ -152,7 +178,9 @@
       "latitude": 49.241901,
       "longitude": -123.152811,
       "storeCount": 8,
-      "province": "SW Ontario"
+      "province": "SW Ontario",
+      "currentDistance": 100,
+      "totalDistance": 1000
     }
   ]
 }

@@ -82,17 +82,21 @@ class StoreMenu extends Component {
   }
 
   renderStoreList(province) {
-    return Object.keys(province).map(key => (
-      <a
-        key={key}
-        onClick={() => {
-          this.handleClick(province[key]);
-        }}
-      >
-        {key}
-        &emsp;
-      </a>
-    ));
+    if (Object.keys(province).length > 0) {
+      return Object.keys(province).map(key => (
+        <a
+          key={key}
+          onClick={() => {
+            this.handleClick(province[key]);
+          }}
+        >
+          {key}
+          &emsp;
+        </a>
+      ));
+    } else {
+      return <div>Locations will be revealed after visited!</div>;
+    }
   }
 
   render() {

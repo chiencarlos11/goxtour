@@ -89,3 +89,33 @@
     grid-template-columns: 37% auto;
   }
 }
+
+@media (max-height: 830px) {
+  .menuBox {
+    max-height: 475px;
+  }
+
+  .mapBox {
+    max-height: 475px;
+  }
+}
+
+@media (max-height: 795px) {
+  .menuBox {
+    max-height: 450px;
+  }
+
+  .mapBox {
+    max-height: 450px;
+  }
+}
+
+@media (max-height: 740px) {
+  .menuBox {
+    max-height: 425px;
+  }
+
+  .mapBox {
+    max-height: 425px;
+  }
+}

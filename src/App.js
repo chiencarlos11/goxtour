@@ -212,11 +212,11 @@ class App extends Component {
       } else if (this.state.display_main === "STATS") {
         document.body.style.height = "unset";
         display = (
-          <div className="containerGallery">
+          <div >
             <div className="header">
               <Navigation setDisplay={this.setDisplay} />
             </div>
-            <div className="menuBox">
+            <div className="StatsBox">
               <Stats
                 changeTag={this.changeTag}
                 changeTagStore={this.changeTagStore}

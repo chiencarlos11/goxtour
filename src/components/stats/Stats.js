@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Stats.css";
+import Prog from "./Progress";
 
 import logo from "../../static/goXtour_logo.png";
 import execIcon_0 from "../../static/ExecPortraits/1_Ingram_profile.png";
@@ -69,26 +70,23 @@ class Stats extends Component {
   }
 
   getRender() {
-    if (this.state.currentExecId >= 0) {
-      return this.getStores();
-    } else {
-      return this.getExecs();
-    }
+    return this.getExecs();
   }
 
   getExecs() {
     let Execs = this.state.execsData.execs.map(exec => (
       <div
-        className="menu-cell"
+        className="statsCell"
         key={exec.id}
         onClick={this.handleClick.bind(this, exec.id)}
       >
-        <div className="execImageBox">
+        <div className="statsBox1">
           <img className="execImage" src={this.getPortrait(exec.id)} alt="" />
         </div>
-        <div className="execNameBox">
-          <div className="execName">{exec.name}</div>
-          <div className="execTitle">{exec.title}</div>
+        <div className="statsBox2">
+          <Prog progress={1} />
+          <div className="execNameStats">{exec.name}</div>
+          <div className="execTitleStats">{exec.title}</div>
         </div>
       </div>
     ));
@@ -96,49 +94,10 @@ class Stats extends Component {
     return Execs;
   }
 
-  getStores() {
-    let exec = this.state.execsData.execs.find(
-      x => x.id === this.state.currentExecId
-    );
-
-    let StoreList;
-    if (exec.stores.length > 0) {
-      StoreList = exec.stores[0].map(e => (
-        <div key={e} className="execStoreLabel">
-          {e}
-        </div>
-      ));
-    }
-
-    return (
-      <div>
-        <div className="menu-cell" key={exec.id}>
-          <div className="execImageBox">
-            <img className="execImage" src={this.getPortrait(exec.id)} alt="" />
-          </div>
-          <div className="execNameBox">
-            <div className="execName">{exec.name}</div>
-            <div className="execTitle">{exec.title}</div>
-          </div>
-        </div>
-        <br />
-        <div className="storeListContainer">{StoreList}</div>
-      </div>
-    );
-  }
-
   render() {
     return (
-      <div className="container-menu">
-        <div className="menu-top">
-          <img
-            className="image-top"
-            src={logo}
-            alt=""
-            onClick={this.handleClick.bind(this, "__show_all__")}
-          />
-        </div>
-        <div className="menu-main">{this.getRender()}</div>
+      <div className="statsContainer">
+        <div className="statsMain">{this.getRender()}</div>
       </div>
     );
   }

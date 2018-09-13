@@ -22,7 +22,7 @@
       "latitude": 43.756319,
       "longitude": -79.53942,
       "storeCount": 12,
-      "province": "Ontaio: GTA & Niagara",
+      "province": "GTA & Niagara, Ontario",
       "currentDistance": 100,
       "totalDistance": 1000
     },
@@ -48,7 +48,7 @@
       "latitude": 45.042571,
       "longitude": -64.602168,
       "storeCount": 10,
-      "province": "Ontario: Ottawa",
+      "province": "Ottawa, Ontario",
       "currentDistance": 100,
       "totalDistance": 1000
     },
@@ -74,7 +74,7 @@
       "latitude": 43.614462,
       "longitude": -79.651135,
       "storeCount": 16,
-      "province": "BC: Kamploops & Kelowna",
+      "province": "Kamploops & Kelowna, BC",
       "currentDistance": 100,
       "totalDistance": 1000
     },
@@ -87,7 +87,7 @@
       "latitude": 42.633016,
       "longitude": -82.209011,
       "storeCount": 18,
-      "province": "BC: Vancouver + Victoria",
+      "province": "Vancouver & Victoria, BC",
       "currentDistance": 100,
       "totalDistance": 1000
     },
@@ -165,7 +165,7 @@
       "latitude": 51.066143,
       "longitude": -114.142066,
       "storeCount": 4,
-      "province": "Ontario: Sudbury & North Bay",
+      "province": "Sudbury & North Bay, Ontario",
       "currentDistance": 100,
       "totalDistance": 1000
     },

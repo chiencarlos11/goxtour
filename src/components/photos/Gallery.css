@@ -56,6 +56,12 @@ body {
   transform: scale(1);
 }
 
+.hover11 {
+  max-width: 1596px;
+  justify-self: center;
+  align-self: center;
+}
+
 /* Opacity #1 */
 .hover11 img {
   opacity: 1;
@@ -84,4 +90,28 @@ body {
 
 .ReactModal__Overlay {
   z-index: 999;
+}
+
+@media screen and (max-width: 1596px) {
+  .hover11 {
+    max-width: 1300px;
+  }
+}
+
+@media screen and (max-width: 1596px) {
+  .hover11 {
+    max-width: 1260px;
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  .hover11 {
+    max-width: 975px;
+  }
+}
+
+@media screen and (max-width: 975px) {
+  .hover11 {
+    max-width: 700px;
+  }
 }

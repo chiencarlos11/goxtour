@@ -7,7 +7,7 @@
 .container {
   all: unset;
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 100px calc(98% - 225px) 125px;
   height: 100%;
   min-width: 850px;
@@ -29,6 +29,20 @@
 
   max-height: 200px;
   max-width: 100%;
+}
+
+.main_both {
+  grid-column: span 2;
+
+  display: grid;
+  grid-template-columns: 37% 63%;
+  grid-auto-rows: minmax(10px, 515px);
+  grid-auto-columns: minmax(10px, 800px);
+
+  min-width: 1350px;
+
+  justify-self: center;
+  align-content: center;
 }
 
 .main_left {
@@ -54,6 +68,9 @@
   width: 100%;
   max-height: 515px;
   max-width: 500px;
+
+  justify-self: end;
+  align-self: center;
 }
 
 .mapBox {
@@ -61,4 +78,44 @@
   width: 100%;
   max-height: 515px;
   max-width: 850px;
+
+  justify-self: start;
+  align-self: center;
+}
+
+@media screen and (max-width: 1250px) {
+  .main_both {
+    min-width: 900px;
+    grid-template-columns: 37% auto;
+  }
+}
+
+@media (max-height: 830px) {
+  .menuBox {
+    max-height: 475px;
+  }
+
+  .mapBox {
+    max-height: 475px;
+  }
+}
+
+@media (max-height: 795px) {
+  .menuBox {
+    max-height: 450px;
+  }
+
+  .mapBox {
+    max-height: 450px;
+  }
+}
+
+@media (max-height: 740px) {
+  .menuBox {
+    max-height: 425px;
+  }
+
+  .mapBox {
+    max-height: 425px;
+  }
 }

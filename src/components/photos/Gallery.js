@@ -88,6 +88,7 @@ export default class Gallery extends Component {
     if (this.state.loaded == "true") {
       return (
         <div className="imageList">
+          <br />
           <div className="hover11">
             <InfiniteScroll
               dataLength={this.state.instagramData.length}

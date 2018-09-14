@@ -133,4 +133,12 @@
   .statsCell {
     grid-gap: 0px;
   }
+
+  .execTitleStats {
+    font-size: 11px;
+  }
+
+  .execNameStats {
+    font-size: 15px;
+  }
 }

@@ -47,7 +47,7 @@
   grid-template-columns: 170px auto;
   grid-template-rows: 100px;
   grid-gap: 15px;
-
+  padding-top: 10px;
   height: 100px;
 }
 

@@ -254,7 +254,7 @@ class ExecMenuMobile extends Component {
 
     return (
       <div>
-        <div className="statsCell" key={exec.id} onClick={this.handleClick.bind(this, exec.id)}>
+        <div className="statsCell" key={exec.id} onClick={this.handleClick.bind(this, '__show_all__')}>
         <div className="statsBox1">
           <img className="execImage" src={this.getPortrait(exec.id)} alt="" />
         </div>

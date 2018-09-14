@@ -71,11 +71,11 @@ export default class Instagram extends Component {
   }
 
   nextSlide() {
-    this.refs.slider.slickNext();
+    this.refs.slider.slickPrev();
   }
 
   previousSlide() {
-    this.refs.slider.slickPrev();
+    this.refs.slider.slickNext();
   }
 
   componentDidMount() {

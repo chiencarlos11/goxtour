@@ -8,6 +8,16 @@ import BrowserDetection from "react-browser-detection";
 import Gallery from "./components/photos/Gallery";
 import Stats from "./components/stats/Stats";
 import Voting from "./components/voting/Voting";
+import { isMobile } from "react-device-detect";
+
+import logo from "./static/goX.png";
+import logoMain from "./static/goXtour_logo.png";
+import homeIcon from "./static/Mobile/home.png";
+import travelIcon from "./static/Mobile/travel.png";
+import galleryIcon from "./static/Mobile/gallery.png";
+import homeIconActive from "./static/Mobile/homeActive.png";
+import travelIconActive from "./static/Mobile/travelActive.png";
+import galleryIconActive from "./static/Mobile/galleryActive.png";
 
 class App extends Component {
   constructor(props) {
@@ -24,6 +34,11 @@ class App extends Component {
       instagramData: 0,
       hasVoted: 0,
       location: {},
+      display_mobile: "HOME",
+      currentHomeIcon: homeIconActive,
+      currentTravelIcon: travelIcon,
+      currentGalleryIcon: galleryIcon
+
     };
 
     this.changeTag = this.changeTag.bind(this);
@@ -176,6 +191,61 @@ class App extends Component {
     this.setState({ hasVoted: imageId });
   }
 
+  getMobileMain() {
+    let main;
+
+    if (this.state.display_mobile == "HOME") {
+      main = (
+        <div className="mobile_home_box">
+          <img className="mobile_home_image" src={logoMain} />
+          <div className="mobile_home_message">
+            For full functionality try our site from a PC
+          </div>
+        </div>
+      );
+    } else if (this.state.display_mobile == "GALLERY") {
+      main = (
+        <div className="mobile_gallery_wrapper">
+          <Gallery instagramData={this.state.instagramData} />
+        </div>
+      );
+    } else if (this.state.display_mobile == "EXECS") {
+      main = (
+        <Menu
+          changeTag={this.changeTag}
+          changeStoreTag={this.changeStoreTag}
+          execsData={this.state.execsData}
+          storesData={this.state.storesData}
+          content={this.state.display_main}
+        />
+      );
+    }
+
+    return main;
+  }
+
+  handleMobileNavigation(selected) {
+    this.setState({ display_mobile: selected });
+
+    if (selected == "HOME") {
+      this.setState({ currentHomeIcon: homeIconActive });
+      this.setState({ currentGalleryIcon: galleryIcon });
+      this.setState({ currentTravelIcon: travelIcon });
+    }
+
+    if (selected == "EXECS") {
+      this.setState({ currentHomeIcon: homeIcon });
+      this.setState({ currentGalleryIcon: galleryIcon });
+      this.setState({ currentTravelIcon: travelIconActive });
+    }
+
+    if (selected == "GALLERY") {
+      this.setState({ currentHomeIcon: homeIcon });
+      this.setState({ currentGalleryIcon: galleryIconActive });
+      this.setState({ currentTravelIcon: travelIcon });
+    }
+  }
+
   render() {
     let display = (
       <div>
@@ -184,8 +254,66 @@ class App extends Component {
       </div>
     );
 
-    if (!this.state.ie_detected) {
-      console.log("Displaying non IE");
+    if (isMobile && !this.state.ie_detected) {
+      document.body.style.height = "100%";
+
+      if (
+        !this.state.instagramData ||
+        !this.state.execsData ||
+        !this.state.storesData
+      ) {
+        display = <div>Loading...</div>;
+      } else {
+        display = (
+          <div className="mobile_container">
+            <div className="mobile_navbar">
+              <div className="mobile_navbar_logo">
+                <img
+                  className="mobile_navbar_image"
+                  src={logo}
+                  alt=""
+                  onClick={this.handleLogoClicked}
+                />
+              </div>
+
+              <div className="mobile_separator_row" />
+            </div>
+            {this.getMobileMain()}
+            <div className="mobile_footer">
+              <div className="mobile_footer_box">
+                <div className="mobile_footer_font">
+                  <img
+                    className="mobile_footer_image"
+                    src={this.state.currentHomeIcon}
+                    onClick={this.handleMobileNavigation.bind(this, "HOME")}
+                  />
+                </div>
+              </div>
+              <div className="mobile_footer_box">
+                <div className="mobile_footer_font">
+                  <img
+                    className="mobile_footer_image"
+                    src={this.state.currentGalleryIcon}
+                    onClick={this.handleMobileNavigation.bind(this, "GALLERY")}
+                  />
+                </div>
+              </div>
+              <div className="mobile_footer_box">
+                <div className="mobile_footer_font">
+                  <img
+                    className="mobile_footer_image"
+                    src={this.state.currentTravelIcon}
+                    onClick={this.handleMobileNavigation.bind(this, "EXECS")}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      }
+    }
+
+    if (!isMobile && !this.state.ie_detected) {
       document.body.style.height = "100%";
       display = (
         <div className="container">

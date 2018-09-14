@@ -3,6 +3,7 @@ import Modal from "react-modal";
 import InstagramEmbed from "react-instagram-embed";
 import InfiniteScroll from "react-infinite-scroll-component";
 import "./Gallery.css";
+import { isMobile } from "react-device-detect";
 
 const customStyles = {
   content: {
@@ -58,8 +59,10 @@ export default class Gallery extends Component {
   };
 
   openModal(instagram_photo) {
-    this.setState({ modalIsOpen: true });
-    this.setState({ current_photo: instagram_photo });
+    if (!isMobile) {
+      this.setState({ modalIsOpen: true });
+      this.setState({ current_photo: instagram_photo });
+    }
   }
 
   afterOpenModal() {

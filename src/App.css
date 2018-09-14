@@ -229,6 +229,7 @@
 .mobile_gallery_wrapper {
   max-height: calc(100% - 200px) !important;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 @media screen and (max-width: 355px) {

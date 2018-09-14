@@ -14,8 +14,6 @@
   grid-template-rows: 100%;
   background-color: white;
   height: 100%;
-
-  padding-top: 20px;
 }
 
 .menu-top {
@@ -60,6 +58,12 @@
   grid-gap: 15px;
 
   height: 100px;
+  width: 300px;
+
+  align-self: center;
+  justify-self: center;
+  align-self: center;
+  justify-self: center;
 }
 
 .menu-cell:hover {
@@ -89,6 +93,7 @@
   grid-template-columns: 100%;
   grid-template-rows: 50% 50%;
 
+  max-width: 200px;
   height: 100%;
 }
 

@@ -129,6 +129,10 @@ body {
     width:100%;
   }
 
+  .hover11 img:hover {
+    opacity: 1;
+  }
+
   .insta_image {
     height: 100%;
     width:100%;

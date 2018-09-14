@@ -230,3 +230,9 @@
   max-height: calc(100% - 200px) !important;
   overflow: auto;
 }
+
+@media screen and (max-width: 355px) {
+  .mobile_home_message {
+    font-size: 10px;
+  }
+}

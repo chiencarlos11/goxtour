@@ -151,6 +151,11 @@
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   justify-items: center;
+
+  position: absolute;
+  bottom: 0px;
+  height: 100px;
+  width: 100%;
 }
 
 .mobile_navbar_logo {
@@ -192,7 +197,7 @@
 .mobile_home_box {
   display: grid;
 
-  grid-template-columns: 80%;
+  grid-template-columns: 90%;
   grid-template-rows: 80%;
 
   justify-content: center;
@@ -219,4 +224,9 @@
   font-style: normal;
   font-variant: normal;
   text-transform: uppercase;
+}
+
+.mobile_gallery_wrapper {
+  max-height: calc(100% - 200px) !important;
+  overflow: auto;
 }

@@ -34,7 +34,6 @@ export default class Instagram extends Component {
 
     this.state = {
       currentExecId: this.props.execId,
-      currentStoreId: this.props.storeId,
       currentTag: this.props.tags,
       loaded: "false",
       modalIsOpen: false,

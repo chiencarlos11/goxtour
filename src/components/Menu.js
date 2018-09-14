@@ -54,6 +54,8 @@ export default class Menu extends Component {
             changeStoreTag={this.props.changeStoreTag}
             displayStore={this.displayStore}
             execsData={this.state.execsData}
+            showStoreModal={this.props.showStoreModal}
+            instagramData={this.props.instagramData}
           />
         );
         break;
@@ -64,6 +66,8 @@ export default class Menu extends Component {
             displayStore={this.displayStore}
             execsData={this.state.execsData}
             storesData={this.state.storesData}
+            showStoreModal={this.props.showStoreModal}
+            instagramData={this.props.instagramData}
           />
         );
         break;
@@ -73,6 +77,8 @@ export default class Menu extends Component {
             changeTag={this.props.changeTag}
             displayStore={this.displayStore}
             execsData={this.state.execsData}
+            showStoreModal={this.props.showStoreModal}
+            instagramData={this.props.instagramData}
           />
         );
         break;

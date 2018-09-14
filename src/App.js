@@ -23,7 +23,7 @@ class App extends Component {
       execsData: 0,
       instagramData: 0,
       hasVoted: 0,
-      location: {}
+      location: {},
     };
 
     this.changeTag = this.changeTag.bind(this);
@@ -197,6 +197,7 @@ class App extends Component {
                 execsData={this.state.execsData}
                 storesData={this.state.storesData}
                 content={this.state.display_main}
+                instagramData={this.state.instagramData}
               />
             </div>
             <div className="mapBox">
@@ -214,7 +215,6 @@ class App extends Component {
               access_token={this.props.access_token}
               tags={this.state.currentTags}
               instagramData={this.state.instagramData}
-              storeId={this.state.selectedStore}
             />
           </div>
         </div>

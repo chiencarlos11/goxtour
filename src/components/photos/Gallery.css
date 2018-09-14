@@ -131,6 +131,10 @@ body {
     height: 100px;
     margin: 2%;
   }
+
+  .hover11 img:hover {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 360px) {

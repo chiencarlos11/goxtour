@@ -236,6 +236,10 @@
   text-transform: uppercase;
 }
 
+.backButton:hover {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1000px) {
   .execName {
     font-size: 24px;

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import MapContainer from "./components/maps/MapContainer";
 import Instagram from "./components/photos/Instagram";
+import MobileExecMenu from "./components/menu/MobileExecMenu";
 import Navigation from "./components/Navigation";
 import Menu from "./components/Menu";
 import BrowserDetection from "react-browser-detection";
@@ -9,6 +10,11 @@ import Gallery from "./components/photos/Gallery";
 import Stats from "./components/stats/Stats";
 import Voting from "./components/voting/Voting";
 import { isMobile } from "react-device-detect";
+
+import logo from "./static/goX.png";
+import homeIcon from "./static/Mobile/home.png";
+import travelIcon from "./static/Mobile/travel3.png";
+import galleryIcon from "./static/Mobile/gallery.png";
 
 class App extends Component {
   constructor(props) {
@@ -182,13 +188,62 @@ class App extends Component {
       </div>
     );
 
-    if (isMobile) {
+    if (isMobile && !this.state.ie_detected) {
       document.body.style.height = "100%";
-      return <div className="mobile_container" />;
+
+      if (
+        !this.state.instagramData ||
+        !this.state.execsData ||
+        !this.state.storesData
+      ) {
+        display = <div>Loading...</div>;
+      } else {
+        display = (
+          <div className="mobile_container">
+            <div className="mobile_navbar">
+              <div className="mobile_navbar_logo">
+                <img
+                  className="mobile_navbar_image"
+                  src={logo}
+                  alt=""
+                  onClick={this.handleLogoClicked}
+                />
+              </div>
+
+              <div className="mobile_separator_row" />
+            </div>
+            <div className="mobile_main">
+              <MobileExecMenu
+                changeTag={this.changeTag}
+                changeStoreTag={this.changeStoreTag}
+                execsData={this.state.execsData}
+                storesData={this.state.storesData}
+                content={this.state.display_main}
+              />
+            </div>
+            <div className="mobile_footer">
+              <div className="mobile_footer_box">
+                <div className="mobile_footer_font">
+                  <img className="mobile_footer_image" src={homeIcon} />
+                </div>
+              </div>
+              <div className="mobile_footer_box">
+                <div className="mobile_footer_font">
+                  <img className="mobile_footer_image" src={galleryIcon} />
+                </div>
+              </div>
+              <div className="mobile_footer_box">
+                <div className="mobile_footer_font">
+                  <img className="mobile_footer_image" src={travelIcon} />
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      }
     }
 
-    if (!this.state.ie_detected) {
-      console.log("Displaying non IE");
+    if (!isMobile && !this.state.ie_detected) {
       document.body.style.height = "100%";
       display = (
         <div className="container">

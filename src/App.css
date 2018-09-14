@@ -125,21 +125,59 @@
   grid-template-columns: 100%;
   grid-template-rows: auto 1fr auto;
   height: 100%;
-
-  background-color: white;
 }
 
 .mobile_navbar {
-  background-color: yellow;
+  background-color: white;
   height: 100px;
 }
 
 .mobile_main {
-  background-color: blue;
   height: 100%;
 }
 
 .mobile_footer {
-  background-color: red;
+  background-color: white;
   height: 100px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  justify-items: center;
+}
+
+.mobile_navbar_logo {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+
+.mobile_navbar_image {
+  height: 80px;
+  justify-self: center;
+  align-self: center;
+}
+
+.mobile_separator_row {
+  height: 20px;
+  background: url("./static/menu-line-single.png");
+  z-index: 950;
+}
+
+.mobile_footer_box {
+  height: 100%;
+
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+
+  align-content: center;
+  align-items: center;
+}
+
+.mobile_footer_image {
+  height: 50px;
+
+  justify-self: center;
+  align-self: center;
 }

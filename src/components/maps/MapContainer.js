@@ -16,20 +16,27 @@ export default class MapContainer extends React.Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    if (nextProps.execId != this.state.currentExecId) {
+
+
+    if (nextProps.execId !== this.state.currentExecId) {
       this.setState({ currentExecId: nextProps.execId });
       return true;
     }
 
-    if (nextProps.storeId != this.state.currentStoreId) {
+    if (nextProps.storeId !== this.state.currentStoreId) {
       this.setState({ currentStoreId: nextProps.storeId });
       return true;
+    }
+
+    if (nextProps.storeId === -1){
+      return true
     }
 
     return false;
   }
 
   render() {
+
     if (this.state.currentExecId >= 0 || this.state.currentStoreId >= 0) {
       return (
         <div

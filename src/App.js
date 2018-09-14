@@ -124,6 +124,7 @@ class App extends Component {
       return;
     } else if (execID === "__show_all__") {
       this.setState({ currentTags: ["__show_all__"] });
+      this.setState({ selectedExec: -1 });
       return;
     }
 
@@ -147,6 +148,9 @@ class App extends Component {
 
     if (storeId === null) {
       this.setState({ currentTags: [] });
+    } else if (storeId === '__show_all__'){
+      this.setState({ selectedExec: -1 });
+
     } else {
       console.log("update selectedStore");
 
@@ -215,6 +219,7 @@ class App extends Component {
               access_token={this.props.access_token}
               tags={this.state.currentTags}
               instagramData={this.state.instagramData}
+              storeId={this.state.selectedStore}
             />
           </div>
         </div>

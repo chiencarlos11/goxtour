@@ -38,7 +38,8 @@ export default class Instagram extends Component {
       loaded: "false",
       modalIsOpen: false,
       current_photo: "",
-      instagramData: this.props.instagramData
+      instagramData: this.props.instagramData,
+      storeId:this.props.storeId
     };
 
     this.filteredInstagramData = this.props.instagramData;
@@ -82,6 +83,40 @@ export default class Instagram extends Component {
     this.setState({ loaded: "true" });
   }
 
+  filterResultsByStore(tags) {
+    if (tags === undefined || tags === null) {
+
+      this.filteredInstagramData = this.state.instagramData;
+    } else if (tags == "__show_all__") {
+
+      this.filteredInstagramData = this.state.instagramData;
+    } else {
+      var photoList = [];
+
+      for (var i = 0; i < this.state.instagramData.length; i++) {
+        var element = this.state.instagramData[i];
+        let added = false;
+        if (element.tags !== null && element.tags.indexOf(tags) >= 0) {
+          photoList.push(element);
+          console.log("Adding element = " + element.tags)
+          added = true;
+        }
+        if (added === false) {
+
+          if (
+            element.edge_media_to_caption !== null &&
+            JSON.stringify(element.edge_media_to_caption).includes(tags)
+          ) {
+            console.log("Adding element = " + JSON.stringify(element.edge_media_to_caption))
+            photoList.push(element);
+          }
+        }
+      }
+
+      this.filteredInstagramData = photoList;
+    }
+  }
+
   filterResultsByTag(tags) {
     if (tags === undefined || tags.length === 0) {
       this.filteredInstagramData = this.state.instagramData;
@@ -112,6 +147,12 @@ export default class Instagram extends Component {
 
     if (this.state.instagramData && nextProps.tags !== this.state.currentTags) {
       this.filterResultsByTag(nextProps.tags);
+      return true;
+    }
+
+    if (this.state.storeId !== nextProps.storeId){
+      this.setState({storeId: nextProps.storeId})
+      this.filterResultsByStore(nextProps.storeId);
       return true;
     }
 

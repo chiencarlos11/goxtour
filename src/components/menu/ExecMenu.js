@@ -72,6 +72,7 @@ class ExecMenu extends Component {
   }
 
   closeModal() {
+    this.props.changeTag(this.state.currentExecId);
     this.setState({ modalIsOpen: false });
   }
 
@@ -95,11 +96,7 @@ class ExecMenu extends Component {
 
     let curr = this.state.current_photo;
 
-    if (this.state.currentTag) {
-      array = this.filteredInstagramData;
-    } else {
-      array = this.state.instagramData;
-    }
+    array = this.filteredInstagramData;
 
     index = array.findIndex(function(instagramImage) {
       return curr.id === instagramImage.id;
@@ -118,11 +115,8 @@ class ExecMenu extends Component {
 
     let curr = this.state.current_photo;
 
-    if (this.state.currentTag) {
-      array = this.filteredInstagramData;
-    } else {
-      array = this.state.instagramData;
-    }
+    array = this.filteredInstagramData;
+
 
     index = array.findIndex(function(instagramImage) {
       return curr.id === instagramImage.id;
@@ -159,6 +153,7 @@ class ExecMenu extends Component {
             element.edge_media_to_caption !== null &&
             JSON.stringify(element.edge_media_to_caption).includes(tags)
           ) {
+            
             photoList.push(element);
           }
         }

@@ -4,6 +4,7 @@ import MapContainer from "./components/maps/MapContainer";
 import Instagram from "./components/photos/Instagram";
 import Navigation from "./components/Navigation";
 import Menu from "./components/Menu";
+import MenuMobile from "./components/MenuMobile";
 import BrowserDetection from "react-browser-detection";
 import Gallery from "./components/photos/Gallery";
 import Stats from "./components/stats/Stats";
@@ -211,7 +212,7 @@ class App extends Component {
       );
     } else if (this.state.display_mobile == "EXECS") {
       main = (
-        <Menu
+        <MenuMobile
           changeTag={this.changeTag}
           changeStoreTag={this.changeStoreTag}
           execsData={this.state.execsData}

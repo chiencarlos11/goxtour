@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import MapContainer from "./components/maps/MapContainer";
 import Instagram from "./components/photos/Instagram";
-import MobileExecMenu from "./components/menu/MobileExecMenu";
 import Navigation from "./components/Navigation";
 import Menu from "./components/Menu";
 import BrowserDetection from "react-browser-detection";
@@ -12,6 +11,7 @@ import Voting from "./components/voting/Voting";
 import { isMobile } from "react-device-detect";
 
 import logo from "./static/goX.png";
+import logoMain from "./static/goXtour_logo.png";
 import homeIcon from "./static/Mobile/home.png";
 import travelIcon from "./static/Mobile/travel3.png";
 import galleryIcon from "./static/Mobile/gallery.png";
@@ -30,7 +30,8 @@ class App extends Component {
       execsData: 0,
       instagramData: 0,
       hasVoted: 0,
-      location: {}
+      location: {},
+      display_mobile: "HOME"
     };
 
     this.changeTag = this.changeTag.bind(this);
@@ -180,6 +181,39 @@ class App extends Component {
     this.setState({ hasVoted: imageId });
   }
 
+  getMobileMain() {
+    let main;
+
+    if (this.state.display_mobile == "HOME") {
+      main = (
+        <div className="mobile_home_box">
+          <img className="mobile_home_image" src={logoMain} />
+          <div className="mobile_home_message">
+            For full functionality try our site from a PC
+          </div>
+        </div>
+      );
+    } else if (this.state.display_mobile == "GALLERY") {
+      main = <Gallery instagramData={this.state.instagramData} />;
+    } else if (this.state.display_mobile == "EXECS") {
+      main = (
+        <Menu
+          changeTag={this.changeTag}
+          changeStoreTag={this.changeStoreTag}
+          execsData={this.state.execsData}
+          storesData={this.state.storesData}
+          content={this.state.display_main}
+        />
+      );
+    }
+
+    return main;
+  }
+
+  handleMobileNavigation(selected) {
+    this.setState({ display_mobile: selected });
+  }
+
   render() {
     let display = (
       <div>
@@ -212,29 +246,33 @@ class App extends Component {
 
               <div className="mobile_separator_row" />
             </div>
-            <div className="mobile_main">
-              <MobileExecMenu
-                changeTag={this.changeTag}
-                changeStoreTag={this.changeStoreTag}
-                execsData={this.state.execsData}
-                storesData={this.state.storesData}
-                content={this.state.display_main}
-              />
-            </div>
+            {this.getMobileMain()}
             <div className="mobile_footer">
               <div className="mobile_footer_box">
                 <div className="mobile_footer_font">
-                  <img className="mobile_footer_image" src={homeIcon} />
+                  <img
+                    className="mobile_footer_image"
+                    src={homeIcon}
+                    onClick={this.handleMobileNavigation.bind(this, "HOME")}
+                  />
                 </div>
               </div>
               <div className="mobile_footer_box">
                 <div className="mobile_footer_font">
-                  <img className="mobile_footer_image" src={galleryIcon} />
+                  <img
+                    className="mobile_footer_image"
+                    src={galleryIcon}
+                    onClick={this.handleMobileNavigation.bind(this, "GALLERY")}
+                  />
                 </div>
               </div>
               <div className="mobile_footer_box">
                 <div className="mobile_footer_font">
-                  <img className="mobile_footer_image" src={travelIcon} />
+                  <img
+                    className="mobile_footer_image"
+                    src={travelIcon}
+                    onClick={this.handleMobileNavigation.bind(this, "EXECS")}
+                  />
                 </div>
               </div>
             </div>

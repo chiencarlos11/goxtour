@@ -17,6 +17,8 @@ import execIcon_11 from "../../static/ExecPortraits/12_Ross_profile.png";
 import execIcon_12 from "../../static/ExecPortraits/13_Raj_profile.png";
 import execIcon_13 from "../../static/ExecPortraits/14_Ellens_profile.png";
 
+import { isMobile } from "react-device-detect";
+
 class ExecMenu extends Component {
   constructor(props) {
     super(props);
@@ -83,9 +85,18 @@ class ExecMenu extends Component {
   }
 
   getExecs() {
+    var menuCell = "menu-cell";
+    var execName = "execName";
+    var execTitle = "execTitle";
+    if (isMobile) {
+      menuCell = "mobile-menu-cell";
+      execName = "mobile-execName";
+      execTitle = "mobile-execTitle";
+    }
+
     let Execs = this.state.execsData.execs.map(exec => (
       <div
-        className="menu-cell"
+        className={menuCell}
         key={exec.id}
         onClick={this.handleClick.bind(this, exec.id)}
       >
@@ -93,8 +104,8 @@ class ExecMenu extends Component {
           <img className="execImage" src={this.getPortrait(exec.id)} alt="" />
         </div>
         <div className="execNameBox">
-          <div className="execName">{exec.name}</div>
-          <div className="execTitle">{exec.title}</div>
+          <div className={execName}>{exec.name}</div>
+          <div className={execTitle}>{exec.title}</div>
         </div>
       </div>
     ));
@@ -144,19 +155,27 @@ class ExecMenu extends Component {
   }
 
   render() {
-    return (
-      <div className="container-menu">
-        <div className="menu-top">
-          <img
-            className="image-top"
-            src={logo}
-            alt=""
-            onClick={this.handleClick.bind(this, "__show_all__")}
-          />
+    if (isMobile) {
+      return (
+        <div className="mobile-container-menu">
+          <div className="menu-main">{this.getRender()}</div>
         </div>
-        <div className="menu-main">{this.getRender()}</div>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div className="container-menu">
+          <div className="menu-top">
+            <img
+              className="image-top"
+              src={logo}
+              alt=""
+              onClick={this.handleClick.bind(this, "__show_all__")}
+            />
+          </div>
+          <div className="menu-main">{this.getRender()}</div>
+        </div>
+      );
+    }
   }
 }
 

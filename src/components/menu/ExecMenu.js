@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { isMobile } from "react-device-detect";
 import "./execMenu.css";
 import Modal from "react-modal";
 import InstagramEmbed from "react-instagram-embed";
@@ -32,7 +33,7 @@ const customStyles = {
   }
 };
 
-import { isMobile } from "react-device-detect";
+
 
 class ExecMenu extends Component {
   constructor(props) {

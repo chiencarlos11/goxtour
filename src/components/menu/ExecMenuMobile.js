@@ -19,6 +19,9 @@ import execIcon_10 from "../../static/ExecPortraits/11_Amjad_profile.png";
 import execIcon_11 from "../../static/ExecPortraits/12_Ross_profile.png";
 import execIcon_12 from "../../static/ExecPortraits/13_Raj_profile.png";
 import execIcon_13 from "../../static/ExecPortraits/14_Ellens_profile.png";
+import execIcon_14 from "../../static/ExecPortraits/15_Gladu_profile.png";
+import execIcon_15 from "../../static/ExecPortraits/16_Ellis_profile.png";
+import execIcon_16 from "../../static/ExecPortraits/17_Anzini_profile.png";
 import "../../stylesheets/line-awesome/css/line-awesome.min.css";
 
 const customStyles = {
@@ -33,8 +36,6 @@ const customStyles = {
     transform: "translate(-50%, -50%)"
   }
 };
-
-
 
 class ExecMenuMobile extends Component {
   constructor(props) {
@@ -194,6 +195,12 @@ class ExecMenuMobile extends Component {
         return execIcon_12;
       case 13:
         return execIcon_13;
+      case 14:
+        return execIcon_14;
+      case 15:
+        return execIcon_15;
+      case 16:
+        return execIcon_16;
       default:
         return execIcon_0;
     }
@@ -218,9 +225,11 @@ class ExecMenuMobile extends Component {
     }
 
     let Execs = this.state.execsData.execs.map(exec => (
-
-
-      <div className="statsCell" key={exec.id} onClick={this.handleClick.bind(this, exec.id)}>
+      <div
+        className="statsCell"
+        key={exec.id}
+        onClick={this.handleClick.bind(this, exec.id)}
+      >
         <div className="statsBox1">
           <img className="execImage" src={this.getPortrait(exec.id)} alt="" />
         </div>
@@ -243,10 +252,7 @@ class ExecMenuMobile extends Component {
     let StoreList;
     if (exec.stores.length > 0) {
       StoreList = exec.stores[0].map(e => (
-        <div
-          key={e}
-          className="execStoreLabel"
-        >
+        <div key={e} className="execStoreLabel">
           {e}
         </div>
       ));
@@ -254,16 +260,20 @@ class ExecMenuMobile extends Component {
 
     return (
       <div>
-        <div className="statsCell" key={exec.id} onClick={this.handleClick.bind(this, '__show_all__')}>
-        <div className="statsBox1">
-          <img className="execImage" src={this.getPortrait(exec.id)} alt="" />
+        <div
+          className="statsCell"
+          key={exec.id}
+          onClick={this.handleClick.bind(this, "__show_all__")}
+        >
+          <div className="statsBox1">
+            <img className="execImage" src={this.getPortrait(exec.id)} alt="" />
+          </div>
+          <div className="statsBox2">
+            <Prog progress={1} />
+            <div className="execNameStats">{exec.name}</div>
+            <div className="execTitleStats">{exec.province}</div>
+          </div>
         </div>
-        <div className="statsBox2">
-          <Prog progress={1} />
-          <div className="execNameStats">{exec.name}</div>
-          <div className="execTitleStats">{exec.province}</div>
-        </div>
-      </div>
         <br />
         <div className="provinceContainer">Visiting: {exec.province}</div>
         <br />

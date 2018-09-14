@@ -41,11 +41,10 @@ export default class Navigation extends Component {
     });
 
     if (display == "Executives") {
-      window.location.reload();
-      //selected_executive: "current";
-      //this.setState({
-      //  selected_executive: "current"
-      //});
+      selected_executive: "current";
+      this.setState({
+        selected_executive: "current"
+      });
     } else if (display == "Stores") {
       this.setState({
         selected_tourstops: "current"

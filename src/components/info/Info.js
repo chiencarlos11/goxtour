@@ -20,7 +20,7 @@ class Info extends Component {
               </b>
             </p>
             <p>
-              &#xb7;&nbsp;&nbsp;Click on a Tour Members’ image on the{" "}
+              &#xb7;&nbsp;&nbsp;Click on a Tour Member's image on the{" "}
               <u>Home</u> page to see where they are and where they’ve visited
             </p>
             <p>

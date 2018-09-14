@@ -105,3 +105,32 @@
     width: 95%;
   }
 }
+
+@media screen and (max-width: 1165px) {
+  .statsMain {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 805px) {
+  .statsMain {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .statsMain {
+    width: 100%;
+  }
+
+  .statsContainer {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .statsCell {
+    grid-gap: 0px;
+  }
+}

@@ -17,6 +17,9 @@ import execIcon_10 from "../../static/ExecPortraits/11_Amjad_profile.png";
 import execIcon_11 from "../../static/ExecPortraits/12_Ross_profile.png";
 import execIcon_12 from "../../static/ExecPortraits/13_Raj_profile.png";
 import execIcon_13 from "../../static/ExecPortraits/14_Ellens_profile.png";
+import execIcon_14 from "../../static/ExecPortraits/15_Gladu_profile.png";
+import execIcon_15 from "../../static/ExecPortraits/16_Ellis_profile.png";
+import execIcon_16 from "../../static/ExecPortraits/17_Anzini_profile.png";
 
 class Stats extends Component {
   constructor(props) {
@@ -64,6 +67,12 @@ class Stats extends Component {
         return execIcon_12;
       case 13:
         return execIcon_13;
+      case 14:
+        return execIcon_14;
+      case 15:
+        return execIcon_15;
+      case 16:
+        return execIcon_16;
       default:
         return execIcon_0;
     }

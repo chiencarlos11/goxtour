@@ -15,6 +15,9 @@ import pin_10 from "../../static/ExecPins/10_Amjad_icon.png";
 import pin_11 from "../../static/ExecPins/11_Ross_iron.png";
 import pin_12 from "../../static/ExecPins/12_Raj_icon.png";
 import pin_13 from "../../static/ExecPins/13_Ellens_icon.png";
+import pin_14 from "../../static/ExecPins/14_Gladu_icon.png";
+import pin_15 from "../../static/ExecPins/15_Ellis_icon.png";
+import pin_16 from "../../static/ExecPins/16_Anzini_icon.png";
 
 import pin_EasyFinancial from "../../static/StorePins/easyfinancial_Icon.png";
 import pin_EasyHome from "../../static/StorePins/easyhome_Icon.png";
@@ -56,6 +59,12 @@ export default class GoXMarker extends React.Component {
         return pin_12;
       case 13:
         return pin_13;
+      case 14:
+        return pin_14;
+      case 15:
+        return pin_15;
+      case 16:
+        return pin_16;
     }
   }
 

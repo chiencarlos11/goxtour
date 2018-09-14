@@ -9,8 +9,8 @@ export default class Prog extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      travelled: 1000,
-      percent: 30,
+      travelled: 0,
+      percent: 0,
       color: "#3FC7FA"
     };
     this.changeState = this.changeState.bind(this);

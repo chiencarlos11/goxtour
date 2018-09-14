@@ -14,9 +14,9 @@ body {
 }
 
 .insta_image {
+  all:unset;
   height: 200px;
-  margin-top: 3%;
-  margin-bottom: 3%;
+  margin: 2%;
 }
 
 /* Gray Scale */
@@ -132,6 +132,9 @@ body {
   .insta_image {
     height: 100%;
     width:100%;
+    margin: unset;
+    margin-top: 3%;
+    margin-bottom: 3%;
   }
 }
 

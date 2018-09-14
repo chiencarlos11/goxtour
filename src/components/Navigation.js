@@ -12,7 +12,8 @@ export default class Navigation extends Component {
       selected_tourstops: "none",
       selected_gallery: "none",
       selected_stats: "none",
-      selected_voting: "none"
+      selected_voting: "none",
+      selected_info: "none"
     };
   }
 
@@ -35,12 +36,16 @@ export default class Navigation extends Component {
     this.setState({
       selected_voting: "none"
     });
+    this.setState({
+      selected_info: "none"
+    });
 
     if (display == "Executives") {
-      selected_executive: "current";
-      this.setState({
-        selected_executive: "current"
-      });
+      window.location.reload();
+      //selected_executive: "current";
+      //this.setState({
+      //  selected_executive: "current"
+      //});
     } else if (display == "Stores") {
       this.setState({
         selected_tourstops: "current"
@@ -56,6 +61,10 @@ export default class Navigation extends Component {
     } else if (display == "VOTING") {
       this.setState({
         selected_voting: "current"
+      });
+    } else if (display == "INFO") {
+      this.setState({
+        selected_info: "current"
       });
     }
   }
@@ -101,6 +110,14 @@ export default class Navigation extends Component {
                   onClick={this.setDisplay.bind(this, "STATS")}
                 >
                   TRAVEL STATS
+                </a>
+              </li>
+              <li>
+                <a
+                  className={this.state.selected_info}
+                  onClick={this.setDisplay.bind(this, "INFO")}
+                >
+                  INFO
                 </a>
               </li>
             </ul>

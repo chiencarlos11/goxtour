@@ -1,0 +1,45 @@
+.infoBox {
+  height: 100%;
+  width: 100%;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-top: 35px;
+}
+
+.infoContainer {
+  display: grid;
+  grid-template-columns: 75%;
+
+  height: 75%;
+  align-content: center;
+  justify-content: center;
+}
+
+.infoMain {
+  background-color: white;
+  padding: 50px;
+  text-align: center;
+}
+
+.fontSite {
+  justify-self: left;
+  align-self: end;
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0px;
+  word-spacing: 2px;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+}
+
+.fontLarger {
+  font-size: 24px;
+}
+
+.fontRed {
+  color: red;
+}

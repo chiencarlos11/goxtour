@@ -9,6 +9,7 @@ import BrowserDetection from "react-browser-detection";
 import Gallery from "./components/photos/Gallery";
 import Stats from "./components/stats/Stats";
 import Voting from "./components/voting/Voting";
+import Info from "./components/info/Info";
 import { isMobile } from "react-device-detect";
 
 import logo from "./static/goX.png";
@@ -39,7 +40,6 @@ class App extends Component {
       currentHomeIcon: homeIconActive,
       currentTravelIcon: travelIcon,
       currentGalleryIcon: galleryIcon
-
     };
 
     this.changeTag = this.changeTag.bind(this);
@@ -164,9 +164,8 @@ class App extends Component {
 
     if (storeId === null) {
       this.setState({ currentTags: [] });
-    } else if (storeId === '__show_all__'){
+    } else if (storeId === "__show_all__") {
       this.setState({ selectedExec: -1 });
-
     } else {
       console.log("update selectedStore");
 
@@ -389,6 +388,15 @@ class App extends Component {
               <Navigation setDisplay={this.setDisplay} />
             </div>
             <Voting hasVoted={this.state.hasVoted} castVote={this.setVoted} />
+          </div>
+        );
+      } else if (this.state.display_main === "INFO") {
+        display = (
+          <div className="height_full">
+            <div className="header">
+              <Navigation setDisplay={this.setDisplay} />
+            </div>
+            <Info />
           </div>
         );
       }

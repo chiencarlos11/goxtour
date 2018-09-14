@@ -119,6 +119,14 @@
   column-span: 5%;
 }
 
+.ModalBox div.box4 {
+  grid-column: 4/5;
+  grid-row: 1/2;
+  justify-self: start;
+  align-self: start;
+  column-span: 5%;
+}
+
 @keyframes image_loading{
     0%{
         opacity: 0;

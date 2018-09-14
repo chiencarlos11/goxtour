@@ -117,7 +117,6 @@ class ExecMenu extends Component {
 
     array = this.filteredInstagramData;
 
-
     index = array.findIndex(function(instagramImage) {
       return curr.id === instagramImage.id;
     });
@@ -130,12 +129,9 @@ class ExecMenu extends Component {
   }
 
   filterResultsByTag(tags) {
-
     if (tags === undefined || tags === null) {
-
       this.filteredInstagramData = this.state.instagramData;
     } else if (tags == "__show_all__") {
-
       this.filteredInstagramData = this.state.instagramData;
     } else {
       var photoList = [];
@@ -148,12 +144,10 @@ class ExecMenu extends Component {
           added = true;
         }
         if (added === false) {
-
           if (
             element.edge_media_to_caption !== null &&
             JSON.stringify(element.edge_media_to_caption).includes(tags)
           ) {
-            
             photoList.push(element);
           }
         }
@@ -307,6 +301,12 @@ class ExecMenu extends Component {
               <div className="sliderButton box3">
                 <a onClick={this.nextImage.bind(this.state.current_photo.id)}>
                   <i className="la la-chevron-right la-4x" />
+                </a>
+              </div>
+
+              <div className="sliderButton box4">
+                <a onClick={this.closeModal}>
+                  <i className="la la-close la-4x" />
                 </a>
               </div>
             </div>

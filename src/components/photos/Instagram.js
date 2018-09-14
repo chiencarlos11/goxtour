@@ -39,7 +39,7 @@ export default class Instagram extends Component {
       modalIsOpen: false,
       current_photo: "",
       instagramData: this.props.instagramData,
-      storeId:this.props.storeId
+      storeId: this.props.storeId
     };
 
     this.filteredInstagramData = this.props.instagramData;
@@ -85,10 +85,8 @@ export default class Instagram extends Component {
 
   filterResultsByStore(tags) {
     if (tags === undefined || tags === null) {
-
       this.filteredInstagramData = this.state.instagramData;
     } else if (tags == "__show_all__") {
-
       this.filteredInstagramData = this.state.instagramData;
     } else {
       var photoList = [];
@@ -98,16 +96,18 @@ export default class Instagram extends Component {
         let added = false;
         if (element.tags !== null && element.tags.indexOf(tags) >= 0) {
           photoList.push(element);
-          console.log("Adding element = " + element.tags)
+          console.log("Adding element = " + element.tags);
           added = true;
         }
         if (added === false) {
-
           if (
             element.edge_media_to_caption !== null &&
             JSON.stringify(element.edge_media_to_caption).includes(tags)
           ) {
-            console.log("Adding element = " + JSON.stringify(element.edge_media_to_caption))
+            console.log(
+              "Adding element = " +
+                JSON.stringify(element.edge_media_to_caption)
+            );
             photoList.push(element);
           }
         }
@@ -150,8 +150,8 @@ export default class Instagram extends Component {
       return true;
     }
 
-    if (this.state.storeId !== nextProps.storeId){
-      this.setState({storeId: nextProps.storeId})
+    if (this.state.storeId !== nextProps.storeId) {
+      this.setState({ storeId: nextProps.storeId });
       this.filterResultsByStore(nextProps.storeId);
       return true;
     }
@@ -316,6 +316,12 @@ export default class Instagram extends Component {
                 <div className="sliderButton box3">
                   <a onClick={this.nextImage.bind(this.state.current_photo.id)}>
                     <i className="la la-chevron-right la-4x" />
+                  </a>
+                </div>
+
+                <div className="sliderButton box4">
+                  <a onClick={this.closeModal}>
+                    <i className="la la-close la-4x" />
                   </a>
                 </div>
               </div>

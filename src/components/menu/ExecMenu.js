@@ -279,6 +279,14 @@ class ExecMenu extends Component {
         <div className="provinceContainer">Visiting: {exec.province}</div>
         <br />
         <div className="storeListContainer">{StoreList}</div>
+        <div className="backButtonWrapper">
+          <div
+            className="backButton"
+            onClick={this.handleClick.bind(this, "__show_all__")}
+          >
+            BACK
+          </div>
+        </div>
 
         <div>
           <Modal

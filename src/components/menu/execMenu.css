@@ -39,15 +39,14 @@
 .menu-main {
   display: grid;
   grid-template-columns: 100%;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .menu-cell {
   display: grid;
-  grid-template-columns: 170px auto;
+  grid-template-columns: 170px calc(100% - 205px) 30px;
   grid-template-rows: 100px;
   grid-gap: 15px;
-  padding-top: 10px;
   height: 100px;
 }
 
@@ -180,6 +179,9 @@
   justify-content: center;
   align-items: top;
   justify-items: center;
+
+  height: calc(100% - 200px);
+  overflow: auto;
 }
 
 .execStoreLabel {
@@ -204,6 +206,34 @@
 .execStoreLabel:hover {
   color: rgb(11, 186, 224);
   cursor: pointer;
+}
+
+.backButtonWrapper {
+  display: grid;
+  width: 100%;
+
+  justify-content: center;
+  justify-items: center;
+}
+
+.backButton {
+  background-color: rgb(25, 186, 226);
+  border: none;
+  color: white;
+  padding: 12px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0px;
+  word-spacing: 2px;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 1000px) {

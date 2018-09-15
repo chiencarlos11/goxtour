@@ -15,11 +15,11 @@ import { isMobile } from "react-device-detect";
 import logo from "./static/goX.png";
 import logoMain from "./static/goXtour_logo.png";
 import homeIcon from "./static/Mobile/home.png";
-import travelIcon from "./static/Mobile/travel.png";
 import galleryIcon from "./static/Mobile/gallery.png";
+import infoIcon from "./static/Mobile/info.png";
 import homeIconActive from "./static/Mobile/homeActive.png";
-import travelIconActive from "./static/Mobile/travelActive.png";
 import galleryIconActive from "./static/Mobile/galleryActive.png";
+import infoIconActive from "./static/Mobile/infoActive.png";
 
 class App extends Component {
   constructor(props) {
@@ -38,7 +38,7 @@ class App extends Component {
       location: {},
       display_mobile: "HOME",
       currentHomeIcon: homeIconActive,
-      currentTravelIcon: travelIcon,
+      currentInfoIcon: infoIcon,
       currentGalleryIcon: galleryIcon
     };
 
@@ -196,12 +196,14 @@ class App extends Component {
 
     if (this.state.display_mobile == "HOME") {
       main = (
-        <div className="mobile_home_box">
-          <img className="mobile_home_image" src={logoMain} />
-          <div className="mobile_home_message">
-            For full functionality try our site from a PC
-          </div>
-        </div>
+        <MenuMobile
+          changeTag={this.changeTag}
+          changeStoreTag={this.changeStoreTag}
+          execsData={this.state.execsData}
+          storesData={this.state.storesData}
+          content={this.state.display_main}
+          execId={this.state.selectedExec}
+        />
       );
     } else if (this.state.display_mobile == "GALLERY") {
       main = (
@@ -211,13 +213,33 @@ class App extends Component {
       );
     } else if (this.state.display_mobile == "EXECS") {
       main = (
-        <MenuMobile
-          changeTag={this.changeTag}
-          changeStoreTag={this.changeStoreTag}
-          execsData={this.state.execsData}
-          storesData={this.state.storesData}
-          content={this.state.display_main}
-        />
+        <div className="mobile_home_box">
+          <div className="mobileInfoMain mobileFontInfo">
+            <p className="mobileFontInfoHeader">How the Site Works</p>
+            <p>
+              <span className="mobileFontBlue">&#xb7;</span>
+              &nbsp;&nbsp;Click on a Tour Member's image on the <u>Home</u> page
+              to see where they are and where they’ve visited
+            </p>
+            <p>
+              <span className="mobileFontBlue">&#xb7;</span>
+              &nbsp;&nbsp;Click on <u>Gallery</u> to see all pics or videos from
+              the Tour
+            </p>
+            <p>
+              <span className="mobileFontBlue">&#xb7;</span>
+              &nbsp;&nbsp;Click on <u>Travel Stats</u> to see how far each Tour
+              Member has travelled during the week
+            </p>
+            <br />
+            <p className="mobileFontBlue">
+              <u>NOTE:</u> Make sure you have your creative hats on when a Tour
+              Member visits: Top 3 Best Pics from the Tour will win your branch
+              or store $250 for your team and $250 donated to Boys and Girls
+              Club on your behalf!
+            </p>
+          </div>
+        </div>
       );
     }
 
@@ -228,21 +250,20 @@ class App extends Component {
     this.setState({ display_mobile: selected });
 
     if (selected == "HOME") {
-      this.setState({ currentHomeIcon: homeIconActive });
-      this.setState({ currentGalleryIcon: galleryIcon });
-      this.setState({ currentTravelIcon: travelIcon });
+      // TO DO FIX THIS
+      window.location.reload();
     }
 
     if (selected == "EXECS") {
       this.setState({ currentHomeIcon: homeIcon });
       this.setState({ currentGalleryIcon: galleryIcon });
-      this.setState({ currentTravelIcon: travelIconActive });
+      this.setState({ currentInfoIcon: infoIconActive });
     }
 
     if (selected == "GALLERY") {
       this.setState({ currentHomeIcon: homeIcon });
       this.setState({ currentGalleryIcon: galleryIconActive });
-      this.setState({ currentTravelIcon: travelIcon });
+      this.setState({ currentInfoIcon: infoIcon });
     }
   }
 
@@ -302,7 +323,7 @@ class App extends Component {
                 <div className="mobile_footer_font">
                   <img
                     className="mobile_footer_image"
-                    src={this.state.currentTravelIcon}
+                    src={this.state.currentInfoIcon}
                     onClick={this.handleMobileNavigation.bind(this, "EXECS")}
                   />
                 </div>

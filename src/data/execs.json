@@ -9,7 +9,7 @@
       "latitude": 44.641927,
       "longitude": -63.598698,
       "storeCount": 10,
-      "province": "Halifax, Nova Scotia + PEI",
+      "province": "Halifax, NS + PEI",
       "currentDistance": 0,
       "totalDistance": 1000
     },
@@ -22,7 +22,7 @@
       "latitude": 43.263682,
       "longitude": -79.973661,
       "storeCount": 12,
-      "province": "GTA + Niagara, ON",
+      "province": "GTA + Niagara Region, ON",
       "currentDistance": 0,
       "totalDistance": 1000
     },
@@ -48,7 +48,7 @@
       "latitude": 45.405876,
       "longitude": -75.711304,
       "storeCount": 10,
-      "province": "Ottawa, ON",
+      "province": "Ottawa Region, ON",
       "currentDistance": 0,
       "totalDistance": 1000
     },
@@ -74,7 +74,7 @@
       "latitude": 53.910157,
       "longitude": -122.751103,
       "storeCount": 16,
-      "province": "Kamloops & Kelowna, BC",
+      "province": "BC Interior + Saskatchewan",
       "currentDistance": 0,
       "totalDistance": 1000
     },
@@ -165,7 +165,7 @@
       "latitude": 45.830003,
       "longitude": -77.110874,
       "storeCount": 4,
-      "province": "Sudbury + North Bay, ON",
+      "province": "Northern Ontario",
       "currentDistance": 0,
       "totalDistance": 1000
     },
@@ -204,7 +204,7 @@
       "latitude": 43.958926,
       "longitude": -78.16857,
       "storeCount": 4,
-      "province": "East GTA, Ontario",
+      "province": "East GTA Ontario",
       "currentDistance": 0,
       "totalDistance": 1000
     },

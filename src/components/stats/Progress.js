@@ -15,6 +15,25 @@ export default class Prog extends Component {
 
   }
 
+
+  getProgress(){
+    if (this.props.totalDistance === null || this.props.totalDistance === 0){
+      return 0
+    }
+
+    if (this.props.travelled === null || this.props.travelled === 0){
+      return 0
+    }
+
+    if (this.props.travelled >= this.props.totalDistance){
+      return 100
+    }
+
+    return (this.props.travelled / this.props.totalDistance) * 100;
+
+  }
+
+
   render() {
     const containerStyle = {
       width: "200px"
@@ -27,7 +46,7 @@ export default class Prog extends Component {
           KM
         </div>
         <Line
-          percent={this.props.progress}
+          percent={this.getProgress()}
           strokeWidth="4"
           strokeColor={this.state.color}
         />

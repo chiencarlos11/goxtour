@@ -89,7 +89,7 @@ class Stats extends Component {
           <img className="execImage" src={this.getPortrait(exec.id)} alt="" />
         </div>
         <div className="statsBox2">
-          <Prog travelled={exec.currentDistance} progress={(exec.currentDistance / exec.totalDistance) * 100} />
+          <Prog travelled={exec.currentDistance} totalDistance={exec.totalDistance} />
           <div className="execNameStats">{exec.name}</div>
           <div className="execTitleStats">{exec.province}</div>
         </div>

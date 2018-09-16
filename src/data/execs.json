@@ -11,7 +11,7 @@
       "storeCount": 10,
       "province": "Halifax, NS + PEI",
       "currentDistance": 0,
-      "totalDistance": 1000
+      "totalDistance": 2724
     },
     {
       "id": 1,
@@ -24,7 +24,7 @@
       "storeCount": 12,
       "province": "GTA + Niagara Region, ON",
       "currentDistance": 0,
-      "totalDistance": 1000
+      "totalDistance": 210
     },
     {
       "id": 2,
@@ -37,7 +37,7 @@
       "storeCount": 12,
       "province": "Manitoba",
       "currentDistance": 0,
-      "totalDistance": 1000
+      "totalDistance": 3180
     },
     {
       "id": 3,
@@ -50,7 +50,7 @@
       "storeCount": 10,
       "province": "Ottawa Region, ON",
       "currentDistance": 0,
-      "totalDistance": 1000
+      "totalDistance": 880
     },
     {
       "id": 4,
@@ -63,7 +63,7 @@
       "storeCount": 11,
       "province": "Newfoundland",
       "currentDistance": 0,
-      "totalDistance": 1000
+      "totalDistance": 4405
     },
     {
       "id": 5,
@@ -76,7 +76,7 @@
       "storeCount": 16,
       "province": "BC Interior + Saskatchewan",
       "currentDistance": 0,
-      "totalDistance": 1000
+      "totalDistance": 6846
     },
     {
       "id": 6,
@@ -89,7 +89,7 @@
       "storeCount": 18,
       "province": "Vancouver + Victoria, BC",
       "currentDistance": 0,
-      "totalDistance": 1000
+      "totalDistance": 6960
     },
     {
       "id": 7,
@@ -102,7 +102,7 @@
       "storeCount": 10,
       "province": "SW Ontario",
       "currentDistance": 0,
-      "totalDistance": 1000
+      "totalDistance": 760
     },
     {
       "id": 8,
@@ -115,7 +115,7 @@
       "storeCount": 10,
       "province": "New Brunswick + Nova Scotia",
       "currentDistance": 0,
-      "totalDistance": 1000
+      "totalDistance": 2540
     },
     {
       "id": 9,
@@ -128,7 +128,7 @@
       "storeCount": 11,
       "province": "Upper Alberta",
       "currentDistance": 0,
-      "totalDistance": 1000
+      "totalDistance": 5165
     },
     {
       "id": 10,
@@ -141,7 +141,7 @@
       "storeCount": 9,
       "province": "New Brunswick + Nova Scotia",
       "currentDistance": 0,
-      "totalDistance": 1000
+      "totalDistance": 2305
     },
     {
       "id": 11,
@@ -154,7 +154,7 @@
       "storeCount": 12,
       "province": "Quebec",
       "currentDistance": 0,
-      "totalDistance": 1000
+      "totalDistance": 1216
     },
     {
       "id": 12,
@@ -167,7 +167,7 @@
       "storeCount": 4,
       "province": "Northern Ontario",
       "currentDistance": 0,
-      "totalDistance": 1000
+      "totalDistance": 670
     },
     {
       "id": 13,
@@ -180,7 +180,7 @@
       "storeCount": 8,
       "province": "SW Ontario",
       "currentDistance": 0,
-      "totalDistance": 1000
+      "totalDistance": 344
     },
     {
       "id": 14,
@@ -193,7 +193,7 @@
       "storeCount": 6,
       "province": "GTA Ontario",
       "currentDistance": 0,
-      "totalDistance": 1000
+      "totalDistance": 140
     },
     {
       "id": 15,
@@ -206,7 +206,7 @@
       "storeCount": 4,
       "province": "East GTA Ontario",
       "currentDistance": 0,
-      "totalDistance": 1000
+      "totalDistance": 300
     },
     {
       "id": 16,
@@ -219,7 +219,7 @@
       "storeCount": 4,
       "province": "Lower Alberta",
       "currentDistance": 0,
-      "totalDistance": 1000
+      "totalDistance": 5444
     }
   ]
 }

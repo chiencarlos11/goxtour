@@ -127,7 +127,9 @@ export default class Instagram extends Component {
       for (var tag of tags) {
         for (var i = 0; i < this.state.instagramData.length; i++) {
           var element = this.state.instagramData[i];
-          if (element.tags !== null && element.tags.indexOf(tag) >= 0) {
+          if (element.tags !== null && element.tags.toString().toLowerCase().indexOf(tag.toString().toLowerCase()) >= 0) {
+            photoList.push(element);
+          } else if (element.edge_media_to_caption !== null && JSON.stringify(element.edge_media_to_caption).toLowerCase().indexOf(tag.toString().toLowerCase()) >= 0 ) {
             photoList.push(element);
           }
         }

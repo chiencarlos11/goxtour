@@ -143,7 +143,7 @@ class ExecMenu extends Component {
       for (var i = 0; i < this.state.instagramData.length; i++) {
         var element = this.state.instagramData[i];
         let added = false;
-        if (element.tags !== null && element.tags.indexOf(tags) >= 0) {
+        if (element.tags !== null && element.tags.toString().toLowerCase().indexOf(tags.toString().toLowerCase()) >= 0) {
           photoList.push(element);
           added = true;
         }

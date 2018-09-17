@@ -144,7 +144,7 @@ class ExecMenuMobile extends Component {
       for (var i = 0; i < this.state.instagramData.length; i++) {
         var element = this.state.instagramData[i];
         let added = false;
-        if (element.tags !== null && element.tags.indexOf(tags) >= 0) {
+        if (element.tags !== null && element.tags.toString().toLowerCase().indexOf(tags.toString().toLowerCase()) >= 0) {
           photoList.push(element);
           added = true;
         }
@@ -234,7 +234,7 @@ class ExecMenuMobile extends Component {
           <img className="execImage" src={this.getPortrait(exec.id)} alt="" />
         </div>
         <div className="statsBox2">
-          <Prog travelled={exec.currentDistance} progress={(exec.currentDistance / exec.totalDistance) * 100} />
+          <Prog travelled={exec.currentDistance} totalDistance={exec.totalDistance} />
           <div className="execNameStats">{exec.name}</div>
           <div className="execTitleStats">{exec.province}</div>
         </div>

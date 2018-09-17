@@ -47,7 +47,8 @@ class ExecMenu extends Component {
       showStoreModal: false,
       modalIsOpen: false,
       current_photo: "",
-      instagramData: this.props.instagramData
+      instagramData: this.props.instagramData,
+      execTag: "",
     };
 
     this.filteredInstagramData = this.props.instagramData;
@@ -80,9 +81,19 @@ class ExecMenu extends Component {
     this.setState({ modalIsOpen: false });
   }
 
+  determineExecTag(execID){
+    console.log("current execID = " + execID)
+    if (execID === null || execID === undefined || execID === "" || execID === '__show_all__'){
+      return ""
+    }
+    let exec_tag = this.props.execsData.execs.find(x => x.id === execID).tag;
+    return exec_tag
+  }
+
   handleClick(id) {
     this.props.changeTag(id);
     this.props.displayStore(id);
+    this.setState({execTag: this.determineExecTag(id)})
     this.setState({ currentExecId: id });
   }
 
@@ -102,6 +113,14 @@ class ExecMenu extends Component {
 
     array = this.filteredInstagramData;
 
+    if (array.length === 1){
+      this.filterResultsByTag(this.state.execTag);
+      array = this.filteredInstagramData;
+      if (array.length === 1){
+        array = this.state.instagramData;
+      }
+    }
+
     index = array.findIndex(function(instagramImage) {
       return curr.id === instagramImage.id;
     });
@@ -120,6 +139,14 @@ class ExecMenu extends Component {
     let curr = this.state.current_photo;
 
     array = this.filteredInstagramData;
+
+    if (array.length === 1){
+      this.filterResultsByTag(this.state.execTag);
+      array = this.filteredInstagramData;
+      if (array.length === 1){
+        array = this.state.instagramData;
+      }
+    }
 
     index = array.findIndex(function(instagramImage) {
       return curr.id === instagramImage.id;

@@ -11,12 +11,14 @@ const customStyles = {
     left: "50%",
     right: "auto",
     bottom: "auto",
-    width: "600px",
+    maxwidth: "200px",
     marginLeft: "auto",
     marginRight: "auto",
     transform: "translate(-50%, -50%)",
     position: "fixed",
-    zIndex: "999"
+    zIndex: "999",
+    background: "unset",
+    border: "unset",
   }
 };
 
@@ -42,6 +44,10 @@ export default class Gallery extends Component {
     //Modal
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+
+    //modal
+    this.previousImage = this.previousImage.bind(this);
+    this.nextImage = this.nextImage.bind(this);
   }
 
   fetchMoreData = () => {
@@ -86,6 +92,52 @@ export default class Gallery extends Component {
     this.setState({ loaded: "true" });
   }
 
+  previousImage(imageID) {
+    let index = 0;
+    let array = [];
+
+    let curr = this.state.current_photo;
+
+    if (this.state.currentTag) {
+      array = this.filteredInstagramData;
+    } else {
+      array = this.state.instagramData;
+    }
+
+    index = array.findIndex(function(instagramImage) {
+      return curr.id === instagramImage.id;
+    });
+
+    if (index === 0) {
+      this.setState({ current_photo: array[array.length - 1] });
+    } else {
+      this.setState({ current_photo: array[index - 1] });
+    }
+  }
+
+  nextImage(imageID) {
+    let index = 0;
+    let array = [];
+
+    let curr = this.state.current_photo;
+
+    if (this.state.currentTag) {
+      array = this.filteredInstagramData;
+    } else {
+      array = this.state.instagramData;
+    }
+
+    index = array.findIndex(function(instagramImage) {
+      return curr.id === instagramImage.id;
+    });
+
+    if (index === array.length - 1) {
+      this.setState({ current_photo: array[0] });
+    } else {
+      this.setState({ current_photo: array[index + 1] });
+    }
+  }
+
   render() {
     document.body.style.height = "unset";
     if (this.state.loaded == "true") {
@@ -118,21 +170,48 @@ export default class Gallery extends Component {
                 contentLabel="Example Modal"
               >
                 <h2 ref={subtitle => (this.subtitle = subtitle)} />
-                <InstagramEmbed
-                  url={
-                    "https://www.instagram.com/p/" +
-                    this.state.current_photo.shortcode
-                  }
-                  maxWidth={600}
-                  hideCaption={false}
-                  containerTagName="div"
-                  protocol=""
-                  injectScript
-                  onLoading={() => {}}
-                  onSuccess={() => {}}
-                  onAfterRender={() => {}}
-                  onFailure={() => {}}
-                />
+                
+                <div className="ModalBox">
+                <div className="box2">
+                  <InstagramEmbed
+                    url={
+                      "https://www.instagram.com/p/" +
+                      this.state.current_photo.shortcode
+                    }
+                    maxWidth={600}
+                    hideCaption={false}
+                    containerTagName="div"
+                    protocol=""
+                    injectScript
+                    onLoading={() => {}}
+                    onSuccess={() => {}}
+                    onAfterRender={() => {}}
+                    onFailure={() => {}}
+                  />
+                </div>
+
+                <div className="sliderButton box1">
+                  <a
+                    onClick={this.previousImage.bind(
+                      this.state.current_photo.id
+                    )}
+                  >
+                    <i className="la la-chevron-left la-4x" />
+                  </a>
+                </div>
+
+                <div className="sliderButton box3">
+                  <a onClick={this.nextImage.bind(this.state.current_photo.id)}>
+                    <i className="la la-chevron-right la-4x" />
+                  </a>
+                </div>
+
+                <div className="sliderButton box4">
+                  <a onClick={this.closeModal}>
+                    <i className="la la-close la-4x" />
+                  </a>
+                </div>
+              </div>
               </Modal>
             </InfiniteScroll>
           </div>

@@ -21,6 +21,7 @@ import execIcon_13 from "../../static/ExecPortraits/14_Ellens_profile.png";
 import execIcon_14 from "../../static/ExecPortraits/15_Gladu_profile.png";
 import execIcon_15 from "../../static/ExecPortraits/16_Ellis_profile.png";
 import execIcon_16 from "../../static/ExecPortraits/17_Anzini_profile.png";
+import execIcon_17 from "../../static/ExecPortraits/18_Newton_profile.png";
 import "../../stylesheets/line-awesome/css/line-awesome.min.css";
 
 const customStyles = {
@@ -48,7 +49,7 @@ class ExecMenu extends Component {
       modalIsOpen: false,
       current_photo: "",
       instagramData: this.props.instagramData,
-      execTag: "",
+      execTag: ""
     };
 
     this.filteredInstagramData = this.props.instagramData;
@@ -81,19 +82,24 @@ class ExecMenu extends Component {
     this.setState({ modalIsOpen: false });
   }
 
-  determineExecTag(execID){
-    console.log("current execID = " + execID)
-    if (execID === null || execID === undefined || execID === "" || execID === '__show_all__'){
-      return ""
+  determineExecTag(execID) {
+    console.log("current execID = " + execID);
+    if (
+      execID === null ||
+      execID === undefined ||
+      execID === "" ||
+      execID === "__show_all__"
+    ) {
+      return "";
     }
     let exec_tag = this.props.execsData.execs.find(x => x.id === execID).tag;
-    return exec_tag
+    return exec_tag;
   }
 
   handleClick(id) {
     this.props.changeTag(id);
     this.props.displayStore(id);
-    this.setState({execTag: this.determineExecTag(id)})
+    this.setState({ execTag: this.determineExecTag(id) });
     this.setState({ currentExecId: id });
   }
 
@@ -113,10 +119,10 @@ class ExecMenu extends Component {
 
     array = this.filteredInstagramData;
 
-    if (array.length === 1){
+    if (array.length === 1) {
       this.filterResultsByTag(this.state.execTag);
       array = this.filteredInstagramData;
-      if (array.length === 1){
+      if (array.length === 1) {
         array = this.state.instagramData;
       }
     }
@@ -140,10 +146,10 @@ class ExecMenu extends Component {
 
     array = this.filteredInstagramData;
 
-    if (array.length === 1){
+    if (array.length === 1) {
       this.filterResultsByTag(this.state.execTag);
       array = this.filteredInstagramData;
-      if (array.length === 1){
+      if (array.length === 1) {
         array = this.state.instagramData;
       }
     }
@@ -170,7 +176,13 @@ class ExecMenu extends Component {
       for (var i = 0; i < this.state.instagramData.length; i++) {
         var element = this.state.instagramData[i];
         let added = false;
-        if (element.tags !== null && element.tags.toString().toLowerCase().indexOf(tags.toString().toLowerCase()) >= 0) {
+        if (
+          element.tags !== null &&
+          element.tags
+            .toString()
+            .toLowerCase()
+            .indexOf(tags.toString().toLowerCase()) >= 0
+        ) {
           photoList.push(element);
           added = true;
         }
@@ -227,6 +239,8 @@ class ExecMenu extends Component {
         return execIcon_15;
       case 16:
         return execIcon_16;
+      case 17:
+        return execIcon_17;
       default:
         return execIcon_0;
     }

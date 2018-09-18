@@ -32,12 +32,12 @@
       "tag": "goXFiederer",
       "name": "Andrea Fiederer",
       "title": "EVP & CMO",
-      "latitude": 49.890207,
-      "longitude": -97.118564,
+      "latitude": 43.64194,
+      "longitude": -79.536957,
       "storeCount": 12,
-      "province": "Manitoba",
+      "province": "GTA, ON",
       "currentDistance": 0,
-      "totalDistance": 3180
+      "totalDistance": 100
     },
     {
       "id": 3,
@@ -220,6 +220,19 @@
       "province": "Lower Alberta",
       "currentDistance": 0,
       "totalDistance": 5444
+    },
+    {
+      "id": 17,
+      "stores": [],
+      "tag": "goXNewton",
+      "name": "Kim Newton",
+      "title": "Director, Learning",
+      "latitude": 49.890207,
+      "longitude": -97.118564,
+      "storeCount": 12,
+      "province": "Manitoba",
+      "currentDistance": 0,
+      "totalDistance": 3180
     }
   ]
 }

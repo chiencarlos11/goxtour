@@ -20,6 +20,7 @@ import execIcon_13 from "../../static/ExecPortraits/14_Ellens_profile.png";
 import execIcon_14 from "../../static/ExecPortraits/15_Gladu_profile.png";
 import execIcon_15 from "../../static/ExecPortraits/16_Ellis_profile.png";
 import execIcon_16 from "../../static/ExecPortraits/17_Anzini_profile.png";
+import execIcon_17 from "../../static/ExecPortraits/18_Newton_profile.png";
 
 class Stats extends Component {
   constructor(props) {
@@ -73,6 +74,8 @@ class Stats extends Component {
         return execIcon_15;
       case 16:
         return execIcon_16;
+      case 17:
+        return execIcon_17;
       default:
         return execIcon_0;
     }
@@ -89,7 +92,10 @@ class Stats extends Component {
           <img className="execImage" src={this.getPortrait(exec.id)} alt="" />
         </div>
         <div className="statsBox2">
-          <Prog travelled={exec.currentDistance} totalDistance={exec.totalDistance} />
+          <Prog
+            travelled={exec.currentDistance}
+            totalDistance={exec.totalDistance}
+          />
           <div className="execNameStats">{exec.name}</div>
           <div className="execTitleStats">{exec.province}</div>
         </div>

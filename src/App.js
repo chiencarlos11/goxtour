@@ -56,6 +56,11 @@ class App extends Component {
       this.setState({ ie_detected: true });
       return null;
     },
+    edge: () => {
+      console.log("This is EDGE");
+      this.setState({ ie_detected: true });
+      return null;
+    },
     default: browser => {
       console.log("Browser ok.");
       return null;

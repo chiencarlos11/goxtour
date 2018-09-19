@@ -19,11 +19,11 @@
       "tag": "goXMullins",
       "name": "JASON MULLINS",
       "title": "PRESIDENT & COO",
-      "latitude": 43.263682,
-      "longitude": -79.973661,
+      "latitude": 43.611875,
+      "longitude": -79.589357,
       "storeCount": 12,
       "province": "GTA + Niagara Region, ON",
-      "currentDistance": 0,
+      "currentDistance": 75,
       "totalDistance": 210
     },
     {
@@ -55,14 +55,14 @@
     {
       "id": 4,
       "stores": [],
-      "tag": "goXYielding",
+      "tag": "goXYeilding",
       "name": "David Yeilding",
       "title": "Interim CFO",
-      "latitude": 47.553487,
-      "longitude": -52.714713,
+      "latitude": 47.506014,
+      "longitude": -52.81359,
       "storeCount": 11,
       "province": "Newfoundland",
-      "currentDistance": 0,
+      "currentDistance": 2180,
       "totalDistance": 4405
     },
     {
@@ -71,11 +71,11 @@
       "tag": "goXPennell",
       "name": "Shane Pennell",
       "title": "SVP, Operations, EFS",
-      "latitude": 53.910157,
-      "longitude": -122.751103,
+      "latitude": 49.886043,
+      "longitude": -119.441714,
       "storeCount": 16,
       "province": "BC Interior + Saskatchewan",
-      "currentDistance": 0,
+      "currentDistance": 3408,
       "totalDistance": 6846
     },
     {
@@ -84,11 +84,11 @@
       "tag": "goXPoole",
       "name": "Steven Poole",
       "title": "SVP, Operations and Merchandising, EH",
-      "latitude": 49.270712,
-      "longitude": -123.062136,
+      "latitude": 49.151324,
+      "longitude": -123.942446,
       "storeCount": 18,
       "province": "Vancouver + Victoria, BC",
-      "currentDistance": 0,
+      "currentDistance": 3435,
       "totalDistance": 6960
     },
     {
@@ -97,11 +97,11 @@
       "tag": "goXCooper",
       "name": "David Cooper",
       "title": "VP, HR",
-      "latitude": 42.06265,
-      "longitude": -82.593183,
+      "latitude": 42.311788,
+      "longitude": -82.974402,
       "storeCount": 10,
       "province": "SW Ontario",
-      "currentDistance": 0,
+      "currentDistance": 335,
       "totalDistance": 760
     },
     {
@@ -114,7 +114,7 @@
       "longitude": -64.777986,
       "storeCount": 10,
       "province": "New Brunswick + Nova Scotia",
-      "currentDistance": 0,
+      "currentDistance": 1255,
       "totalDistance": 2540
     },
     {
@@ -123,11 +123,11 @@
       "tag": "goXNijjar",
       "name": "Hetal Nijjar",
       "title": "VP, Audit & Compliance",
-      "latitude": 54.462268,
-      "longitude": -110.171236,
+      "latitude": 53.468116,
+      "longitude": -113.489718,
       "storeCount": 11,
       "province": "Upper Alberta",
-      "currentDistance": 0,
+      "currentDistance": 2620,
       "totalDistance": 5165
     },
     {
@@ -140,7 +140,7 @@
       "longitude": -66.054805,
       "storeCount": 9,
       "province": "New Brunswick + Nova Scotia",
-      "currentDistance": 0,
+      "currentDistance": 1130,
       "totalDistance": 2305
     },
     {
@@ -153,7 +153,7 @@
       "longitude": -73.557441,
       "storeCount": 12,
       "province": "Quebec",
-      "currentDistance": 0,
+      "currentDistance": 563,
       "totalDistance": 1216
     },
     {
@@ -166,7 +166,7 @@
       "longitude": -77.110874,
       "storeCount": 4,
       "province": "Northern Ontario",
-      "currentDistance": 0,
+      "currentDistance": 365,
       "totalDistance": 670
     },
     {
@@ -205,7 +205,7 @@
       "longitude": -78.16857,
       "storeCount": 4,
       "province": "East GTA Ontario",
-      "currentDistance": 0,
+      "currentDistance": 150,
       "totalDistance": 300
     },
     {
@@ -214,11 +214,11 @@
       "tag": "goXAnzini",
       "name": "Sabrina Anzini",
       "title": "VP, Legal",
-      "latitude": 51.036675,
-      "longitude": -114.046601,
+      "latitude": 50.966178,
+      "longitude": -114.077929,
       "storeCount": 4,
       "province": "Lower Alberta",
-      "currentDistance": 0,
+      "currentDistance": 2752,
       "totalDistance": 5444
     },
     {
@@ -231,7 +231,7 @@
       "longitude": -97.118564,
       "storeCount": 12,
       "province": "Manitoba",
-      "currentDistance": 0,
+      "currentDistance": 1584,
       "totalDistance": 3180
     }
   ]

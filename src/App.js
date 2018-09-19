@@ -269,7 +269,7 @@ class App extends Component {
 
   render() {
     let display = (
-      <div>
+      <div style={{color:'white'}}>
         <h1>We are Sorry!</h1>{" "}
         <h3>This website is optimized for Chrome, Firefox or Safari.</h3>
       </div>

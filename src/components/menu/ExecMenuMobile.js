@@ -281,7 +281,10 @@ class ExecMenuMobile extends Component {
             <img className="execImage" src={this.getPortrait(exec.id)} alt="" />
           </div>
           <div className="statsBox2">
-            <Prog progress={1} />
+            <Prog
+            travelled={exec.currentDistance}
+            totalDistance={exec.totalDistance}
+            />
             <div className="execNameStats">{exec.name}</div>
             <div className="execTitleStats">{exec.province}</div>
           </div>

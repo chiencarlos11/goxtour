@@ -6,11 +6,11 @@
       "tag": "goXIngram",
       "name": "DAVID INGRAM",
       "title": "CHIEF EXECUTIVE OFFICER",
-      "latitude": 44.641927,
-      "longitude": -63.598698,
+      "latitude": 46.107425,
+      "longitude": -64.823111,
       "storeCount": 10,
       "province": "Halifax, NS + PEI",
-      "currentDistance": 0,
+      "currentDistance": 1407,
       "totalDistance": 2724
     },
     {
@@ -19,11 +19,11 @@
       "tag": "goXMullins",
       "name": "JASON MULLINS",
       "title": "PRESIDENT & COO",
-      "latitude": 43.611875,
-      "longitude": -79.589357,
+      "latitude": 43.174159,
+      "longitude": -79.225199,
       "storeCount": 12,
       "province": "GTA + Niagara Region, ON",
-      "currentDistance": 75,
+      "currentDistance": 125,
       "totalDistance": 210
     },
     {
@@ -58,11 +58,11 @@
       "tag": "goXYeilding",
       "name": "David Yeilding",
       "title": "Interim CFO",
-      "latitude": 47.506014,
-      "longitude": -52.81359,
+      "latitude": 48.960629,
+      "longitude": -54.605668,
       "storeCount": 11,
       "province": "Newfoundland",
-      "currentDistance": 2180,
+      "currentDistance": 2225,
       "totalDistance": 4405
     },
     {
@@ -71,11 +71,11 @@
       "tag": "goXPennell",
       "name": "Shane Pennell",
       "title": "SVP, Operations, EFS",
-      "latitude": 49.886043,
-      "longitude": -119.441714,
+      "latitude": 50.46385,
+      "longitude": -104.622758,
       "storeCount": 16,
       "province": "BC Interior + Saskatchewan",
-      "currentDistance": 3408,
+      "currentDistance": 3483,
       "totalDistance": 6846
     },
     {
@@ -84,11 +84,11 @@
       "tag": "goXPoole",
       "name": "Steven Poole",
       "title": "SVP, Operations and Merchandising, EH",
-      "latitude": 49.151324,
-      "longitude": -123.942446,
+      "latitude": 49.118426,
+      "longitude": -122.65621,
       "storeCount": 18,
       "province": "Vancouver + Victoria, BC",
-      "currentDistance": 3435,
+      "currentDistance": 3525,
       "totalDistance": 6960
     },
     {
@@ -97,11 +97,11 @@
       "tag": "goXCooper",
       "name": "David Cooper",
       "title": "VP, HR",
-      "latitude": 42.311788,
-      "longitude": -82.974402,
+      "latitude": 43.007733,
+      "longitude": -81.243357,
       "storeCount": 10,
       "province": "SW Ontario",
-      "currentDistance": 335,
+      "currentDistance": 425,
       "totalDistance": 760
     },
     {
@@ -110,11 +110,11 @@
       "tag": "goXMcGuire",
       "name": "Keran McGuire",
       "title": "VP, IT Shared Services",
-      "latitude": 46.085349,
-      "longitude": -64.777986,
+      "latitude": 47.628091,
+      "longitude": -65.696627,
       "storeCount": 10,
       "province": "New Brunswick + Nova Scotia",
-      "currentDistance": 1255,
+      "currentDistance": 1270,
       "totalDistance": 2540
     },
     {
@@ -123,11 +123,11 @@
       "tag": "goXNijjar",
       "name": "Hetal Nijjar",
       "title": "VP, Audit & Compliance",
-      "latitude": 53.468116,
-      "longitude": -113.489718,
+      "latitude": 53.462817,
+      "longitude": -113.445618,
       "storeCount": 11,
       "province": "Upper Alberta",
-      "currentDistance": 2620,
+      "currentDistance": 5165,
       "totalDistance": 5165
     },
     {
@@ -136,11 +136,11 @@
       "tag": "goXAmjad",
       "name": "Aun Amjad",
       "title": "VP, Enterprise Systems",
-      "latitude": 45.26515,
-      "longitude": -66.054805,
+      "latitude": 45.070895,
+      "longitude": -64.435893,
       "storeCount": 9,
       "province": "New Brunswick + Nova Scotia",
-      "currentDistance": 1130,
+      "currentDistance": 2305,
       "totalDistance": 2305
     },
     {
@@ -149,11 +149,11 @@
       "tag": "goXRoss",
       "name": "Adam Ross",
       "title": "Director, Marketing",
-      "latitude": 45.515692,
-      "longitude": -73.557441,
+      "latitude": 46.353505,
+      "longitude": -72.55105,
       "storeCount": 12,
       "province": "Quebec",
-      "currentDistance": 563,
+      "currentDistance": 623,
       "totalDistance": 1216
     },
     {
@@ -175,11 +175,11 @@
       "tag": "goXEllens",
       "name": "Melissa Ellens",
       "title": "Director, Operations",
-      "latitude": 43.134958,
-      "longitude": -80.747146,
+      "latitude": 42.836506,
+      "longitude": -80.303978,
       "storeCount": 8,
       "province": "SW Ontario",
-      "currentDistance": 0,
+      "currentDistance": 172,
       "totalDistance": 344
     },
     {
@@ -214,11 +214,11 @@
       "tag": "goXAnzini",
       "name": "Sabrina Anzini",
       "title": "VP, Legal",
-      "latitude": 50.966178,
-      "longitude": -114.077929,
+      "latitude": 50.01617,
+      "longitude": -110.67322,
       "storeCount": 4,
       "province": "Lower Alberta",
-      "currentDistance": 2752,
+      "currentDistance": 2797,
       "totalDistance": 5444
     },
     {
@@ -231,7 +231,7 @@
       "longitude": -97.118564,
       "storeCount": 12,
       "province": "Manitoba",
-      "currentDistance": 1584,
+      "currentDistance": 3180,
       "totalDistance": 3180
     }
   ]

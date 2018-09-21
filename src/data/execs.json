@@ -10,7 +10,7 @@
       "longitude": -64.823111,
       "storeCount": 10,
       "province": "Halifax, NS + PEI",
-      "currentDistance": 1407,
+      "currentDistance": 2724,
       "totalDistance": 2724
     },
     {
@@ -23,7 +23,7 @@
       "longitude": -79.225199,
       "storeCount": 12,
       "province": "GTA + Niagara Region, ON",
-      "currentDistance": 125,
+      "currentDistance": 210,
       "totalDistance": 210
     },
     {
@@ -36,7 +36,7 @@
       "longitude": -79.536957,
       "storeCount": 12,
       "province": "GTA, ON",
-      "currentDistance": 0,
+      "currentDistance": 100,
       "totalDistance": 100
     },
     {
@@ -45,11 +45,11 @@
       "tag": "goXAppel",
       "name": "JASON APPEL",
       "title": "SVP & CRO",
-      "latitude": 45.405876,
-      "longitude": -75.711304,
+      "latitude": 45.028045,
+      "longitude": -74.738734,
       "storeCount": 10,
       "province": "Ottawa Region, ON",
-      "currentDistance": 0,
+      "currentDistance": 880,
       "totalDistance": 880
     },
     {
@@ -62,7 +62,7 @@
       "longitude": -54.605668,
       "storeCount": 11,
       "province": "Newfoundland",
-      "currentDistance": 2225,
+      "currentDistance": 4405,
       "totalDistance": 4405
     },
     {
@@ -75,7 +75,7 @@
       "longitude": -104.622758,
       "storeCount": 16,
       "province": "BC Interior + Saskatchewan",
-      "currentDistance": 3483,
+      "currentDistance": 6846,
       "totalDistance": 6846
     },
     {
@@ -88,7 +88,7 @@
       "longitude": -122.65621,
       "storeCount": 18,
       "province": "Vancouver + Victoria, BC",
-      "currentDistance": 3525,
+      "currentDistance": 6960,
       "totalDistance": 6960
     },
     {
@@ -101,7 +101,7 @@
       "longitude": -81.243357,
       "storeCount": 10,
       "province": "SW Ontario",
-      "currentDistance": 425,
+      "currentDistance": 760,
       "totalDistance": 760
     },
     {
@@ -114,7 +114,7 @@
       "longitude": -65.696627,
       "storeCount": 10,
       "province": "New Brunswick + Nova Scotia",
-      "currentDistance": 1270,
+      "currentDistance": 2540,
       "totalDistance": 2540
     },
     {
@@ -153,7 +153,7 @@
       "longitude": -72.55105,
       "storeCount": 12,
       "province": "Quebec",
-      "currentDistance": 623,
+      "currentDistance": 1216,
       "totalDistance": 1216
     },
     {
@@ -166,7 +166,7 @@
       "longitude": -77.110874,
       "storeCount": 4,
       "province": "Northern Ontario",
-      "currentDistance": 365,
+      "currentDistance": 670,
       "totalDistance": 670
     },
     {
@@ -179,7 +179,7 @@
       "longitude": -80.303978,
       "storeCount": 8,
       "province": "SW Ontario",
-      "currentDistance": 172,
+      "currentDistance": 344,
       "totalDistance": 344
     },
     {
@@ -218,7 +218,7 @@
       "longitude": -110.67322,
       "storeCount": 4,
       "province": "Lower Alberta",
-      "currentDistance": 2797,
+      "currentDistance": 5444,
       "totalDistance": 5444
     },
     {

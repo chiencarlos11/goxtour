@@ -2053,9 +2053,163 @@
       "Region": 65,
       "Latitude": 43.696134,
       "Longitude": -79.772032,
-      "State": "Active",
+      "State": "Inactive",
       "Tag": "",
       "Type": "financial"
+    },
+    {
+      "Id": 2141,
+      "Province": "BC",
+      "Division": 2,
+      "Region": 65,
+      "Latitude": 48.44945,
+      "Longitude": -123.498327,
+      "State": "Inactive",
+      "Tag": "",
+      "Type": "financial"
+    },
+    {
+      "Id": 3111,
+      "Province": "BC",
+      "Division": 2,
+      "Region": 65,
+      "Latitude": 49.20718,
+      "Longitude": -122.919446,
+      "State": "Inactive",
+      "Tag": "",
+      "Type": "home"
+    },
+    {
+      "Id": 2139,
+      "Province": "BC",
+      "Division": 2,
+      "Region": 65,
+      "Latitude": 49.155711,
+      "Longitude": -123.952114,
+      "State": "Inactive",
+      "Tag": "",
+      "Type": "financial"
+    },
+    {
+      "Id": 2115,
+      "Province": "BC",
+      "Division": 2,
+      "Region": 65,
+      "Latitude": 53.910626,
+      "Longitude": -122.759408,
+      "State": "Inactive",
+      "Tag": "",
+      "Type": "financial"
+    },
+    {
+      "Id": 2116,
+      "Province": "BC",
+      "Division": 2,
+      "Region": 65,
+      "Latitude": 50.276602,
+      "Longitude": -119.274516,
+      "State": "Inactive",
+      "Tag": "",
+      "Type": "financial"
+    },
+    {
+      "Id": 3305,
+      "Province": "SK",
+      "Division": 2,
+      "Region": 65,
+      "Latitude": 52.129891,
+      "Longitude": -106.679412,
+      "State": "Inactive",
+      "Tag": "",
+      "Type": "home"
+    },
+    {
+      "Id": 2302,
+      "Province": "SK",
+      "Division": 2,
+      "Region": 65,
+      "Latitude": 53.199213,
+      "Longitude": -105.730312,
+      "State": "Inactive",
+      "Tag": "",
+      "Type": "financial"
+    },
+    {
+      "Id": 3403,
+      "Province": "MB",
+      "Division": 2,
+      "Region": 65,
+      "Latitude": 49.95359,
+      "Longitude": -97.148899,
+      "State": "Inactive",
+      "Tag": "",
+      "Type": "home"
+    },
+    {
+      "Id": 2504,
+      "Province": "ON",
+      "Division": 2,
+      "Region": 65,
+      "Latitude": 43.102895,
+      "Longitude": -79.116613,
+      "State": "Inactive",
+      "Tag": "",
+      "Type": "financial"
+    },
+    {
+      "Id": 3568,
+      "Province": "ON",
+      "Division": 2,
+      "Region": 65,
+      "Latitude": 43.609687,
+      "Longitude": -79.586601,
+      "State": "Inactive",
+      "Tag": "",
+      "Type": "home"
+    },
+    {
+      "Id": 3509,
+      "Province": "ON",
+      "Division": 2,
+      "Region": 65,
+      "Latitude": 43.176381,
+      "Longitude": -79.214421,
+      "State": "Inactive",
+      "Tag": "",
+      "Type": "home"
+    },
+    {
+      "Id": 2915,
+      "Province": "NS",
+      "Division": 2,
+      "Region": 65,
+      "Latitude": 45.37092,
+      "Longitude": -63.302835,
+      "State": "Inactive",
+      "Tag": "",
+      "Type": "financial"
+    },
+    {
+      "Id": 3907,
+      "Province": "NS",
+      "Division": 2,
+      "Region": 65,
+      "Latitude": 44.774831,
+      "Longitude": -63.693042,
+      "State": "Inactive",
+      "Tag": "",
+      "Type": "home"
+    },
+    {
+      "Id": 3115,
+      "Province": "BC",
+      "Division": 2,
+      "Region": 65,
+      "Latitude": 49.221273,
+      "Longitude": -122.600442,
+      "State": "Inactive",
+      "Tag": "",
+      "Type": "home"
     }
   ]
 }
